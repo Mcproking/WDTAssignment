@@ -1,0 +1,30 @@
+.nav{
+    background-color: black;
+    display: flex;
+}
+
+.select{
+    flex-grow: 1;
+    margin: 0.5rem;
+    padding: 10px 10px
+}
+
+#m1{
+    background-color: beige;
+}
+
+#m2{
+    background-color: turquoise;
+}
+
+#m3{
+    background-color: rebeccapurple;
+}
+
+#m4{
+    background-color: red;
+}
+
+#m5{
+    background-color: sandybrown;
+}

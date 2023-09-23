@@ -1,0 +1,10 @@
+https://css-tricks.com/almanac/properties/f/flex-direction/
+
+https://stackoverflow.com/questions/4938716/align-div-elements-side-by-side
+
+https://stackoverflow.com/questions/40585937/how-to-vertical-align-text-in-the-middle-without-changing-size-of-a-div
+
+https://stackoverflow.com/questions/31000885/align-an-element-to-bottom-with-flexbox
+
+
+https://www.phpjabbers.com/blog/fix-my-php-script.html
