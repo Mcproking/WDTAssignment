@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Name Plsssss</title>
     <link rel="stylesheet" href="./static/body.css">
-    <link rel="stylesheet" href="./static/header.css">
+    <link rel="stylesheet" href="./static/indexheader.css">
     <link rel="stylesheet" href="./static/navbar.css">
     <link rel="stylesheet" href="./static/index.css">
     <link rel="stylesheet" href="./static/footer.css">
@@ -13,9 +13,9 @@
 </head>
 <body>
 
-    <div id="warper">
+    <div id="wrapper">
         <?php 
-        include 'includes/header.html';
+        include 'includes/indexheader.html';
         include 'includes/navbar.html';?>
 
         <div id="about">

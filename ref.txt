@@ -8,3 +8,11 @@ https://stackoverflow.com/questions/31000885/align-an-element-to-bottom-with-fle
 
 
 https://www.phpjabbers.com/blog/fix-my-php-script.html
+
+https://stackoverflow.com/questions/3538513/detect-if-php-session-exists
+
+https://www.w3schools.com/php/php_sessions.asp
+
+https://www.quora.com/How-do-you-clear-a-CSS-cache
+
+https://stackoverflow.com/questions/16679146/force-footer-on-bottom-on-pages-with-little-content

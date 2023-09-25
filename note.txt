@@ -1,4 +1,4 @@
 header.html is for index header
 but i think that the "login/register" will have to use php to change the text to "welcome, <username>". May have to play aounaround with this
 
-navbar has been created and can be expand more 
+navbar has been created and can be expand more if needed easily
