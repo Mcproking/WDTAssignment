@@ -18,7 +18,6 @@
     flex-direction: column;
     padding: 30px;
     margin: 18vh 38vw;
-    overflow: auto;
 }
 
 #textLogin{
@@ -28,7 +27,7 @@
 .Username, .Password{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items:unset;  
     justify-content: space-between;
     padding: 0.25rem;
 }
@@ -37,9 +36,9 @@
     padding: 0.125rem;
 }
 
-#loginButton{
-    display: grid;
-    grid-template-columns: repeat(3,auto);
+#button{
+    display: flex;
+    justify-content: center;
     margin: auto 50%;
 }
 
@@ -49,8 +48,13 @@
     padding: 1rem;
 }
 
-.redirect a {
+.redirect div {
+    cursor: pointer;
     padding: 0.125rem;
+}
+
+.redirect #Switch:hover{
+    color: pink;
 }
 
 #footer{
