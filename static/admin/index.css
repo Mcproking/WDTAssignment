@@ -1,0 +1,47 @@
+#wrapper{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    
+}
+#flogin{
+    border-radius: 15%;
+    border-style: solid;
+    background-color: rgba(128, 128, 128,0.2);
+}
+
+.flogin{
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px;
+    margin: 18vh 38vw;
+}
+
+#textLogin{
+    font-size: 2vh;
+}
+
+.Username, .Password{
+    display: flex;
+    flex-direction: column;
+    align-items:unset;  
+    justify-content: space-between;
+    padding: 0.25rem;
+}
+
+.Username label, .Password label{
+    padding: 0.125rem;
+}
+
+#button{
+    display: flex;
+    justify-content: center;
+    margin: auto 50%;
+}
+
+#footer{
+    bottom: 0;
+}
