@@ -16,3 +16,17 @@ https://www.w3schools.com/php/php_sessions.asp
 https://www.quora.com/How-do-you-clear-a-CSS-cache
 
 https://stackoverflow.com/questions/16679146/force-footer-on-bottom-on-pages-with-little-content
+
+https://stackoverflow.com/questions/40843494/call-javascript-function-from-anchor-html-tag
+
+https://www.geeksforgeeks.org/html-content-modification-using-javascript/
+
+https://www.geeksforgeeks.org/what-is-the-most-used-method-for-hashing-passwords-in-php/
+
+https://stackoverflow.com/questions/18906660/converting-md5-password-hashes-to-php-5-5-password-hash
+
+https://www.php.net/manual/en/function.password-verify.php#:~:text=Description%20%C2%B6&text=password_verify()%20is%20compatible%20with,hash%20is%20included%20in%20it.
+
+https://www.php.net/manual/en/function.password-hash.php
+
+https://stackoverflow.com/questions/41170937/how-to-fix-error-mysql-shutdown-unexpectedly-on-xampp-due-to-plugin-aria
