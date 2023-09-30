@@ -16,3 +16,8 @@ https://www.w3schools.com/php/php_sessions.asp
 https://www.quora.com/How-do-you-clear-a-CSS-cache
 
 https://stackoverflow.com/questions/16679146/force-footer-on-bottom-on-pages-with-little-content
+
+
+Registration
+https://w3schools.invisionzone.com/topic/12939-cancel-button-for-forms/
+https://stackoverflow.com/questions/61227490/html-css-trying-to-move-input-text-box-to-a-set-positon
