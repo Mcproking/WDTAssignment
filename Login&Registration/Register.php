@@ -40,7 +40,7 @@
 
                 <div>
                     <label for="phone">Phone No.* </label><br>
-                    <input type="email" name="" id="phone" required>
+                    <input type="tel" name="Phone" id="phone" placeholder="012-345-6789" required>
                 </div>   
 
                 <div>

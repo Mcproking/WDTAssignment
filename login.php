@@ -13,8 +13,8 @@
         var loginWith = "Username"
         function loginSwitch(){
             if (loginWith == "Username"){
-                console.log("swtich from user");
-                document.getElementById('User').innerHTML = '<label>Email</label> <input type="email" name="txtName" id="inputUser" />';
+                console.log("switch from user");
+                document.getElementById('User').innerHTML = '<label for="inputUser">Email</label> <input type="email" name="txtName" id="inputUser" required/>';
                 document.getElementById('Switch').innerHTML = '<a onclick="loginSwitch(); return false">Login With Username</a>';
                 loginWith = "Email"
             }else if (loginWith == "Email")
