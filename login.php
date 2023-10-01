@@ -40,7 +40,7 @@
             <form action="" method="post">
                 <div class="Username" id="User">
                     <label for="inputUser">Username</label>
-                    <input type="text" name="txtName" id="inputUser" required/>    
+                    <input type="text" name="txtName" id="inputUser" autofocus required/>    
                 </div>
                 <div class="Password" id="Pass">
                     <label for="inputPassword">Password</label>

@@ -21,3 +21,4 @@ https://stackoverflow.com/questions/16679146/force-footer-on-bottom-on-pages-wit
 Registration
 https://w3schools.invisionzone.com/topic/12939-cancel-button-for-forms/
 https://stackoverflow.com/questions/61227490/html-css-trying-to-move-input-text-box-to-a-set-positon
+https://www.w3schools.com/tags/att_pattern.asp
