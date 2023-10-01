@@ -17,43 +17,43 @@
             <div>
                 <h1>Registration</h1>
             </div>
-            <form action="loginEmail.html" method="post">
-                <div>
+            <form action="loginEmail.html" method="post" id="Form">
+                <div id="Username">
                     <label for="username">Username* </label><br>
                     <input type="text" name="txtUsername" id="username" autofocus required>
                 </div>
 
-                <div>
+                <div id="Password">
                     <label for="password">Password* </label><br>
                     <input type="password" name="txtPassword" id="password" pattern="(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*?[~`!@#$%^&*()_-+={}[]|\:;,.?/]).{8,}" title="Password must contain at least one uppercase letter, one lowercase letter, one digit, one special character, and at least 8 characters in length" required>
                 </div>
 
-                <div>
+                <div id="Confirm">
                     <label for="confirm">Confirm Password* </label><br>
                     <input type="password" name="txtConfirmPassword" id="confirm"  required>
                 </div>     
 
-                <div>
+                <div id="Email">
                     <label for="email">Email* </label><br>
                     <input type="email" name="txtEmail" id="email" required>
                 </div>   
 
-                <div>
+                <div id="Phone_No">
                     <label for="phone">Phone No.* </label><br>
                     <input type="tel" name="Phone" id="phone" placeholder="012-345-6789" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
                 </div>   
 
-                <div>
+                <div id="Gender">
                     Gender <br>
                     <label for="male"><input type="radio" name="Gender" id="male" required>Male</label>
                     <label for="female"><input type="radio" name="Gender" id="female" required>Female</label>
                 </div>   
 
-                <div>
+                <div id="Address">
                     <label for="address">Address (Optional)<br><textarea name="txtAddress" id="address" cols="50" rows="3" autocomplete="off"></textarea></label>
                 </div>     
 
-                <div>
+                <div id="States">
                     State (Optional)
                     <select name="State" id="state">
                         <option value="JHR">Johor</option>
@@ -75,21 +75,21 @@
                     </select>
                 </div>
 
-                <div>
+                <div id="Date_Of_Birth">
                     <label for="DOB">Date of Birth* <input type="date" name="txtDOB" id="DOB" required></label>
                 </div>
                 
-                <div>
+                <div id="Field">
                     <h4>* means required field</h4>
                 </div>
 
-                <div>
+                <div id="Buttons">
                     <button type="submit" value="Register" id="registerButton">Register</button>
                     <button type="button" value="Cancel" id="cancel" onclick="window.location='../index.php'">Cancel</button>
                 </div>
             </form>
                             
-            <div id="requirement">
+            <div id="Requirements">
                 <h4>Password must contain the following requirements: </h4>
                 <p>At least 1 <b><i>uppercase</i></b> letter</p>
                 <p>At least 1 <b><i>lowercase</i></b> letter</p>
