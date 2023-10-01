@@ -40,11 +40,11 @@
             <form action="" method="post">
                 <div class="Username" id="User">
                     <label for="inputUser">Username</label>
-                    <input type="text" name="txtName" id="inputUser" />    
+                    <input type="text" name="txtName" id="inputUser" required/>    
                 </div>
                 <div class="Password" id="Pass">
                     <label for="inputPassword">Password</label>
-                    <input type="password" name="txtPassword" id="inputPassword" />
+                    <input type="password" name="txtPassword" id="inputPassword" required/>
                 </div>
                 <div id="button">
                     <button type="submit" value="Login" id="loginButton">Login</button>

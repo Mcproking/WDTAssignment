@@ -17,44 +17,44 @@
             <div>
                 <h1>Registration</h1>
             </div>
-            <form action="" method="post">
+            <form action="loginEmail.html" method="post">
                 <div>
                     <label for="username">Username* </label><br>
-                    <input type="text" name="txtUsername" id="username">
+                    <input type="text" name="txtUsername" id="username" required>
                 </div>
 
                 <div>
                     <label for="password">Password* </label><br>
-                    <input type="password" name="txtPassword" id="password">
+                    <input type="password" name="txtPassword" id="password" required>
                 </div>    
 
                 <div>
                     <label for="confirm">Confirm Password* </label><br>
-                    <input type="password" name="txtConfirmPassword" id="confirm">
+                    <input type="password" name="txtConfirmPassword" id="confirm" required>
                 </div>     
 
                 <div>
                     <label for="email">Email* </label><br>
-                    <input type="email" name="txtEmail" id="email">
+                    <input type="email" name="txtEmail" id="email" required>
                 </div>   
 
                 <div>
                     <label for="phone">Phone No.* </label><br>
-                    <input type="email" name="" id="phone">
+                    <input type="email" name="" id="phone" required>
                 </div>   
 
                 <div>
                     Gender <br>
-                    <label for="male"><input type="radio" name="Gender" id="male">Male</label>
-                    <label for="female"><input type="radio" name="Gender" id="female">Female</label>
+                    <label for="male"><input type="radio" name="Gender" id="male" required>Male</label>
+                    <label for="female"><input type="radio" name="Gender" id="female" required>Female</label>
                 </div>   
 
                 <div>
-                    <label for="address">Address (optional)<br><textarea name="txtAddress" id="address" cols="50" rows="3"></textarea></label>
+                    <label for="address">Address (Optional)<br><textarea name="txtAddress" id="address" cols="50" rows="3"></textarea></label>
                 </div>     
                 
                 <div>
-                    State
+                    State (Optional)
                     <select name="State" id="state">
                         <option value="JHR">Johor</option>
                         <option value="KDH">Kedah</option>
@@ -76,18 +76,18 @@
                 </div>
 
                 <div>
-                    Date of Birth* <input type="date" name="txtDOB" id="DOB" />
+                    <label for="DOB">Date of Birth* <input type="date" name="txtDOB" id="DOB" required></label>
+                </div>
+                
+                <div>
+                    <h4>* means required field</h4>
+                </div>
+
+                <div>
+                    <button type="submit" value="Register" id="registerButton">Register</button>
+                    <button type="button" value="Cancel" id="cancel" onclick="window.location='../index.php'">Cancel</button>
                 </div>
             </form>
-
-            <div>
-                <h4>* means required field</h4>
-            </div>
-
-            <div>
-                <button type="submit" value="Register" id="registerButton">Register</button>
-                <button type="button" value="Cancel" id="cancel" onclick="window.location='../index.php'">Cancel</button>
-            </div>
         </div>
         <?php
         include '../includes/footer.html';
