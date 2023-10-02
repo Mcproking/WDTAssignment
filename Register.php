@@ -92,11 +92,11 @@
                             
             <div id="Requirements">
                 <h4>Password must contain the following requirements: </h4>
-                <p>At least 1 <b><i>uppercase</i></b> letter</p>
-                <p>At least 1 <b><i>lowercase</i></b> letter</p>
-                <p>At least 1 <b><i>digit</i></b></p>
-                <p>At least 1 <b><i>special character</i></b></p>
-                <p>At least <b><i>8 characters</i></b></p>
+                <p id="Uletter">At least 1 <b><i>uppercase</i></b> letter</p>
+                <p id="Lletter">At least 1 <b><i>lowercase</i></b> letter</p>
+                <p id="Digit">At least 1 <b><i>digit</i></b></p>
+                <p id="Special">At least 1 <b><i>special character</i></b></p>
+                <p id="8Char">At least <b><i>8 characters</i></b></p>
             </div>
         </div>
         <?php
