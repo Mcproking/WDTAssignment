@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../static/header.css">
     <link rel="stylesheet" href="../static/login.css">
     <link rel="stylesheet" href="../static/footer.css">
+    <link rel="stylesheet" href="../static/register.css">
 </head>
 <body>
     <div id="wrapper">
