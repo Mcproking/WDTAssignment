@@ -6,7 +6,6 @@ https://stackoverflow.com/questions/40585937/how-to-vertical-align-text-in-the-m
 
 https://stackoverflow.com/questions/31000885/align-an-element-to-bottom-with-flexbox
 
-
 https://www.phpjabbers.com/blog/fix-my-php-script.html
 
 https://stackoverflow.com/questions/3538513/detect-if-php-session-exists
@@ -30,3 +29,5 @@ https://www.php.net/manual/en/function.password-verify.php#:~:text=Description%2
 https://www.php.net/manual/en/function.password-hash.php
 
 https://stackoverflow.com/questions/41170937/how-to-fix-error-mysql-shutdown-unexpectedly-on-xampp-due-to-plugin-aria
+
+https://stackoverflow.com/questions/34874130/when-go-to-login-page-redirect-to-index-if-already-login

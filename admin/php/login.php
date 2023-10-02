@@ -1,5 +1,11 @@
 <?php
-    include '../db_conn.php';
+    session_start();
+    
+    if(!empty($_SESSION['name'])){
+        header('Location: ../admin.php');
+    }
+
+    include '../../php/db_conn.php';
 
     // $username = $_POST['txtName'];
     // $email = $_POST['txtemail'];
@@ -23,6 +29,7 @@
                 $_SESSION['name'] = $username;
                 $_SESSION['email'] = $email;
                 $_SESSION['password'] = $pass;
+                header('Location: ../admin.php');
             }else{
                 echo 'worng pass';
             }

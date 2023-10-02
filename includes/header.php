@@ -8,11 +8,13 @@
         </div>
     </div>
     <div class="right rwarpper">
-        <?php if(session_status() != PHP_SESSION_ACTIVE){
-                echo '<div id="user">&nbsp;</div>';
+        <?php 
+        session_start();
+        if(!empty($_SESSION['loggedin'])){
+                echo '<div id="user">'.$_SESSION['name'].'</div>';
         }
         else{
-            echo '<div id="login">&nbsp;</div>';
+            echo '<div id="login">Login</div>';
         }
         ?>
     </div>
