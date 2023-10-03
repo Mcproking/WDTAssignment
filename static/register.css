@@ -1,0 +1,110 @@
+#wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+#register {
+    border-radius: 15%;
+    border-style: solid;
+    background-color: #FAF1E4;
+    width: 500px;
+}
+
+.register {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 7vh 2vw;
+    margin: 18vh 38vw;
+}
+
+#textRegister {
+    font-size: 2vh;
+}
+
+/*Register Parts*/
+
+#Username, #Password{
+    display: flex;
+    flex-direction: column;
+    align-items:unset;  
+    justify-content: space-between;
+    padding: 0.25rem;
+}
+
+#Username label, #Password label{
+    padding: 0.125rem;
+}
+
+#Address {
+    width: 350px;
+    height: 80px;
+}
+
+/*Submit and Cancel buttons*/
+
+button {
+    background-color: #FFB000;
+    color: black;
+  }
+
+#Buttons{
+    display: flex;
+    justify-content: center;
+    margin: auto 50%;
+}
+
+#footer{
+    bottom: 0;
+}
+
+/*Password Validation*/
+
+.input {
+    width: 100%;
+    padding: 5px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+}
+
+#Requirements {
+  display: none;
+  background: #f1f1f1;
+  color: #000;
+  position: relative;
+  padding: 20px;
+  margin-top: 10px;
+}
+
+#Requirements p {
+  padding: 3px 10px;
+  font-size: 16px;
+}
+
+.valid {
+    color: green;
+}
+
+.valid:before {
+    position: relative;
+    left: -35px;
+    content: "\2713";
+}
+
+.invalid {
+    color: red;
+}
+  
+.invalid:before {
+    position: relative;
+    left: -35px;
+    content: "\274C";
+}
