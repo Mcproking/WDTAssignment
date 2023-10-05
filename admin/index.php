@@ -14,7 +14,7 @@
             <div id="textLogin">
                 <h1>Admin Login</h1>
             </div>
-            <form action="" method="post">
+            <form action="../php/admin/login.php" method="post">
                 <div class="Username" id="User">
                     <label>Username</label>
                     <input type="text" name="txtName" id="inputUser" />     
