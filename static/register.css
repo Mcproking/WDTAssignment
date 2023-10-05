@@ -27,18 +27,21 @@
     font-size: 2vh;
 }
 
-/*Register Parts*/
-
-#Username, #Password{
-    display: flex;
-    flex-direction: column;
-    align-items:unset;  
-    justify-content: space-between;
-    padding: 0.25rem;
+.input {
+    width: 100%;
+    padding: 5px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 10px;
 }
 
-#Username label, #Password label{
-    padding: 0.125rem;
+/*Register Parts*/
+
+#Username, #Password, #Confirm, #Email, #Phone_No, #Gender, #Address, #States, #Date_Of_Birth {
+    text-align: left;
+    padding-bottom: 15px;
 }
 
 #Address {
@@ -65,28 +68,20 @@ button {
 
 /*Password Validation*/
 
-.input {
-    width: 100%;
-    padding: 5px;
-    border: 2px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    margin-top: 6px;
-    margin-bottom: 16px;
-}
-
 #Requirements {
-  display: none;
-  background: #f1f1f1;
-  color: #000;
-  position: relative;
-  padding: 20px;
-  margin-top: 10px;
+    display: none;
+    background: #f1f1f1;
+    color: #000;
+    position: relative;
+    padding: 20px;
+    margin-top: 10px;
 }
 
 #Requirements p {
-  padding: 3px 10px;
-  font-size: 16px;
+    display: flex;
+    align-items: center;
+    padding: 3px 10px;
+    font-size: 16px;
 }
 
 .valid {
@@ -97,14 +92,18 @@ button {
     position: relative;
     left: -35px;
     content: "\2713";
+    font-size: 18px;
+    padding-left: 25px;
 }
 
 .invalid {
-    color: red;
+    color: red;;
 }
   
 .invalid:before {
     position: relative;
     left: -35px;
     content: "\274C";
+    font-size: 16px;
+    padding-left: 25px;
 }
