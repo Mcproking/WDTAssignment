@@ -18,6 +18,8 @@ https://www.quora.com/How-do-you-clear-a-CSS-cache
 https://stackoverflow.com/questions/16679146/force-footer-on-bottom-on-pages-with-little-content
 
 
+https://www.codingdeeply.com/what-is-in-php/#:~:text=In%20PHP%20code%2C%20operators%20are,any%20properties%20in%20PHP%20objects.    
+
 Registration
 https://w3schools.invisionzone.com/topic/12939-cancel-button-for-forms/
 https://stackoverflow.com/questions/61227490/html-css-trying-to-move-input-text-box-to-a-set-positon
