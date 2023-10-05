@@ -6,7 +6,6 @@
     <title>Registration</title>
     <link rel="stylesheet" href="./static/body.css">
     <link rel="stylesheet" href="./static/header.css">
-    <link rel="stylesheet" href="./static/login.css">
     <link rel="stylesheet" href="./static/footer.css">
     <link rel="stylesheet" href="./static/register.css">
 </head>
@@ -32,11 +31,11 @@
                                             
                 <div id="Requirements">
                     <h4>Password must achieve the following requirements: </h4>
-                    <p id="Uletter" class="invalid">At least 1 <b><i>uppercase</i></b> letter</p>
-                    <p id="Lletter" class="invalid">At least 1 <b><i>lowercase</i></b> letter</p>
-                    <p id="Digit" class="invalid">At least 1 <b><i>digit</i></b></p>
-                    <p id="Special" class="invalid">At least 1 <b><i>special character</i></b></p>
-                    <p id="Char8" class="invalid">At least <b><i>8 characters</i></b></p>
+                    <p id="Uletter" class="invalid">At least 1&nbsp<b><i>uppercase</i></b>&nbspletter</p>
+                    <p id="Lletter" class="invalid">At least 1&nbsp<b><i>lowercase</i></b>&nbspletter</p>
+                    <p id="Digit" class="invalid">At least 1&nbsp<b><i>digit</i></b></p>
+                    <p id="Special" class="invalid">At least 1&nbsp<b><i>special character</i></b></p>
+                    <p id="Char8" class="invalid">At least&nbsp<b><i>8 characters</i></b></p>
                 </div>
 
                 <script src="./JavaScript/register.js"></script>
