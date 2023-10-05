@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration</title>
-    <link rel="stylesheet" href="./static/body.css">
     <link rel="stylesheet" href="./static/header.css">
     <link rel="stylesheet" href="./static/footer.css">
     <link rel="stylesheet" href="./static/register.css">
@@ -47,7 +46,7 @@
 
                 <div id="Email">
                     <label for="email">Email* </label><br>
-                    <input type="email" name="txtEmail" id="email"  class="input" required>
+                    <input type="email" name="txtEmail" id="email" class="input" required>
                 </div>   
 
                 <div id="Phone_No">
@@ -56,7 +55,7 @@
                 </div>   
 
                 <div id="Gender">
-                    Gender <br>
+                    Gender* <br>
                     <label for="male"><input type="radio" name="Gender" id="male" required>Male</label>
                     <label for="female"><input type="radio" name="Gender" id="female" required>Female</label>
                 </div>   
