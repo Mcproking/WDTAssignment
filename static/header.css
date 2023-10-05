@@ -39,8 +39,49 @@
     height: 65px;
 }
 
+
 #user{
-    background-color: purple;
+    position: relative;
+    display: block;
     width:120px;
     height: 65px;
+}
+
+
+#user .dropbtn{
+    background-color: purple;
+    border: none;
+    width: inherit;
+    height: inherit;
+}
+
+#user .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+#user .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Show the dropdown menu on hover */
+#user:hover .dropdown-content {
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+#user:hover .dropbtn {
+    background-color: #3e8e41;
 }

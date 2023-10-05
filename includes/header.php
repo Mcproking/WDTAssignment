@@ -11,10 +11,26 @@
         <?php 
         session_start();
         if(!empty($_SESSION['loggedin'])){
-            echo '<div id="user">'.$_SESSION['name'].' </div>';
+            echo '
+            <div id="user">
+                <button class="dropbtn">Welcome,<br>'.$_SESSION['name'].'</button>
+                <div class="dropdown-content">
+                    <a href="#">Account</a>
+                    <a href="../php/logout.php">Logout</a>
+                </div>
+            </div>
+            ';
         }
         else{
-            echo '<div id="login">&nbsp;</div>';
+            echo '
+            <div id="user">                
+                <button class="dropbtn">Login/Register</button>
+                <div class="dropdown-content">
+                    <a href="#">Login</a>
+                    <a href="#">Register</a>
+                </div>
+            </div>
+            ';
         }
         ?>
     </div>

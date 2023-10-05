@@ -2,8 +2,6 @@
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    align-content: center;
-    flex-wrap: wrap;
 }
 
 #register {
@@ -20,7 +18,7 @@
     justify-content: center;
     flex-direction: column;
     padding: 7vh 2vw;
-    margin: 18vh 38vw;
+    margin: 18vh 32vw;
 }
 
 #textRegister {

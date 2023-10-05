@@ -1,14 +1,8 @@
 <?php
     session_start();
 
-    // check if the session is login alrdy
-    if(!empty($_SESSION['loggedin'])){
-        header('Location: ../../admin/admin.php');
-    }
-
-
     // include the connection of database and sql querry
-    include '../db_conn.php';
+    include 'db_conn.php';
     $sql = 'SELECT `username`, `email`, `password` FROM `admin` WHERE `username` = ?';
 
     // user authentication
@@ -29,12 +23,16 @@
                 $_SESSION['name'] = $username;
                 $_SESSION['email'] = $email;
                 $_SESSION['password'] = $pass;
-                header('Location: ../../admin/admin.php');
+                header('Location: ../admin/admin.php');
             }else{
-                echo 'Worng Pass';
+                header('Location: ../admin/');
+                $err = 'Login Error';
+                $_SESSION['FLASH'] = $err;
             }
         }else{
-            echo 'Worng User';
+            header('Location: ../admin/');
+            $err = 'Login Error';
+            $_SESSION['FLASH'] = $err;
         }
         $smst -> close();
         $conn -> close();
