@@ -62,3 +62,13 @@ input.onkeyup = function() {
         Char8.classList.add("invalid");
     }
 }
+
+function check() {
+    if(document.getElementById('password').value == document.getElementById('confirm').value){
+        console.log('green');
+        document.getElementById('confirm').style.border = '3px solid green';
+    }else{
+        console.log('red');
+        document.getElementById('confirm').style.border = '3px solid red';
+    }
+}

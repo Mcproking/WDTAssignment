@@ -17,7 +17,7 @@
             <div id=textRegister>
                 <h1>Registration</h1>
             </div>
-            <form action="./admin" method="post" id="Form">
+            <form action="./php/register_user.php" method="post" id="Form">
                 <div id="Username">
                     <label for="username">Username* </label><br>
                     <input type="text" name="txtUsername" id="username"  class="input" autofocus required>
@@ -25,7 +25,7 @@
 
                 <div id="Password">
                     <label for="password">Password* </label><br>
-                    <input type="password" name="txtPassword" id="password"  class="input" pattern="(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*?[~`!@#$%^&*()_+\-=\[\]{};:\\|,.<>\/?]).{8,}" title="Password must contain at least one uppercase letter, one lowercase letter, one digit, one special character, and at least 8 characters in length" required>
+                    <input type="password" name="txtPassword" id="password"  class="input" onfocusout="check();" pattern="(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*?[~`!@#$%^&*()_+\-=\[\]{};:\\|,.<>\/?]).{8,}" title="Password must contain at least one uppercase letter, one lowercase letter, one digit, one special character, and at least 8 characters in length"  required>
                 </div>
                                             
                 <div id="Requirements">
@@ -41,7 +41,7 @@
 
                 <div id="Confirm">
                     <label for="confirm">Confirm Password* </label><br>
-                    <input type="password" name="txtConfirmPassword" id="confirm" class="input" required>
+                    <input type="password" name="txtConfirmPassword" id="confirm" class="input" onfocusout="check();" required>
                 </div>     
 
                 <div id="Email">
@@ -56,8 +56,8 @@
 
                 <div id="Gender">
                     Gender* <br>
-                    <label for="male"><input type="radio" name="Gender" id="male" required>Male</label>
-                    <label for="female"><input type="radio" name="Gender" id="female" required>Female</label>
+                    <label for="male"><input type="radio" name="Gender" value="male" required>Male</label>
+                    <label for="female"><input type="radio" name="Gender" value="female" required>Female</label>
                 </div>   
 
                 <div id="Address">
