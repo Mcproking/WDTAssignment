@@ -20,12 +20,12 @@
             <form action="./admin" method="post" id="Form">
                 <div id="Username">
                     <label for="username">Username* </label><br>
-                    <input type="text" name="txtUsername" id="username"  class="input" autofocus required>
+                    <input type="text" name="txtUsername" id="username" class="input" autofocus required>
                 </div>
 
                 <div id="Password">
                     <label for="password">Password* </label><br>
-                    <input type="password" name="txtPassword" id="password"  class="input" pattern="(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*?[~`!@#$%^&*()_+\-=\[\]{};:\\|,.<>\/?]).{8,}" title="Password must contain at least one uppercase letter, one lowercase letter, one digit, one special character, and at least 8 characters in length" required>
+                    <input type="password" name="txtPassword" id="password" class="input" pattern="(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*?[~`!@#$%^&*()_+\-=\[\]{};:\\|,.<>\/?]).{8,}" title="Password must contain at least one uppercase letter, one lowercase letter, one digit, one special character, and at least 8 characters in length" required>
                 </div>
                                             
                 <div id="Requirements">
@@ -42,7 +42,13 @@
                 <div id="Confirm">
                     <label for="confirm">Confirm Password* </label><br>
                     <input type="password" name="txtConfirmPassword" id="confirm" class="input" required>
-                </div>     
+                </div>
+                
+                <div id="confirmValidate" class="original">
+                    <p id="passValidate">Confirm password does not match with your password<br>Please enter again</p>
+                </div>
+
+                <script src="./JavaScript/register.js"></script>
 
                 <div id="Email">
                     <label for="email">Email* </label><br>
@@ -51,7 +57,7 @@
 
                 <div id="Phone_No">
                     <label for="phone">Phone No.* </label><br>
-                    <input type="tel" name="Phone" id="phone"  class="input" placeholder="012-345-6789" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+                    <input type="tel" name="Phone" id="phone" class="input" placeholder="0123456789" minlength="10" maxlength="11" required>
                 </div>   
 
                 <div id="Gender">

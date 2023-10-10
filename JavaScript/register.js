@@ -1,3 +1,4 @@
+//Password Validation
 var input = document.getElementById("password");
 var Uletter = document.getElementById("Uletter");
 var Lletter = document.getElementById("Lletter");
@@ -62,3 +63,22 @@ input.onkeyup = function() {
         Char8.classList.add("invalid");
     }
 }
+
+//Confirm Password Validation
+
+var password = document.getElementById("password");
+var Confirm = document.getElementById("confirm");
+var confirmValidate = document.getElementById("confirmValidate");
+
+Confirm.onchange = function() {
+
+    if (password.value != Confirm.value) {
+        confirmValidate.classList.remove("original");
+        confirmValidate.classList.add("change");
+    }
+    else {
+        confirmValidate.classList.remove("change");
+        confirmValidate.classList.add("original");
+    }
+}
+
