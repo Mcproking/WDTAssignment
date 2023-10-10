@@ -17,7 +17,7 @@
             <div id=textRegister>
                 <h1>Registration</h1>
             </div>
-            <form action="./admin" method="post" id="Form">
+            <form action="./php/register_user.php" method="post" id="Form">
                 <div id="Username">
                     <label for="username">Username* </label><br>
                     <input type="text" name="txtUsername" id="username" class="input" autofocus required>
@@ -62,8 +62,8 @@
 
                 <div id="Gender">
                     Gender* <br>
-                    <label for="male"><input type="radio" name="Gender" id="male" required>Male</label>
-                    <label for="female"><input type="radio" name="Gender" id="female" required>Female</label>
+                    <label for="male"><input type="radio" name="Gender" value="male" required>Male</label>
+                    <label for="female"><input type="radio" name="Gender" value="female" required>Female</label>
                 </div>   
 
                 <div id="Address">
