@@ -112,10 +112,19 @@ button {
     padding-bottom: 10px;
 }
 
+button:hover {
+    color: #FFB000;
+    background-color: #0e1111;
+}
+
 #registerButton {
     margin-right: 15px;
     border-radius: 10%;
     border: 2px solid black;
+}
+
+#registerButton:hover {
+    border: 2px solid #FFB000;
 }
 
 #cancel {
@@ -123,6 +132,10 @@ button {
     margin-left: 15px;
     border-radius: 10%;
     border: 2px solid black;
+}
+
+#cancel:hover {
+    border: 2px solid #FFB000;
 }
 
 #Buttons{
