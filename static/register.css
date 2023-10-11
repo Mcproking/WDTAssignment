@@ -2,6 +2,7 @@
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    align-content: center;
 }
 
 #register {
@@ -35,6 +36,18 @@
     margin-bottom: 10px;
 }
 
+input:focus { 
+    outline:none;
+    border-color:#9ecaed;
+    box-shadow:0 0 10px #9ecaed;
+}
+
+input:hover {
+    outline:none;
+    border-color:#9ecaed;
+    box-shadow:0 0 10px #9ecaed;
+}
+
 /*Register Parts*/
 
 #Username, #Password, #Confirm, #Email, #Phone_No, #Gender, #Address, #States, #Date_Of_Birth {
@@ -45,6 +58,40 @@
 #Address {
     width: 350px;
     height: 80px;
+}
+
+#address:focus {
+    outline:none;
+    border-color:#9ecaed;
+    box-shadow:0 0 10px #9ecaed;
+}
+
+#address:hover {
+    outline:none;
+    border-color:#9ecaed;
+    box-shadow:0 0 10px #9ecaed;
+}
+
+#state {
+    width: 100%;
+    padding: 5px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 5px;
+}
+
+#state:focus {
+    outline:none;
+    border-color:#9ecaed;
+    box-shadow:0 0 10px #9ecaed;
+}
+
+#state:hover {
+    outline:none;
+    border-color:#9ecaed;
+    box-shadow:0 0 10px #9ecaed;
 }
 
 #Field {
@@ -65,22 +112,35 @@ button {
     padding-bottom: 10px;
 }
 
+button:hover {
+    color: #FFB000;
+    background-color: #0e1111;
+}
+
 #registerButton {
     margin-right: 15px;
     border-radius: 10%;
     border: 2px solid black;
 }
 
+#registerButton:hover {
+    border: 2px solid #FFB000;
+}
+
 #cancel {
+    font-size: 18px;
     margin-left: 15px;
     border-radius: 10%;
     border: 2px solid black;
 }
 
+#cancel:hover {
+    border: 2px solid #FFB000;
+}
+
 #Buttons{
     display: flex;
     justify-content: center;
-    margin: auto 50%;
 }
 
 #footer{
