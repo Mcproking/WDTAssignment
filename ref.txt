@@ -24,3 +24,4 @@ Registration
 https://w3schools.invisionzone.com/topic/12939-cancel-button-for-forms/
 https://stackoverflow.com/questions/61227490/html-css-trying-to-move-input-text-box-to-a-set-positon
 https://www.w3schools.com/tags/att_pattern.asp
+https://stackoverflow.com/questions/5670879/css-html-create-a-glowing-border-around-an-input-field
