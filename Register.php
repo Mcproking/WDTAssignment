@@ -62,8 +62,8 @@
 
                 <div id="Gender">
                     Gender* <br>
-                    <label for="male"><input type="radio" name="Gender" value="male" required>Male</label>
-                    <label for="female"><input type="radio" name="Gender" value="female" required>Female</label>
+                    <label for="male"><input type="radio" name="Gender" value="M" required>Male</label>
+                    <label for="female"><input type="radio" name="Gender" value="F" required>Female</label>
                 </div>   
 
                 <div id="Address">
@@ -73,6 +73,7 @@
                 <div id="States">
                     State (Optional)
                     <select name="State" id="state">
+                        <option value="">--Select State--</option>
                         <option value="JHR">Johor</option>
                         <option value="KDH">Kedah</option>
                         <option value="KTN">Kelantan</option>

@@ -23,6 +23,7 @@
                 $_SESSION['name'] = $username;
                 $_SESSION['email'] = $email;
                 $_SESSION['password'] = $pass;
+                $_SESSION['auth'] = "Admin";
                 header('Location: ../admin/admin.php');
             }else{
                 header('Location: ../admin/');
