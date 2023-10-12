@@ -1,7 +1,21 @@
+<?php
+    session_start();
+
+    $admin = "../imgs/EZ_GG.png";
+    $user = "imgs/EZ_GG.png";
+
+    if($_SESSION['auth'] == "Admin"){
+        $path = $admin;
+    }else{
+        $path = $user;
+    }
+    session_abort();
+?>
+
 <div class="header">
     <div class="left lwarpper">
         <div id="icon">
-            &nbsp;
+            <img src="<?php echo $path?>">
         </div>
         <div id="dropnav">
             &nbsp;

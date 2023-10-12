@@ -36,7 +36,6 @@
                 </div>
             </form>
             <?php
-                session_start();
                 if(!empty($_SESSION['FLASH'])){
                     echo'<div id="error">'.$_SESSION['FLASH'].'</div>';
                     $_SESSION = array();
