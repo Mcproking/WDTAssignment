@@ -7,7 +7,7 @@
 
     // user authentication
     if( $smst = $conn->prepare($sql)){
-        // reqest data from sql querry and store it
+        // request data from sql querry and store it
         $smst -> bind_param('s',$_POST['txtName']);
         $smst -> execute();
         $smst -> store_result();
