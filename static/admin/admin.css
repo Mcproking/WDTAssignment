@@ -9,6 +9,15 @@
     background-color: #CEDEBD;
 }
 
+#title {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 150px;
+    font-size: large;
+    font-weight: 2px;
+    color: #002314;
+}
+
 #stats {
     display: flex;
     justify-content: space-evenly;
@@ -41,4 +50,41 @@ p {
     flex-direction: column; /* Display options vertically */
     align-items: center; /* Center options horizontally */
     margin-top: 20px;
+}
+
+button {
+    background-color: #AFDE75;
+    color: black;
+    font-size: 24px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.Button {
+    border-radius: 25%;
+    border: 3px solid black;
+}
+
+#users {
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+button:hover {
+    color: #4FE3A2;
+    background-color: #0e1111;
+}
+
+#users:hover {
+    border: 3px solid #4FE3A2;
+}
+
+#items {
+    margin-top: 15px;
+}
+
+#items:hover {
+    border: 3px solid #4FE3A2;
 }
