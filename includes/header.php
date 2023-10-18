@@ -30,7 +30,7 @@
                 <button class="dropbtn">Welcome,<br>'.$_SESSION['name'].'</button>
                 <div class="dropdown-content">
                     <a href="#">Account</a>
-                    <a href="../php/logout.php">Logout</a>
+                    <a href="./php/logout.php">Logout</a>
                 </div>
             </div>
             ';

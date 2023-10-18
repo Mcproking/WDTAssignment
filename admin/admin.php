@@ -41,9 +41,9 @@
             <button onclick="window.location.href='manageItem.php'" id="items" class="Button">Manage Items</button>
         </div>
     </div>
-    
+
     <?php
-        include './includes/footer.html';
+        include '../includes/footer.html';
     ?>
 </body>
 </html>
