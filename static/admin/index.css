@@ -39,9 +39,13 @@
 #button{
     display: flex;
     justify-content: center;
-    margin: auto 50%;
+    margin: 1rem 50%;
 }
 
 #footer{
     bottom: 0;
+}
+
+#error{
+    color:red;
 }

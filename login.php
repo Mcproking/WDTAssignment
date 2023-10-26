@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login</title>
     <link rel="stylesheet" href="./static/body.css">
     <link rel="stylesheet" href="./static/header.css">
     <link rel="stylesheet" href="./static/login.css">
@@ -13,8 +13,8 @@
         var loginWith = "Username"
         function loginSwitch(){
             if (loginWith == "Username"){
-                console.log("swtich from user");
-                document.getElementById('User').innerHTML = '<label>Email</label> <input type="email" name="txtName" id="inputUser" />';
+                console.log("switch from user");
+                document.getElementById('User').innerHTML = '<label for="inputUser">Email</label> <input type="email" name="txtName" id="inputUser" required/>';
                 document.getElementById('Switch').innerHTML = '<a onclick="loginSwitch(); return false">Login With Username</a>';
                 loginWith = "Email"
             }else if (loginWith == "Email")
@@ -39,12 +39,12 @@
             </div>
             <form action="" method="post">
                 <div class="Username" id="User">
-                    <label>Username</label>
-                    <input type="text" name="txtName" id="inputUser" />     
+                    <label for="inputUser">Username</label>
+                    <input type="text" name="txtName" id="inputUser" autofocus required/>    
                 </div>
                 <div class="Password" id="Pass">
-                    <label>Password</label>
-                    <input type="password" name="txtPassword" id="inputPassword" />
+                    <label for="inputPassword">Password</label>
+                    <input type="password" name="txtPassword" id="inputPassword" required/>
                 </div>
                 <div id="button">
                     <button type="submit" value="Login" id="loginButton">Login</button>

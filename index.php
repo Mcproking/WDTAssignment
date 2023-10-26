@@ -16,14 +16,14 @@
     <div id="wrapper">
         <?php 
         include 'includes/indexheader.html';
-        include 'includes/navbar.html';?>
+        ?>
 
         <div id="about">
             <h1 id="header">ABOUT US</h1>
             <div id="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam hic tempore facilis sequi vitae exercitationem unde, explicabo quasi maiores? Facilis repellendus fugiat distinctio ut voluptate architecto quos perferendis eveniet et, quidem natus in earum impedit eius delectus nostrum aspernatur libero.</div>
         </div>
         <div id="latest">
-            <div id="ltext" class="text">Latest</div>
+            <div id="ltext" class="text"><b>Latest</b></div>
             <div id="litems" class="items">
                 <div class="item">
                     <img src="https://picsum.photos/150/150?random=1">

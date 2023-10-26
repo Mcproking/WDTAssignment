@@ -1,0 +1,206 @@
+#wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+#register {
+    border-radius: 15%;
+    border-style: solid;
+    background-color: #FAF1E4;
+    width: 500px;
+}
+
+.register {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 7vh 2vw;
+    margin: 18vh 32vw;
+}
+
+#textRegister {
+    font-size: 2vh;
+}
+
+.input {
+    width: 100%;
+    padding: 5px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 10px;
+}
+
+input:focus { 
+    outline:none;
+    border-color:#9ecaed;
+    box-shadow:0 0 10px #9ecaed;
+}
+
+input:hover {
+    outline:none;
+    border-color:#9ecaed;
+    box-shadow:0 0 10px #9ecaed;
+}
+
+/*Register Parts*/
+
+#Username, #Password, #Confirm, #Email, #Phone_No, #Gender, #Address, #States, #Date_Of_Birth {
+    text-align: left;
+    padding-bottom: 15px;
+}
+
+#Address {
+    width: 350px;
+    height: 80px;
+}
+
+#address:focus {
+    outline:none;
+    border-color:#9ecaed;
+    box-shadow:0 0 10px #9ecaed;
+}
+
+#address:hover {
+    outline:none;
+    border-color:#9ecaed;
+    box-shadow:0 0 10px #9ecaed;
+}
+
+#state {
+    width: 100%;
+    padding: 5px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 5px;
+}
+
+#state:focus {
+    outline:none;
+    border-color:#9ecaed;
+    box-shadow:0 0 10px #9ecaed;
+}
+
+#state:hover {
+    outline:none;
+    border-color:#9ecaed;
+    box-shadow:0 0 10px #9ecaed;
+}
+
+#Field {
+    color: red;
+    text-align: left;
+    margin-top: -20px;
+}
+
+/*Submit and Cancel buttons*/
+
+button {
+    background-color: #FFB000;
+    color: black;
+    font-size: 16px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+button:hover {
+    color: #FFB000;
+    background-color: #0e1111;
+}
+
+#registerButton {
+    margin-right: 15px;
+    border-radius: 10%;
+    border: 2px solid black;
+}
+
+#registerButton:hover {
+    border: 2px solid #FFB000;
+}
+
+#cancel {
+    font-size: 18px;
+    margin-left: 15px;
+    border-radius: 10%;
+    border: 2px solid black;
+}
+
+#cancel:hover {
+    border: 2px solid #FFB000;
+}
+
+#Buttons{
+    display: flex;
+    justify-content: center;
+}
+
+#footer{
+    bottom: 0;
+}
+
+/*Password Validation*/
+
+#Requirements {
+    display: none;
+    background: #f1f1f1;
+    color: #000;
+    position: relative;
+    padding: 20px;
+    margin-top: -5px;
+    margin-bottom: 2px;
+}
+
+#Requirements p {
+    display: flex;
+    align-items: center;
+    padding: 3px 10px;
+    font-size: 16px;
+}
+
+.valid {
+    color: green;
+}
+
+.valid:before {
+    position: relative;
+    left: -35px;
+    content: "\2713";
+    font-size: 18px;
+    padding-left: 25px;
+}
+
+.invalid {
+    color: red;;
+}
+  
+.invalid:before {
+    position: relative;
+    left: -35px;
+    content: "\274C";
+    font-size: 16px;
+    padding-left: 25px;
+}
+
+/*Confirm Password Validation */
+
+.original {
+    display: none;
+}
+
+.change {
+    background: #f1f1f1;
+    color: red;
+    position: relative;
+    padding: 10px;
+    margin-top: -5px;
+    margin-bottom: 2px;
+}
