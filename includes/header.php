@@ -1,51 +1,35 @@
-<?php
-    session_start();
 
-    $admin = "../imgs/EZ_GG.png";
-    $user = "imgs/EZ_GG.png";
-
-    if($_SESSION['auth'] == "Admin"){
-        $path = $admin;
-    }else{
-        $path = $user;
-    }
-    session_abort();
-?>
 
 <div class="header">
-    <div class="left lwarpper">
-        <div id="icon">
-            <img src="<?php echo $path?>">
+    <div class="h_wrapper">
+        <div class="bdy_flex_left h_left_container">
+            <a href="./index.php">
+                <img src="./imgs/Main-icon.png" width="340px">
+            </a>
         </div>
-        <div id="dropnav">
-            &nbsp;
+        <div class="bdy_flex_right h_right_container">
+                <?php
+                session_start();
+
+                if (!isset($_SESSION['loggedin'])){
+                echo '<div class="h_box">
+                <a href="login.php" class="h_login h_box_text"><div>Login</div></a>
+                </div>
+                <div class="h_box">
+                <a href="register.php" class="h_login h_box_text"><div>Register</div></a>
+                </div>';
+                }
+                else
+                {                
+                echo '<div class="h_box">
+                <img src="../imgs/customer.png" width="35px">
+                <div class="h_user h_box_text">'.$_SESSION['name'].'</div>
+                </div>';
+                }
+
+                session_abort();
+                ?>
         </div>
     </div>
-    <div class="right rwarpper">
-        <?php 
-        session_start();
-        if(!empty($_SESSION['loggedin'])){
-            echo '
-            <div id="user">
-                <button class="dropbtn">Welcome,<br>'.$_SESSION['name'].'</button>
-                <div class="dropdown-content">
-                    <a href="#">Account</a>
-                    <a href="./php/logout.php">Logout</a>
-                </div>
-            </div>
-            ';
-        }
-        else{
-            echo '
-            <div id="user">                
-                <button class="dropbtn">Login/Register</button>
-                <div class="dropdown-content">
-                    <a href="#">Login</a>
-                    <a href="#">Register</a>
-                </div>
-            </div>
-            ';
-        }
-        ?>
-    </div>
+
 </div>
