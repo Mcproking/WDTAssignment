@@ -1,87 +1,120 @@
-#about{
-    margin: 3rem 2rem;
-    padding: 10px;
+.wrapper{
+    margin: 30px 0;
     display: flex;
     flex-direction: column;
-    background-color: rgba(255, 176, 0, 0.25);
+    row-gap:30px;
 }
 
 
-#latest{
-    margin: 3rem 2rem;
+/* Moving Image Area */
+/* Refernce : https://www.w3schools.com/howto/howto_js_slideshow.asp */
+.moving-image{
+    background-color: black;
+    height: 655px;
+}
+
+.myslides{
+    display: none;
+}
+.myslides img{
+    width: 100%;
+    height: 655px;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: relative;
+    top: -50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: #FFB000;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    float: right;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+/* This is section for moving image animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in;
+}
+  
+@keyframes fade {
+    0% {opacity: 0.0}
+    50% {opacity: 0.8}
+    100% {opacity: 1}
+}
+
+/* Self Introduction Area */
+.self-intro{
     display: flex;
-    flex-direction: column;
-    height: auto;
-    background-color: rgba(128, 128, 128,0.2);
-}
-
-#ltext{
-    font-size: 24px;
-    padding:10px 10px;
-}
-
-.items{
-    flex-grow: 1;
-    display:flex;
+    margin:15px;
     flex-direction: row;
+}
+
+.intro-text{
+    font-size: 48px;
+    text-align: center;
+    font-weight: bold;
+    margin:auto;
+    flex-grow: 1;
+}
+
+
+/* Latest Seclection Area */
+.latest{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.latest-header{
+    font-size: 48px;
+    font-weight: bolder;
+}
+
+.latest-items{
+    background-color: #FFCF9D;
+    margin:15px;
+    padding:15px;
+    width: 90%;
+    border-radius: 15px;
+}
+
+
+.latest-itemsbox{
+    display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
 }
 
-.item{
+.latest-item{
+    margin: 25px;
+    border-width: 1px;
+    border-style: solid;
     display: flex;
     flex-direction: column;
-    margin: 0.5rem;
-    padding: 10px 10px;
 }
 
-#itext{
+.latest-itemtext{
+    background: #fff;
+}
+
+.latest-itemtext .item-text{
+    padding:3px;
     text-align: center;
-    padding: 5px 5px;
-}
-
-#category{
-    margin: 3rem 2rem;
-    display: flex;
-    flex-direction: column;
-    background-color: rgba(255, 192, 203,0.8);
-}
-
-#ctext{
-    padding: 10px 10px;
-}
-
-.selection{
-    display: flex;
-    border-style: solid;
-    border-width: 1px;
-}
-
-#category .left{
-    float: left;
-}
-
-
-.itemnav{
-    display: flex;
-    padding: 25px 50px;
-    text-align: center;
-    background-color: rgba(255, 0, 0,0.2);
-    border-style: solid;
-    border-width: 1px;
-}
-
-
-#category .right{
-    float: right;
-}
-
-#category .right .items{
-    display: grid;
-    grid-template-columns: repeat(5, auto);
-    grid-template-rows: repeat(2, auto);
-}
-
-#category .right .item{
-    margin: 10px 10px;
-    padding:20px 20px;
+    font-size: 24px;
 }

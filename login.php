@@ -4,62 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
     <link rel="stylesheet" href="./static/body.css">
-    <link rel="stylesheet" href="./static/header.css">
+    <link rel="stylesheet" href="./static/includes.css">
     <link rel="stylesheet" href="./static/login.css">
-    <link rel="stylesheet" href="./static/footer.css">
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script> -->
-    <script type="text/javascript">
-        var loginWith = "Username"
-        function loginSwitch(){
-            if (loginWith == "Username"){
-                console.log("switch from user");
-                document.getElementById('User').innerHTML = '<label for="inputUser">Email</label> <input type="email" name="txtName" id="inputUser" required/>';
-                document.getElementById('Switch').innerHTML = '<a onclick="loginSwitch(); return false">Login With Username</a>';
-                loginWith = "Email"
-            }else if (loginWith == "Email")
-            {
-                console.log("switch from email")
-                document.getElementById('User').innerHTML = '<label>Username</label> <input type="text" name="txtName" id="inputUser" />';
-                document.getElementById('Switch').innerHTML = '<a onclick="loginSwitch(); return false">Login With Email</a>';
-                loginWith = "Username"
-            }
-
+    <style>
+        .h_right_container{
+            display: none;
         }
-    </script>
+    </style>
 </head>
 <body>
-    <div id="wrapper">
-        <?php
-        include 'includes/header.php';
-        ?>
-        <div id="flogin" class="flogin">
-            <div id="textLogin">
-                <h1>Login</h1>
+    <?php
+    include "./includes/header.php";
+    ?>
+    <div class="wrapper">
+        <div class="bdy_flex_left content-left">
+            <div class="login">
+                <div id="login-header">Login</div>
+                <div id="login-form">
+                    <form name="login" action="" method="post">
+                        <label for="email" id="form-header">Email</label>
+                        <input type="email" name="email-login" id="email" placeholder="you@example.com">
+                        <label for="password" id="form-header">Password</label>
+                        <input type="password" name="pass-login" id="password" placeholder="Enter Your Password">
+                        <input type="submit" value="Login" id="button-box">
+                    </form>
+                </div>
+                <div id="login-no-account">
+                    Don't have an account yet? <a href="">Register Here.</a>
+                </div>
             </div>
-            <form action="" method="post">
-                <div class="Username" id="User">
-                    <label for="inputUser">Username</label>
-                    <input type="text" name="txtName" id="inputUser" autofocus required/>    
-                </div>
-                <div class="Password" id="Pass">
-                    <label for="inputPassword">Password</label>
-                    <input type="password" name="txtPassword" id="inputPassword" required/>
-                </div>
-                <div id="button">
-                    <button type="submit" value="Login" id="loginButton">Login</button>
-                </div>
-                <div class="redirect">
-                    <div id="Switch"><a onclick="loginSwitch(); return false">Login With Email</a></div>
-                    <div href="#">Register Here</div>    
-                    <div href="#">Forgot Password?</div>
-                </div>
-            </form>
         </div>
-        <?php
-        include 'includes/footer.html';
-        ?>
+        <div class="bdy_flex_right content-right">
+            <img src="./imgs/login_imgs/side-img.png" >
+        </div>
     </div>
-
+    <?php
+    include "./includes/footer.html";
+    ?>
 </body>
 </html>

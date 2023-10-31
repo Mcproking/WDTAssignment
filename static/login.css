@@ -1,63 +1,79 @@
-#wrapper{
-    min-height: 100vh;
+.wrapper{
+    max-height: 795px;
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    width: auto;
+    overflow-x: hidden;
     
 }
-#flogin{
-    border-radius: 15%;
-    border-style: solid;
-    background-color: rgba(128, 128, 128,0.2);
-    width: 500px;
-}
 
-.flogin{
+/* Section for entire login box */
+.content-left{
     flex-grow: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 7vh 2vw;
-    margin: 18vh 38vw;
 }
 
-#textLogin{
-    font-size: 2vh;
-}
-
-.Username, .Password{
+.login{
     display: flex;
     flex-direction: column;
-    align-items:unset;  
-    justify-content: space-between;
-    padding: 0.25rem;
+    width: 100%;
+    padding: 5rem;
+    gap: 3rem;
 }
 
-.Username label, .Password label{
-    padding: 0.125rem;
+#login-header{
+    font-size: 64px;
+    font-weight:bolder;
+    align-self: center;
 }
 
-#button{
-    display: flex;
-    justify-content: center;
-    margin: auto 50%;
-}
-
-.redirect{
+#login-form form{
     display: flex;
     flex-direction: column;
-    padding: 1rem;
+    gap:1rem;
 }
 
-.redirect div {
-    cursor: pointer;
-    padding: 0.125rem;
+
+/* section is for form css */
+#form-header{
+    font-size: 32px;
+    font-weight: bold;
 }
 
-.redirect #Switch:hover{
-    color: pink;
+::-webkit-input-placeholder{
+    color: grey;
+    opacity: 0.5;
 }
 
-#footer{
-    bottom: 0;
+input[type=email], input[type=password],input[type=submit]{
+    font-size: 32px;
+    padding: 15px 20px;
+    border-radius: 10px;
+}
+
+/* login box with animation */
+#button-box{
+    background-color: #FFB000;
+    border-style: none;
+    font-weight: bold;
+    width: fit-content;
+    padding: 20px 6rem;
+    align-self: center;
+    margin-top: 1rem;
+}
+
+#login-no-account{
+    align-self: center;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+input[type=email]:focus, input[type=password]:focus{
+    border-color: #004225;
+    border-width: 3px;
+}
+
+/* Section for the image */
+.content-right{
+    height: 795px;
+    object-fit: contain;
 }
