@@ -1,25 +1,61 @@
 #wrapper {
-    min-height: 100vh;
+    max-height: 2500px;
     display: flex;
-    flex-direction: column;
-    align-content: center;
+    justify-content: space-between;
+    width: auto;
+    overflow-x: hidden;
+    background-color: #A7D397
 }
 
-#register {
-    border-radius: 15%;
-    border-style: solid;
-    background-color: #FAF1E4;
-    width: 500px;
-}
-
-.register {
-    flex-grow: 1;
+#register_img {
+    width: auto;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+#registerIMG {
+    width: auto;
+    height: 1450px;
+    border-color: #A7D397;
+}
+
+.content-left{
+    display: flex;
+    align-items: center;
+}
+
+.content-right {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#register {
+    background-color: #FAF1E4;
+    width: 700px;
+}
+
+.register {
+    display: flex;
     flex-direction: column;
-    padding: 7vh 2vw;
-    margin: 18vh 32vw;
+    width: 100%;
+    padding-left: 16rem;
+    padding-right: 16rem;
+    padding-top: 5rem;
+    gap: 3rem;
+}
+
+#register_header {
+    font-size: 40px;
+    font-weight: bolder;
+    align-self: center;
+}
+
+#register form {
+    display: flex;
+    flex-direction: column;
+    gap:1rem;
 }
 
 #textRegister {
@@ -28,7 +64,7 @@
 
 .input {
     width: 100%;
-    padding: 5px;
+    padding: 10px;
     border: 2px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
@@ -55,9 +91,19 @@ input:hover {
     padding-bottom: 15px;
 }
 
+input[type="radio"] {
+    height: 15px;
+    width: 15px;
+    vertical-align: text-top;
+}
+
+.container {
+    padding-right: 2rem;
+}
+
 #Address {
-    width: 350px;
-    height: 80px;
+    width: 700px;
+    height: 130px;
 }
 
 #address:focus {
@@ -74,7 +120,7 @@ input:hover {
 
 #state {
     width: 100%;
-    padding: 5px;
+    padding: 10px;
     border: 2px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
@@ -104,12 +150,13 @@ input:hover {
 
 button {
     background-color: #FFB000;
-    color: black;
-    font-size: 16px;
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    border-style: none;
+    font-size: 28px;
+    font-weight: bold;
+    width: fit-content;
+    padding: 20px 6rem;
+    align-self: center;
+    margin-top: 1rem;
 }
 
 button:hover {
@@ -120,23 +167,40 @@ button:hover {
 #registerButton {
     margin-right: 15px;
     border-radius: 10%;
-    border: 2px solid black;
+    /* border: 2px solid black; */
 }
 
-#registerButton:hover {
+#back_to_login {
+    align-self: center;
+    font-size: 20px;
+    font-weight: 500;
+    margin-left: -15px;
+}
+
+#text_back {
+    color: black;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+#text_back:hover {
+    color: #FFB000;
+}
+
+/* #registerButton:hover {
     border: 2px solid #FFB000;
-}
+} */
 
-#cancel {
+/* #cancel {
     font-size: 18px;
     margin-left: 15px;
     border-radius: 10%;
     border: 2px solid black;
-}
+} */
 
-#cancel:hover {
+/* #cancel:hover {
     border: 2px solid #FFB000;
-}
+} */
 
 #Buttons{
     display: flex;

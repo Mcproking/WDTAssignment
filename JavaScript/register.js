@@ -70,7 +70,7 @@ var password = document.getElementById("password");
 var Confirm = document.getElementById("confirm");
 var confirmValidate = document.getElementById("confirmValidate");
 
-Confirm.onchange = function() {
+Confirm.oninput = function() {
 
     if (password.value != Confirm.value) {
         confirmValidate.classList.remove("original");
