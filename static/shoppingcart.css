@@ -1,0 +1,142 @@
+.wrapper{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin: 30px 20px;
+    gap:30px;
+}
+
+/* Shoping cart Header */
+.shoppingcart-header{
+    display: flex;
+    width: auto;
+    flex-direction: row;
+    border-style: solid;
+    border-width: 3px;
+    background-color: #FCE09B;
+    justify-content: space-between;
+}
+
+/* Header text alignment and border */
+.header-text{
+    font-size: 36px;
+    font-weight: 650;
+    text-align: center;
+    flex: 1;
+    border-right-style: solid;
+}
+
+.header-text:last-child{
+    border-right-style: none;
+}
+
+/* Header text width size */
+#header-item, #header-total-price{
+    min-width: 300px;
+}
+
+#header-seller, #header-price, #header-quantity{
+    width: 150px;
+}
+
+/* Shoping cart item */
+.shoppingcart-item{
+    display: flex;
+    width: auto;
+    height: 75px;
+    flex-direction: row;
+    border-style: solid;
+    border-width: 2px;
+    background-color: #F5F5DC;
+    justify-content: space-between;
+}
+
+/* shoping cart item text align and border */
+.item-text{
+    font-size: 28px;
+    font-weight: 550;
+    text-align: center;
+    flex: 1;
+    border-right-style: solid;
+}
+
+.item-text:last-child{
+    border-right-style: none;
+}
+
+/* Item text Width size */
+#item-item, #item-total-price{
+    min-width: 300px;
+}
+
+
+#item-item{
+    display: flex;
+    justify-content: flex-start;
+}
+
+/* Align the text to the center using flex */
+#item-item label, #item-seller, #item-price, #item-quantity, #item-total-price{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#item-item label{
+    flex-grow: 1;
+}
+
+#item-item img{
+    padding:0 5px;
+}
+
+#item-seller, #item-price, #item-quantity{
+    width: 150px;
+}
+
+/* Shopping cart flex direction */
+.shopping-cart{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
+
+
+/* Shopping Cart Options */
+.shoppingcart-options{
+    padding-bottom: 8px;
+    padding: 0 20px;
+}
+
+.delete-button{
+    border-style: none;
+    background-color: #901111;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    padding: 15px 50px;
+    border-radius: 20px;
+    cursor:pointer;
+}
+
+.right-option{
+    display: flex;
+    gap:15px;
+}
+
+.total-price{
+    text-align: center;
+    margin: auto;
+    font-size: 24px;
+    font-weight: 750;
+}
+
+.checkout-button{
+    padding: 15px 20px;
+    border-radius: 15px;
+    background-color: #FFB000;
+    font-size: 20px;
+    font-weight: bold;
+    color:black;
+    text-decoration: none;
+}
