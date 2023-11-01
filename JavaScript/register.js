@@ -6,12 +6,31 @@ var Digit = document.getElementById("Digit");
 var Special = document.getElementById("Special");
 var Char8 = document.getElementById("Char8");
 
-input.onfocus = function() {
-    document.getElementById("Requirements").style.display = "block";
-}
-input.onblur = function() {
-    document.getElementById("Requirements").style.display = "none";
-}
+var Requirements = document.getElementById("Requirements");
+input.addEventListener("focus",function(){
+    Requirements.classList.toggle("visually-hidden");
+    Requirements.classList.toggle("reqz_ani-in");
+});
+input.addEventListener("focusout",function(){
+    Requirements.classList.remove("reqz_ani-in");
+    Requirements.classList.toggle("reqz_ani-out");
+    setTimeout(() => {
+        Requirements.classList.toggle("visually-hidden");
+        Requirements.classList.remove("reqz_ani-out");
+    }, 1000);
+});
+
+
+// input.onfocus = function() {
+//     document.getElementById("Requirements").style.animation = "slideIn 1s ease-out;";
+//     document.getElementById("Requirements").style.display = "block";
+// }
+// input.onblur = function() {
+//     setTimeout(function() {
+//         document.getElementById("Requirements").style.display = "none";
+//         document.getElementById("Requirements").style.animation = "slideIn 1s ease-out;";
+//     }, 1000); 
+// }
 input.onkeyup = function() {
 
     var upperCaseLetter = /[A-Z]/g;

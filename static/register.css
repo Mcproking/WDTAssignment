@@ -197,16 +197,28 @@ button:hover {
 
 /*Password Validation*/
 
-#Requirements {
+.visually-hidden{
     display: none;
+}
+
+.reqz_ani-out{
+    animation: slideOut 1s ease-in;
+}
+
+.reqz_ani-in{
+    animation: slideIn 1s ease-out; 
+}
+
+
+#Requirements {
     background: #f1f1f1;
     color: #000;
     position: relative;
     padding: 20px;
     margin-top: -5px;
     margin-bottom: 2px;
-    animation: slideIn 1s ease-out;
 }
+
 
 #Requirements p {
     display: flex;

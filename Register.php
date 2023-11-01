@@ -24,6 +24,16 @@
                 transform: translateY(0);
             }
         }
+        @keyframes slideOut {
+            0% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+        }
     </style>
 </head>
 <body>
@@ -61,15 +71,15 @@
                     <div id="Password">
                         <label for="password">Password<span style="color:red">*</span> </label><br>
                         <input type="password" name="txtPassword" id="password" class="input" pattern="(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*?[~!@#$%^&*()_+-={};:\|,.<>/?]).{8,}" title="Password must contain at least one uppercase letter, one lowercase letter, one digit, one special character, and at least 8 characters in length" required>
-                    </div>
 
-                    <div id="Requirements">
-                        <h4>Password must achieve the following requirements: </h4>
-                        <p id="Uletter" class="invalid">At least 1&nbsp<b><i>uppercase</i></b>&nbspletter</p>
-                        <p id="Lletter" class="invalid">At least 1&nbsp<b><i>lowercase</i></b>&nbspletter</p>
-                        <p id="Digit" class="invalid">At least 1&nbsp<b><i>digit</i></b></p>
-                        <p id="Special" class="invalid">At least 1&nbsp<b><i>special character</i></b></p>
-                        <p id="Char8" class="invalid">At least&nbsp<b><i>8 characters</i></b></p>
+                        <div id="Requirements" class="visually-hidden">
+                            <h4>Password must achieve the following requirements: </h4>
+                            <p id="Uletter" class="invalid">At least 1&nbsp<b><i>uppercase</i></b>&nbspletter</p>
+                            <p id="Lletter" class="invalid">At least 1&nbsp<b><i>lowercase</i></b>&nbspletter</p>
+                            <p id="Digit" class="invalid">At least 1&nbsp<b><i>digit</i></b></p>
+                            <p id="Special" class="invalid">At least 1&nbsp<b><i>special character</i></b></p>
+                            <p id="Char8" class="invalid">At least&nbsp<b><i>8 characters</i></b></p>
+                        </div>
                     </div>
 
                     <div id="Confirm">
