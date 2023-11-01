@@ -32,7 +32,7 @@
                     </form>
                 </div>
                 <div id="login-no-account">
-                    Don't have an account yet? <a href="">Register Here.</a>
+                    Don't have an account yet? <a href="./Register.php">Register Here.</a>
                 </div>
             </div>
         </div>
