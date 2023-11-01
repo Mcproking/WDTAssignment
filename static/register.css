@@ -146,7 +146,7 @@ input[type="radio"] {
     margin-top: -20px;
 }
 
-/*Submit and Cancel buttons*/
+/*Submit button and Back to Login link text*/
 
 button {
     background-color: #FFB000;
@@ -167,7 +167,6 @@ button:hover {
 #registerButton {
     margin-right: 15px;
     border-radius: 10%;
-    /* border: 2px solid black; */
 }
 
 #back_to_login {
@@ -186,21 +185,6 @@ button:hover {
 #text_back:hover {
     color: #FFB000;
 }
-
-/* #registerButton:hover {
-    border: 2px solid #FFB000;
-} */
-
-/* #cancel {
-    font-size: 18px;
-    margin-left: 15px;
-    border-radius: 10%;
-    border: 2px solid black;
-} */
-
-/* #cancel:hover {
-    border: 2px solid #FFB000;
-} */
 
 #Buttons{
     display: flex;
@@ -221,6 +205,7 @@ button:hover {
     padding: 20px;
     margin-top: -5px;
     margin-bottom: 2px;
+    animation: slideIn 1s ease-out;
 }
 
 #Requirements p {
@@ -230,6 +215,7 @@ button:hover {
     font-size: 16px;
 }
 
+/*Checkmark & Cross*/
 .valid {
     color: green;
 }
