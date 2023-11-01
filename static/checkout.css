@@ -1,0 +1,214 @@
+.wrapper{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin: 30px 20px;
+    gap:30px;
+}
+
+/* checkout Header */
+.checkout-header{
+    display: flex;
+    width: auto;
+    flex-direction: row;
+    border-style: solid;
+    border-width: 3px;
+    background-color: #FCE09B;
+    justify-content: space-between;
+}
+
+/* Header text alignment and border */
+.header-text{
+    font-size: 36px;
+    font-weight: 650;
+    text-align: center;
+    flex: 1;
+    border-right-style: solid;
+}
+
+.header-text:last-child{
+    border-right-style: none;
+}
+
+/* Header text width size */
+#header-item, #header-total-price{
+    min-width: 300px;
+}
+
+#header-seller, #header-price, #header-quantity{
+    width: 150px;
+}
+
+/* Shoping cart item */
+.checkout-item, .final-fee{
+    display: flex;
+    width: auto;
+    height: 75px;
+    flex-direction: row;
+    border-style: solid;
+    border-bottom-style: none ;
+    border-width: 2px;
+    background-color: #F5F5DC;
+    justify-content: space-between;
+}
+
+.checkout-item:last-child{
+    border-bottom-style: solid;
+}
+
+/* shoping cart item text align and border */
+.item-text{
+    font-size: 28px;
+    font-weight: 550;
+    text-align: center;
+    flex: 1;
+    border-right-style: solid;
+}
+
+.item-text:last-child{
+    border-right-style: none;
+}
+
+
+
+/* Item text Width size */
+#item-item, #item-total-price{
+    min-width: 300px;
+}
+
+
+#item-item{
+    display: flex;
+    justify-content: flex-start;
+}
+
+/* Align the text to the center using flex */
+#item-item label, #item-seller, #item-price, #item-quantity, #item-total-price{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#item-item label{
+    flex-grow: 1;
+}
+
+#item-item img{
+    padding:0 5px;
+}
+
+#item-seller, #item-price, #item-quantity{
+    width: 150px;
+}
+
+/* Shopping cart flex direction */
+.checkout{
+    display: flex;
+    flex-direction: column;
+    gap:0;
+}
+
+
+/* Final fee section */
+div.final-fee{
+    border-bottom-style: solid;
+    flex-direction: row;
+    height: fit-content;
+}
+
+
+.final-header, .final-amount{
+    font-size: 24px;
+    flex-direction: column;
+}
+
+.final-header *{
+    padding: 10px 0 10px 5px;
+    font-weight: 720;
+}
+
+.final-amount{
+    width: auto;
+    border-left-style: solid;
+}
+
+.final-amount *{
+    display: flex;
+    position: relative;
+    justify-content: flex-end;
+    right:5px;
+    width:300px;
+    padding: 10px 0 10px 0;
+    text-align: end;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.final-fee-text{
+    flex-direction: column;
+}
+
+/* Final Seletctor section */
+.final-section{
+    display: flex;
+    flex-direction: column;
+    background-color: #FFCF9D;
+    border-style: solid;
+    border-width: 2px;
+    gap: 0px;
+}
+
+.final-selector, .final-comfirmation{
+    padding:25px 30px;
+}
+
+.selector-text{
+    display: flex;
+    flex-direction: column;
+    gap:15px;
+}
+
+.selector-text select{
+    height: 60px;
+    width: 50%;
+    padding: 0 25px;
+    font-size: 20px;
+    border-radius: 10px;
+    color: #ADADAD;
+    background-color: #FFFFFF;
+}
+
+.selector-text select option{
+    color:black;
+}
+
+.selector-text .text-header{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* final price and button */
+.final-comfirmation{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap:20px;
+}
+
+.final-comfirmation-fee{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.final-comfirmation-button{
+    padding:15px 20px;
+    border-radius: 15px;
+    background-color: #FFB000;
+    font-size: 20px;
+    font-weight: bold;
+    color:black;
+    text-decoration: none;
+}

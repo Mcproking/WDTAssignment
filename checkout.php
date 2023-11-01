@@ -3,26 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cart</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
+    <title>Check Out</title>
     <link rel="stylesheet" href="./static/body.css">
     <link rel="stylesheet" href="./static/includes.css">
-    <link rel="stylesheet" href="./static/shoppingcart.css">
+    <link rel="stylesheet" href="./static/checkout.css">
 </head>
 <body>
-    <?php 
+    <?php
     include "./includes/header.php";
     include "./includes/navbar.html";
     ?>
     <div class="wrapper">
-        <div class="shoppingcart-header">
+        <div class="checkout-header">
             <div class="header-text" id="header-item">Item</div>
             <div class="header-text" id="header-seller">Seller</div>
             <div class="header-text" id="header-price">Price</div>
             <div class="header-text" id="header-quantity">Quantity</div>
             <div class="header-text" id="header-total-price">Total Price</div>
         </div>
-        <div class="shopping-cart">
+        <div class="checkout">
             <!-- for sql uses -->
             <!-- <div class="shoppingcart-item">
                 <div class="item-text" id="item-item">
@@ -36,9 +35,8 @@
                 <div class="item-text" id="item-total-price">Total Price</div>
             </div> -->
 
-            <div class="shoppingcart-item">
+            <div class="checkout-item">
                 <div class="item-text" id="item-item">
-                    <input type="checkbox" name="id1" id="chkbox" value="id1">
                     <img src="https://picsum.photos/seed/a/150">
                     <label for="id1">Item Name</label>
                 </div>
@@ -47,85 +45,73 @@
                 <div class="item-text" id="item-quantity">Quantity</div>
                 <div class="item-text" id="item-total-price">Total Price</div>
             </div>
-            
-            <div class="shoppingcart-item">
+            <div class="checkout-item">
                 <div class="item-text" id="item-item">
-                    <input type="checkbox" name="id2" id="chkbox" value="id2">
                     <img src="https://picsum.photos/seed/b/150">
-                    <label for="id2">Item Name</label>
+                    <label for="id1">Item Name</label>
                 </div>
                 <div class="item-text" id="item-seller">Seller</div>
                 <div class="item-text" id="item-price">Price</div>
                 <div class="item-text" id="item-quantity">Quantity</div>
                 <div class="item-text" id="item-total-price">Total Price</div>
             </div>
-
-            <div class="shoppingcart-item">
+            <div class="checkout-item">
                 <div class="item-text" id="item-item">
-                    <input type="checkbox" name="id3" id="chkbox" value="id3">
                     <img src="https://picsum.photos/seed/c/150">
-                    <label for="id3">Item Name</label>
+                    <label for="id1">Item Name</label>
                 </div>
                 <div class="item-text" id="item-seller">Seller</div>
                 <div class="item-text" id="item-price">Price</div>
                 <div class="item-text" id="item-quantity">Quantity</div>
                 <div class="item-text" id="item-total-price">Total Price</div>
             </div>
-
-            <div class="shoppingcart-item">
-                <div class="item-text" id="item-item">
-                    <input type="checkbox" name="id4" id="chkbox" value="id4">
-                    <img src="https://picsum.photos/seed/d/150">
-                    <label for="id4">Item Name</label>
+            <div class="final-fee">
+                <div class="bdy_flex_left final-header">
+                    <div id="shipping-fee-text">Shipping Fee</div>
+                    <div id="fee-text">Final Fee</div>
                 </div>
-                <div class="item-text" id="item-seller">Seller</div>
-                <div class="item-text" id="item-price">Price</div>
-                <div class="item-text" id="item-quantity">Quantity</div>
-                <div class="item-text" id="item-total-price">Total Price</div>
-            </div>
-
-            <div class="shoppingcart-item">
-                <div class="item-text" id="item-item">
-                    <input type="checkbox" name="id5" id="chkbox" value="id5">
-                    <img src="https://picsum.photos/seed/e/150">
-                    <label for="id5">Item Name</label>
+                <div class="bdy_flex_right final-amount">
+                    <div id="shipping-fee-amount">RM 0.00</div>
+                    <div id="fee-amount">RM 0.00</div>
                 </div>
-                <div class="item-text" id="item-seller">Seller</div>
-                <div class="item-text" id="item-price">Price</div>
-                <div class="item-text" id="item-quantity">Quantity</div>
-                <div class="item-text" id="item-total-price">Total Price</div>
             </div>
-        </div>
-        <hr style="background-color:black; height:1px; width:100%;">
-        <div class="shoppingcart-options">
-            <div class="bdy_flex_left">
-                <button class="delete-button" onclick="delete_items();">DELETE SECTION</button>
+        </div> 
+        <div class="final-section">
+            <div class="final-selector" style="border-bottom:solid; border-width:2px;">
+                <div class="selector-text" id="address-drop">
+                    <div class="text-header"><label for="address">Delivery Address</label></div>
+                    <select name="address" id="address-selector">
+                        <option value="none" selected disabled hidden>-- Select Address --</option>
+                        <!-- for sql use -->
+                        <!-- <option value="{{ address id }}">{{ address text }}</option> -->
+                        <option value="">my Vir</option>
+                        <option value="">my As</option>
+                        <option value="">my Bal</option>
+                        <option value="">my Mout</option>
+                    </select>
+                </div>
+                <div class="selector-text" id="payment-drop">
+                    <div class="text-header"><label for="payment">Payment Method</label></div>
+                    <select name="payment" id="payment-selector">
+                        <option value="none" selected disabled hidden>-- Select Payment Method--</option>
+                        <option value="">May</option>
+                        <option value="">Private</option>
+                        <option value="">Palbud</option>
+                        <option value="">oshit</option>
+                    </select>
+                </div>
             </div>
-            <div class="bdy_flex_right right-option">
-                <div class="total-price">RM 00.00</div>
-                <a href="./checkout.php" class="checkout-button">Check out</a>
+            <div class="final-comfirmation">
+                <div class="final-comfirmation-fee">
+                    <div id="final-comfirmation-header">Final Price:</div>
+                    <div id="final-comfirmation-price">RM 0.00</div>
+                </div>
+                <a class="final-comfirmation-button" href="">PLACE ORDER</a>
             </div>
         </div>
     </div>
     <?php
     include "./includes/footer.html";
     ?>
-    <script>
-        let chkboxs = document.querySelectorAll("[id='chkbox']");
-        var items = new Array();
-        function delete_items(){
-            items = [];
-            for(i = 0; i < chkboxs.length; i++){
-                if(chkboxs[i].checked){
-                    items.push(chkboxs[i]);
-                }
-            }
-            for(i = 0; i < items.length; i++){
-                items[i].parentElement.parentElement.remove();
-            }
-            // console.log(items);
-        }
-        
-    </script>
 </body>
 </html>

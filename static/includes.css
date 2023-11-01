@@ -38,6 +38,10 @@
     font-size: 24px;
 }
 
+.h_user.h_box_text{
+    padding: 10px 15px 10px 5px;
+}
+
 /* Login Box Styling */
 /* Any Login or User style is needed while hovering and drop down
 Please Style within this area
