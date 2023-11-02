@@ -1,0 +1,142 @@
+.wrapper{
+    display: flex;
+    padding: 50px 30px;
+    flex-direction: column;
+    gap:30px;
+}
+
+.edit-header{
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.edit-box{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 20px;
+    gap:8rem;
+}
+
+/* image section */
+.edit-image{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+}
+
+.edit-image img{
+    border-style:solid;
+    border-width: 1px;
+}
+
+#imgs-button{
+    width: 200px;
+    border-style: none;
+    background-color: #FFB000;
+    font-size: 16px;
+    font-weight: bold;
+    padding:10px 5px;
+    border-radius: 10px;
+}
+
+/* Item  edit section*/
+.edit-details{
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-evenly;
+    gap:20px;
+}
+
+#edit-header{
+    margin-bottom: 20px;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+#edit-textbox{
+    font-size: 20px;
+    width: 75%;
+    height: 50px;
+    border-width: 1px;
+    border-radius: 10px;
+}
+
+#edit-selectbox{
+    font-size: 20px;
+    width: 75%;
+    height: 50px;
+    border-width: 1px;
+    border-radius: 10px;
+}
+
+/* Quantity Boxing Section */
+.quantity-selector{
+    display: flex;
+    justify-content: flex-start;
+}
+
+#quantity{
+    text-align: center;
+}
+
+input[type=number], input[type=button]{
+    font-size: 24px;
+    padding: 20px 10px;
+    border-width: 3px;
+    border-color: black;
+}
+
+input[type=number]:disabled{
+    width: 50%;
+    color:black;
+    border-style: solid;
+    border-left-style: none;
+    border-right-style: none;
+    background-color: #F5F5E6;
+}
+
+input::-webkit-inner-spin-button, 
+input::-webkit-outer-spin-button{
+    -webkit-appearance: none;
+    margin: 0; 
+}
+
+input[type=button]{
+    padding: 20px 20px;
+    border-style: solid;
+    background-color: #F5F5E6;
+    width: max-content;
+}
+
+input[type=button]:hover{
+    background-color: #F9F9CA;
+}
+
+
+/* edit button section */
+.edit-buttons{
+    display: flex;
+    justify-content: center;
+    gap:8rem;
+}
+
+.edit-buttons a{
+    font-size: 20px;
+    font-weight: bold;
+    color:white;
+    text-decoration: none;
+    padding: 20px 4rem;
+    border-radius: 10px;
+    
+}
+
+#cfm-change-btn{
+    background-color: #57B461;
+}
+
+#cancel-btn{
+    background-color: #901111;
+}
