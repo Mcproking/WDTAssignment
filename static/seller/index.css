@@ -1,0 +1,81 @@
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    padding: 50px 30px;
+    gap:100px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.home-header{
+    font-size: 36px;
+    font-weight: bold;
+}
+
+/* menu box section */
+.home-menu-box{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 300px;
+    border-radius: 15px;
+    gap:20px;
+}
+
+.box img{
+    width: 50%;
+    height: 50%;
+}
+
+.textbox{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap:5px;
+}
+
+.box-header{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.box-text{
+    font-size: 16px;
+    font-weight: 700;
+}
+
+#sell-item{
+    background-color: #A7D397;
+}
+
+#item-list{
+    background-color: #C0D1FF;
+}
+
+#view-order{
+    background-color: #F0BB6C;
+}
+
+#sell-item img{
+    position: relative;
+    right: -8px;
+}
+
+#item-list img{
+    position: relative;
+    left:-15px;
+}
+#view-order img{
+    width: max-content;
+}
