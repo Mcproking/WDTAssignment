@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>item name?</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
     <link rel="stylesheet" href="./static/body.css">
     <link rel="stylesheet" href="./static/includes.css">
     <link rel="stylesheet" href="./static/item.css">
