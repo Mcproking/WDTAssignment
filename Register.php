@@ -133,7 +133,14 @@
                     <div id="Field">
                         <h4>* indicates a required field</h4>
                     </div>
-
+                   
+                    <?php
+                        if(!empty($_SESSION['ERR_FLASH'])){
+                            echo '<div id="err" style="color:red; font-size:16px; font-weight:bold;">'.$_SESSION['ERR_FLASH'].'</div>';
+                            $_SESSION = array();
+                        }
+                    ?>
+                    
                     <div id="Buttons">
                         <button type="submit" value="Register" id="registerButton">Register</button>
                         <!-- <button type="button" value="Cancel" id="cancel" onclick="window.location='./index.php'">Cancel</button> -->
