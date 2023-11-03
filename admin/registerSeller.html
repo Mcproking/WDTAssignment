@@ -5,11 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
-    <link rel="stylesheet" href="./static/body.css">
-    <link rel="stylesheet" href="./static/includes.css">
-    <link rel="stylesheet" href="./static/register.css">
+    <link rel="stylesheet" href="../static/body.css">
+    <link rel="stylesheet" href="../static/includes.css">
+    <link rel="stylesheet" href="../static/registerSeller.css">
 
     <style>
+        /* html {
+            background-image: url(../imgs/admin_imgs/registerSeller.jpg);
+        } */
+
         .h_box {
             display: none;
         }
@@ -43,16 +47,12 @@
 
     <div id="wrapper">
 
-        <div class="bdy_flex_left content-left" id="register_img">
-            <img src="./imgs/register_imgs/registerIMG.png" id="registerIMG">
-        </div>
-
         <div class="bdy_flex_right content-right">
             <div id="register" class="register" align="center">
                 <div id=textRegister> <!--Title-->
-                    <h1 id="register_header">Registration</h1>
+                    <h1 id="register_header">Register Seller</h1>
                 </div>
-                <form action="./php/register_user.php" method="post" id="Form">
+                <form action="../php/register_seller.php" method="post" id="Form">
                     <div id="Username">
                         <label for="username">Username<span style="color:red">*</span> </label><br>
                         <input type="text" name="txtUsername" id="username" class="input" autofocus required>
@@ -88,10 +88,10 @@
                     </div>
 
                     <div id="confirmValidate" class="original">
-                        <p id="passValidate">Confirm password does not match with your password<br>Please enter again</p>
+                        <p id="passValidate">Confirm password does not match with the password<br>Please enter again</p>
                     </div>
 
-                    <script src="./JavaScript/register.js"></script>
+                    <script src="../JavaScript/register.js"></script>
 
                     <div id="Gender">
                         Gender<span style="color:red">*</span> <br><br>
@@ -145,10 +145,7 @@
                     
                     <div id="Buttons">
                         <button type="submit" value="Register" id="registerButton">Register</button>
-                        <!-- <button type="button" value="Cancel" id="cancel" onclick="window.location='./index.php'">Cancel</button> -->
-                    </div>
-                    <div id="back_to_login">
-                        <a href="./login.php" id="text_back">Back to Login</a>
+                        <button type="button" value="Cancel" id="cancel" onclick="window.location=''">Cancel</button>
                     </div>
                 </form>
             </div>
