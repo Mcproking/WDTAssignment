@@ -1,0 +1,46 @@
+/* nav */
+#nav{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    height: 127%;
+    top:0;
+    width: fit-content;
+    background-color: #393838;
+    z-index: 1;
+    gap: 10px;
+    color: white;
+    padding: 0 20px;
+    transition: 1s;
+}
+
+.navopen{
+    left:0;
+}
+
+.navclose{
+    left:-400px;
+}
+
+#nav img{
+    width: 40px;
+    height: 40px;
+}
+
+.nav-items{
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.nav-items div{
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+p{
+    font-size: 24px;
+    font-weight: bold;
+}

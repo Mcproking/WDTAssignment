@@ -1,90 +1,78 @@
-#wrapper {
-    min-height: 100vh;
-    width: 100%;
+.wrapper{
     display: flex;
     flex-direction: column;
-    align-content: center;
-    align-items: center;
+    padding: 50px 30px;
+    gap:30px;
+}
+
+.header{
+    position: relative;
+    z-index: 1;
+}
+
+.side-nav{
+    position: relative;
+    top:-2rem;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}
+
+/* menu section */
+.menu{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap:8rem;
+    max-width: 75%;
+    align-self: center;
     justify-content: center;
-    background-color: #CEDEBD;
 }
 
-#title {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 150px;
-    font-size: large;
-    font-weight: 2px;
-    color: #002314;
-}
-
-#stats {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 100%; 
-    margin-top: -100px;
-}
-
-p {
-    padding: 20px;
-    border: 2px solid;
-    border-radius: 5%;
-    background-color: #4FE3A2;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
-
-.box {
-    height: 169px;
-    width: 350px;
-}
-
-.image {
-    margin-bottom: 5px;
-}
-
-#options {
-    display: flex;
-    flex-direction: column; /* Display options vertically */
-    align-items: center; /* Center options horizontally */
-    margin-top: 20px;
-}
-
-button {
-    background-color: #AFDE75;
+.menu-box{
+    text-decoration: none;
     color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 300px;
+    border-radius: 15px;
+    padding: 20px;
+    gap:30px;
+}
+
+.menu-box img{
+    width: 150px;
+    height: 150px;
+}
+
+#text-header{
+    text-align: center;
     font-size: 24px;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
 }
 
-.Button {
-    border-radius: 25%;
-    border: 3px solid black;
+#text{
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
 }
 
-#users {
-    margin-top: 20px;
-    margin-bottom: 15px;
+#register-seller{
+    background-color: #6EE281;
 }
 
-button:hover {
-    color: #4FE3A2;
-    background-color: #0e1111;
+#seller-list{
+    background-color: #9DD2F9;
 }
 
-#users:hover {
-    border: 3px solid #4FE3A2;
+#customer-list{
+    background-color: #B2ACFC;
 }
 
-#items {
-    margin-top: 15px;
+#item-list{
+    background-color: #F8E582;
 }
 
-#items:hover {
-    border: 3px solid #4FE3A2;
-}

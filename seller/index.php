@@ -18,31 +18,28 @@
             What would you like to do?
         </div>
         <div class="home-menu-box">
-            <a href="">
-                <div class="box" id="sell-item">
-                    <img src="../imgs/seller_imgs/sell-item-icon.png">
-                    <div class="textbox">
-                        <div class="box-header">Sell Item</div>
-                        <div class="box-text">Add a Product</div>
-                    </div>
+            <a class="box" id="sell-item">
+                <img src="../imgs/seller_imgs/sell-item-icon.png">
+                <div class="textbox">
+                    <div class="box-header">Sell Item</div>
+                    <div class="box-text">Add a Product</div>
                 </div>
             </a>
-            <a href="">
-                <div class="box" id="item-list">
-                    <img src="../imgs/seller_imgs/item-list-icon.png">
-                    <div class="textbox">
-                        <div class="box-header">Item List</div>
-                        <div class="box-text">Edit or Remove List</div>
-                    </div>
+            <!-- this prob uses daryl crated one-->
+            <a class="box" id="item-list" href="./edititem.php">
+                <img src="../imgs/seller_imgs/item-list-icon.png">
+                <div class="textbox">
+                    <div class="box-header">Item List</div>
+                    <div class="box-text">Edit or Remove List</div>
                 </div>
             </a>
-            <a href="">
-                <div class="box" id="view-order">
-                    <img src="../imgs/seller_imgs/view-order-icon.png">
-                    <div class="textbox">
-                        <div class="box-header">View Order</div>
-                        <div class="box-text">Check Customer Orders</div>
-                    </div>
+
+
+            <a class="box" id="view-order">
+                <img src="../imgs/seller_imgs/view-order-icon.png">
+                <div class="textbox">
+                    <div class="box-header">View Order</div>
+                    <div class="box-text">Check Customer Orders</div>
                 </div>
             </a>
         </div>
