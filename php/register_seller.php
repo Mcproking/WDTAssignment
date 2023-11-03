@@ -6,12 +6,10 @@
         $email = $_POST['txtEmail'];
         $phone = $_POST['Phone'];
         $password = $_POST['txtPassword'];
-        $gender = $_POST['Gender'];
-        $date_of_birth = $_POST['txtDOB'];
         $address = $_POST['txtAddress'];
         $state = $_POST['State'];
 
-        $registerQuery = "INSERT INTO `Seller`(`SellerUsername`, `SellerEmail`, `SellerPhone`, `SellerPassword`, `SellerGender`, `SellerDOB`, `SellerAddress`, `SellerState`) VALUES ('$username','$email','$phone','$password','$gender','$date_of_birth','$address', '$state')";
+        $registerQuery = "INSERT INTO `Seller`(`SellerUsername`, `SellerEmail`, `SellerPhone`, `SellerPassword`, `SellerAddress`, `SellerState`) VALUES ('$username','$email','$phone','$password', '$address', '$state')";
 
         $checkQuery = "SELECT * FROM Seller WHERE SellerEmail = '$email'";
         $results = mysqli_query($conn, $checkQuery);

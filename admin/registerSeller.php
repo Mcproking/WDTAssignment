@@ -93,16 +93,6 @@
 
                     <script src="../JavaScript/register.js"></script>
 
-                    <div id="Gender">
-                        Gender<span style="color:red">*</span> <br><br>
-                        <label for="male" class="container"><input type="radio" name="Gender" value="M" id="male" required>Male</label>
-                        <label for="female" class="container"><input type="radio" name="Gender" value="F" id="female" required>Female</label>
-                    </div>
-                    
-                    <div id="Date_Of_Birth">
-                        <label for="DOB">Date of Birth<span style="color:red">*</span> <input type="date" name="txtDOB" id="DOB" class="input" required></label>
-                    </div>
-
                     <div id="Address">
                         <label for="address">Address (Optional)<br><textarea name="txtAddress" id="address"
                         placeholder="Enter address without state&#10[Street Address], [Postal Code & City]"
