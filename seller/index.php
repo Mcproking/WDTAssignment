@@ -18,7 +18,7 @@
             What would you like to do?
         </div>
         <div class="home-menu-box">
-            <a class="box" id="sell-item">
+            <a class="box" id="sell-item" href="./sellitem.php">
                 <img src="../imgs/seller_imgs/sell-item-icon.png">
                 <div class="textbox">
                     <div class="box-header">Sell Item</div>

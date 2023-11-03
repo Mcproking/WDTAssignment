@@ -25,14 +25,14 @@
             ?>
         </div>
         <div class="menu">
-            <a class="menu-box" id="register-seller" href="">
+            <a class="menu-box" id="register-seller" href="./registerSeller.php">
                 <img src="../imgs/admin_imgs/register-seller-icon.png" alt="">
                 <div class="textbox">
                     <div id="text-header">Register Seller</div>
                     <div id="text">Add a Seller</div>
                 </div>
             </a>
-            <a class="menu-box" id="seller-list" href="">
+            <a class="menu-box" id="seller-list" href="./sellerList.php">
                 <img src="../imgs/admin_imgs/seller-list-icon.png" alt="">
                 <div class="textbox">
                     <div id="text-header">Seller List</div>

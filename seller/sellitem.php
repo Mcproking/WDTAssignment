@@ -48,7 +48,7 @@
     <div id="wrapper">
 
         <div class="box">
-            <div id="sellitem" class="sellitem" align="center">
+            <div id="sellitem" class="sellitem">
                 <div id=textsellitem> <!--Title-->
                     <h1 id="sellitem_header">Sell Item</h1>
                 </div>
