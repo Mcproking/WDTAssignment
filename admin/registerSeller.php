@@ -7,12 +7,12 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
     <link rel="stylesheet" href="../static/body.css">
     <link rel="stylesheet" href="../static/includes.css">
-    <link rel="stylesheet" href="../static/registerSeller.css">
+    <link rel="stylesheet" href="../static/admin/registerSeller.css">
 
     <style>
-        /* html {
+        html {
             background-image: url(../imgs/admin_imgs/registerSeller.jpg);
-        } */
+        }
 
         .h_box {
             display: none;
@@ -42,12 +42,12 @@
 </head>
 <body>
     <?php
-        include './includes/header.php';
+        include '../includes/header.php';
     ?>
 
     <div id="wrapper">
 
-        <div class="bdy_flex_right content-right">
+        <div class="box">
             <div id="register" class="register" align="center">
                 <div id=textRegister> <!--Title-->
                     <h1 id="register_header">Register Seller</h1>
@@ -152,7 +152,7 @@
         </div>
     </div>
     <?php
-        include './includes/footer.html';
+        include '../includes/footer.html';
     ?>
 </body>
 </html>

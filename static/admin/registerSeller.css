@@ -1,0 +1,244 @@
+#wrapper {
+    max-height: 3500px;
+    height: 2000px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    overflow-x: hidden;
+}
+
+#register {
+    border-radius: 25px;
+    background: #FCE09B;
+    width: 400px;
+    height: 1400px;
+}
+
+.register {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding-left: 16rem;
+    padding-right: 16rem;
+    padding-top: 5rem;
+    gap: 3rem;
+}
+
+#register_header {
+    font-size: 40px;
+    font-weight: bolder;
+    align-self: center;
+}
+
+#register form {
+    display: flex;
+    flex-direction: column;
+    gap:1rem;
+}
+
+#textRegister {
+    font-size: 2vh;
+}
+
+.input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 10px;
+}
+
+input:focus { 
+    outline:none;
+    border-color:#9ecaed;
+    box-shadow:0 0 10px #9ecaed;
+}
+
+input:hover {
+    outline:none;
+    border-color:#9ecaed;
+    box-shadow:0 0 10px #9ecaed;
+}
+
+/*Register Parts*/
+
+#Username, #Password, #Confirm, #Email, #Phone_No, #Gender, #Address, #States, #Date_Of_Birth {
+    text-align: left;
+    padding-bottom: 15px;
+}
+
+input[type="radio"] {
+    height: 15px;
+    width: 15px;
+    vertical-align: text-top;
+}
+
+.container {
+    padding-right: 2rem;
+}
+
+#Address {
+    width: 700px;
+    height: 130px;
+}
+
+#address:focus {
+    outline:none;
+    border-color:#9ecaed;
+    box-shadow:0 0 10px #9ecaed;
+}
+
+#address:hover {
+    outline:none;
+    border-color:#9ecaed;
+    box-shadow:0 0 10px #9ecaed;
+}
+
+#state {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 5px;
+}
+
+#state:focus {
+    outline:none;
+    border-color:#9ecaed;
+    box-shadow:0 0 10px #9ecaed;
+}
+
+#state:hover {
+    outline:none;
+    border-color:#9ecaed;
+    box-shadow:0 0 10px #9ecaed;
+}
+
+#Field {
+    color: red;
+    text-align: left;
+    margin-top: -20px;
+}
+
+/*Submit button and Back to Login link text*/
+
+button {
+    background-color: #FFB000;
+    border-style: none;
+    font-size: 28px;
+    font-weight: bold;
+    width: fit-content;
+    padding: 20px 6rem;
+    align-self: center;
+    margin-top: 1rem;
+}
+
+button:hover {
+    color: #FFB000;
+    background-color: #0e1111;
+}
+
+#registerButton {
+    margin-right: 40px;
+    border-radius: 10px;
+}
+
+#cancel {
+    background: #901111;
+    color: #FFFFFF;
+    margin-left: 40px;
+    border-radius: 10px;
+}
+
+#cancel:hover {
+    background: #FF1212;
+    color: #FDFFAD;
+}
+
+#Buttons{
+    display: flex;
+    justify-content: center;
+}
+
+#footer{
+    bottom: 0;
+}
+
+/*Password Validation*/
+
+.visually-hidden{
+    display: none;
+}
+
+.reqz_ani-out{
+    animation: slideOut 1s ease-in;
+}
+
+.reqz_ani-in{
+    animation: slideIn 1s ease-out; 
+}
+
+
+#Requirements {
+    background: #f1f1f1;
+    color: #000;
+    position: relative;
+    padding: 20px;
+    margin-top: -5px;
+    margin-bottom: 2px;
+}
+
+
+#Requirements p {
+    display: flex;
+    align-items: center;
+    padding: 3px 10px;
+    font-size: 16px;
+}
+
+/*Checkmark & Cross*/
+.valid {
+    color: green;
+}
+
+.valid:before {
+    position: relative;
+    left: -35px;
+    content: "\2713";
+    font-size: 18px;
+    padding-left: 25px;
+}
+
+.invalid {
+    color: red;;
+}
+  
+.invalid:before {
+    position: relative;
+    left: -35px;
+    content: "\274C";
+    font-size: 16px;
+    padding-left: 25px;
+}
+
+/*Confirm Password Validation */
+
+.original {
+    display: none;
+}
+
+.change {
+    background: #f1f1f1;
+    color: red;
+    position: relative;
+    padding: 10px;
+    margin-top: -5px;
+    margin-bottom: 2px;
+}
