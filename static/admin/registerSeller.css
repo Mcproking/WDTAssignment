@@ -1,6 +1,5 @@
 #wrapper {
-    max-height: 3500px;
-    height: 2000px;
+    height: 1800px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -13,7 +12,7 @@
     border-radius: 25px;
     background: #FCE09B;
     width: 400px;
-    height: 1400px;
+    height: 1200px;
 }
 
 .register {
