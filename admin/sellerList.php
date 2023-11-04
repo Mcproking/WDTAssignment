@@ -59,14 +59,14 @@
                                 for($x = 0; $x < $smst->num_rows; $x++){
                                     $smst->bind_result($id,$username,$email,$phone,$address,$state);
                                     $smst->fetch();
-                                    $full_address = $address.$state;
+                                    $full_address = $address.', '.$state;
                                     $html = '
                                     <div id="record">
                                         <div class="record-detail" id="r-id">S'.$id.'</div>
                                         <div class="record-detail" id="r-user">'.$username.'</div>
                                         <div class="record-detail" id="r-email">'.$email.'</div>
                                         <div class="record-detail" id="r-phone">'.$phone.'</div>
-                                        <div class="record-detail" id="r-address">'.$address.'</div>
+                                        <div class="record-detail" id="r-address">'.$full_address.'</div>
                                         <div class="record-detail" id="r-action">
                                             <a href="./editSeller.php?SellerID='.$id.'" id="edit">EDIT</a>
                                             <a onclick="confirmDelete()" id="delete">DELETE</a>
@@ -84,13 +84,13 @@
                             for($x = 0; $x < $smst->num_rows; $x++){
                                 $smst->bind_result($id,$username,$email,$phone,$address,$state);
                                 $smst->fetch();
-                                $full_address = $address.$state;
+                                $full_address = $address.', '.$state;
                                 $html = '<div id="record">
                                 <div class="record-detail" id="r-id">S'.$id.'</div>
                                 <div class="record-detail" id="r-user">'.$username.'</div>
                                 <div class="record-detail" id="r-email">'.$email.'</div>
                                 <div class="record-detail" id="r-phone">'.$phone.'</div>
-                                <div class="record-detail" id="r-address">'.$address.'</div>
+                                <div class="record-detail" id="r-address">'.$full_address.'</div>
                                 <div class="record-detail" id="r-action">
                                     <a href="./editSeller.php?SellerID='.$id.'" id="edit">EDIT</a>
                                     <a onclick="confirmDelete()" id="delete">DELETE</a>
