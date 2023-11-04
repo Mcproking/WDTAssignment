@@ -68,7 +68,7 @@
                                         <div class="record-detail" id="r-phone">'.$phone.'</div>
                                         <div class="record-detail" id="r-address">'.$address.'</div>
                                         <div class="record-detail" id="r-action">
-                                            <a onclick="confirmDelete()" id="delete">DELETE</a>
+                                            <a onclick="confirmDelete('.$id.')" id="delete">DELETE</a>
                                         </div>
                                     </div>';
                                     echo $html;  
@@ -91,7 +91,7 @@
                                 <div class="record-detail" id="r-phone">'.$phone.'</div>
                                 <div class="record-detail" id="r-address">'.$full_address.'</div>
                                 <div class="record-detail" id="r-action">
-                                    <a onclick="confirmDelete()" id="delete">DELETE</a>
+                                    <a onclick="confirmDelete('.$id.')" id="delete">DELETE</a>
                                 </div>
                             </div>';
                                 echo $html;
@@ -120,12 +120,12 @@
             elementItem.classList.remove("navopen");
         }
     </script>
-<?php echo $id?>
+    
     <script>
-        function confirmDelete() {
+        function confirmDelete(id) {
             let confirmation = "Are you sure you want to delete this customer?\nPress OK to confirm\nPress Cancel to cancel deletion";
             if (confirm(confirmation) == true) {
-                window.location.href="./deleteCustomer.php?customerid=<?php echo $id ?>";
+                window.location.href="./deleteCustomer.php?customerid="+ id;
             }
         }
     </script>
