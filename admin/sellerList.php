@@ -59,13 +59,13 @@
 <?php
     include "../php/db_conn.php";
     
-    $displayQuery = "SELECT * FROM Seller ORDER BY SellerID ASC LIMIT 20";
+    $displayQuery = "SELECT * FROM seller ORDER BY SellerID ASC LIMIT 20";
     $displayResults = mysqli_query($conn, $displayQuery);
     
     if (isset($_GET['searchSeller'])) {
         $username = $_GET['searchSeller'];
     }
-    $searchQuery = "SELECT * FROM Seller WHERE SellerUsername = '$username'";
+    $searchQuery = "SELECT * FROM seller WHERE SellerUsername = '$username'";
     $searchResults =  mysqli_query($conn, $searchResults);
 
     if (mysqli_num_rows($searchResults) > 0) {

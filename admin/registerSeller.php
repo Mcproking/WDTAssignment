@@ -49,7 +49,7 @@
 
         <div class="box">
             <div id="register" class="register" align="center">
-                <div id=textRegister> <!--Title-->
+                <div id="textRegister"> <!--Title-->
                     <h1 id="register_header">Register Seller</h1>
                 </div>
                 <form action="../php/register_seller.php" method="post" id="Form">
