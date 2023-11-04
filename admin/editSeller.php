@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../static/includes.css">
     <link rel="stylesheet" href="../static/admin/admin.css">
     <link rel="stylesheet" href="../static/admin/sidenav.css">
+    <link rel="stylesheet" href="../static/admin/editSeller.css">
 
 </head>
 <body>
@@ -23,11 +24,11 @@
             include "./sidenav.html";
             ?>
         </div>
-    </div>
+    
 
 <?php
     include "../php/db_conn_daryl.php";
-    echo $SellerID = $_GET['SellerID'];
+    $SellerID = $_GET['SellerID'];
     $selectSeller = "SELECT * FROM seller WHERE SellerID = '$SellerID'";
     $selectResult = mysqli_query($conn, $selectSeller);
 
@@ -35,7 +36,7 @@
         while ($row = mysqli_fetch_assoc($selectResult)) {           
 ?>
 
-    <div id="wrapper">
+    <div id="box">
         <div id=title> <!--Title-->
             <h1 id="editSeller">Edit Seller</h1>
         </div>
@@ -91,8 +92,14 @@
                         <option id="WPPJY" value="Wilayah Persekutuan Putrajaya">Wilayah Persekutuan Putrajaya</option>
                     </select>
                 </div>
+
+                <div id="Buttons">
+                    <button type="submit" value="CONFIRM CHANGES" id="confirmButton" name="confirmButton">CONFIRM CHANGES</button>
+                    <button type="button" value="CANCEL" id="cancel" onclick="window.location='./admin.php'">CANCEL</button>
+                </div>
             </form>
         </div>
+    </div>
     </div>
 <?php
         }

@@ -134,8 +134,8 @@
                     ?>
                     
                     <div id="Buttons">
-                        <button type="submit" value="Register" id="registerButton" name="registerButton">Register</button>
-                        <button type="button" value="Cancel" id="cancel" onclick="window.location='./admin.php'">Cancel</button>
+                        <button type="submit" value="REGISTER" id="registerButton" name="registerButton">REGISTER</button>
+                        <button type="button" value="CANCEL" id="cancel" onclick="window.location='./admin.php'">CANCEL</button>
                     </div>
                 </form>
             </div>

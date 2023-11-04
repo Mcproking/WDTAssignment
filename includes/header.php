@@ -4,7 +4,7 @@
     <div class="h_wrapper">
         <div class="bdy_flex_left h_left_container">
             <a href="./index.php">
-                <img src="./imgs/Main-icon.png" width="340px">
+                <img src="../imgs/Main-icon.png" width="340px">
             </a>
         </div>
         <div class="bdy_flex_right h_right_container">
