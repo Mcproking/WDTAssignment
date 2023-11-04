@@ -63,8 +63,10 @@
                 </div>
 
                 <div id="Address">
-                    <label for="address">Address<br><textarea name="txtAddress" id="address"
-                    class="input" cols="50" rows="5" autocomplete="off" value="<?php echo $row['SellerAddress'] ?>"></textarea></label>
+                    <label for="address">
+                        Address<br>
+                        <textarea name="txtAddress" id="address" class="input" cols="50" rows="5" autocomplete="off"><?php echo $row['SellerAddress']; ?></textarea>
+                    </label>
                 </div>
 
                 <div id="States">
