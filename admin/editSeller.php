@@ -40,7 +40,6 @@
 
     if (mysqli_num_rows($selectResult) > 0) {
         $row = mysqli_fetch_assoc($selectResult);
-        print_r($row);
 ?>
 
         <div id=title> 
@@ -119,8 +118,6 @@
     else {
         echo 'No records found.';
     }
-
-    
 ?>
     <?php
         include "../includes/footer.html";
