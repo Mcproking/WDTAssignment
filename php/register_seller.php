@@ -1,5 +1,5 @@
 <?php
-    include 'db_conn_daryl.php';
+    include 'db_conn.php';
 
     if (isset($_POST['registerButton'])) {
         $username = $_POST['txtUsername'];
