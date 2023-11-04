@@ -145,7 +145,7 @@
         function confirmDelete() {
             let confirmation = "Are you sure you want to delete this seller?\nPress OK to confirm\nPress Cancel to cancel deletion";
             if (confirm(confirmation) == true) {
-                window.location.href="./deleteSeller.php?SellerID="+$id;
+                window.location.href="./deleteSeller.php?SellerID=<?php echo $id ?>";
             }
         }
     </script>
