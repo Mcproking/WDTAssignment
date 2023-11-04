@@ -89,8 +89,8 @@
                                     <div class="record-detail" id="r-phone">'.$phone.'</div>
                                     <div class="record-detail" id="r-address">'.$address.'</div>
                                     <div class="record-detail" id="r-action">
-                                        <a href="./editSeller.php?SellerID='.$id.'">EDIT</a>
-                                        <button onclick="confirmDelete()">DELETE</button>
+                                        <a href="./editSeller.php?SellerID='.$id.'" id="edit">EDIT</a>
+                                        <a onclick="confirmDelete()" id="delete">DELETE</a>
                                     </div>
                                 </div>';
                                 echo $html;  
@@ -111,21 +111,20 @@
                             <div class="record-detail" id="r-phone">'.$phone.'</div>
                             <div class="record-detail" id="r-address">'.$address.'</div>
                             <div class="record-detail" id="r-action">
-                                <a href="./editSeller.php?SellerID='.$id.'">EDIT</a>
-                                <button>DELETE</button>
+                                <a href="./editSeller.php?SellerID='.$id.'" id="edit">EDIT</a>
+                                <a onclick="confirmDelete()" id="delete">DELETE</a>
                             </div>
                         </div>';
                             echo $html;
                         }
                     }
                 ?>
-
             </div>
         </div>
     </div>
 
     <?php
-        include "../includes/simple_footer.html";
+        include "../includes/footer.html";
     ?>
 
     <script>
@@ -146,20 +145,10 @@
         function confirmDelete() {
             let confirmation = "Are you sure you want to delete this seller?\nPress OK to confirm\nPress Cancel to cancel deletion";
             if (confirm(confirmation) == true) {
-                <?php
-                    include "../php/db_conn.php";
-
-                    $SellerID = $_GET['SellerID'];
-
-                    $deleteQuery = "DELETE FROM `seller` WHERE SellerID='$SellerID'";
-
-                    if (mysqli_query($conn, $deleteQuery)) {
-                        echo "<script> alert('Seller was deleted successfully!');
-                        window.location.href='./admin.php'; </script>";
-                    }
-                ?>
+                window.location.href="./deleteSeller.php?SellerID="+$id;
             }
         }
     </script>
 </body>
 </html>
+

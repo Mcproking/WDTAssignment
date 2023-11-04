@@ -124,7 +124,7 @@
     align-items: center;
 }
 
-#r-action a{
+#edit{
     padding: 10px 30px;
     background-color: #FFB000;
     border-radius: 10px;
@@ -133,7 +133,17 @@
     font-weight: bold;
 }
 
-#r-action button{
+#delete {
+    padding: 10px 30px;
+    background-color: #901111;
+    border-radius: 10px;
+    color:white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* #r-action button{
     padding: 10px 30px;
     background-color: #901111;
     border-style: none;
@@ -141,4 +151,4 @@
     color:white;
     font-weight: bold;
     font-size: 16px;
-}
+} */

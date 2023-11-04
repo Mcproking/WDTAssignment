@@ -39,36 +39,37 @@
     $selectResult = mysqli_query($conn, $selectSeller);
 
     if (mysqli_num_rows($selectResult) > 0) {
-        while ($row = mysqli_fetch_assoc($selectResult)) {           
+        $row = mysqli_fetch_assoc($selectResult);
+        print_r($row);
 ?>
 
-        <div id=title> <!--Title-->
+        <div id=title> 
             <h1 id="editSeller">Edit Seller</h1>
         </div>
         <div id="box">
             <div id="form_wrapper">
-                <form action="" method="post" id="Form">
+                <form action="./editBackend.php" method="post" id="Form">
                     <div id="Group1">
                         <div id="SellerID">
                             <span style="font-size:28px; font-weight: bolder;">SellerID</span> <br>
-                            <input type="text" value="<?php echo $row['SellerID'] ?>" id="idBox" class="input" disabled >
+                            <input type="text" value="<?php echo $row['id'] ?>" id="idBox" class="input" disabled >
                         </div>
 
                         <div id="Username">
                             <label for="username" class="textLabel">Username</label><br>
-                            <input type="text" name="txtUsername" id="username" class="input" value="<?php echo $row['SellerUsername'] ?>">
+                            <input type="text" name="txtUsername" id="username" class="input" value="<?php echo $row['username'] ?>">
                         </div>
                     </div>
 
                     <div id="Group2">
                         <div id="Email" class="textLabel">
                             <label for="email">Email</label><br>
-                            <input type="email" name="txtEmail" id="email" class="input" value="<?php echo $row['SellerEmail'] ?>">
+                            <input type="email" name="txtEmail" id="email" class="input" value="<?php echo $row['email'] ?>">
                         </div>
 
                         <div id="Phone_No" class="textLabel">
                             <label for="phone">Phone No.</label><br>
-                            <input type="tel" name="Phone" id="phone" class="input" placeholder="0123456789" minlength="10" maxlength="11"  value="<?php echo $row['SellerPhone'] ?>">
+                            <input type="tel" name="Phone" id="phone" class="input" placeholder="0123456789" minlength="10" maxlength="11"  value="<?php echo $row['phone_no'] ?>">
                         </div>
                     </div>
 
@@ -76,14 +77,14 @@
                         <div id="Address">
                             <label for="address" class="textLabel">
                                 Address<br>
-                                <textarea name="txtAddress" id="address" class="input" cols="50" rows="5" autocomplete="off"><?php echo $row['SellerAddress']; ?></textarea>
+                                <textarea name="txtAddress" id="address" class="input" cols="50" rows="5" autocomplete="off"><?php echo $row['address']; ?></textarea>
                             </label>
                         </div>
 
                         <div id="States">
                         <span style="font-size:28px; font-weight: bolder;">State</span> <br>
                             <select name="State" id="state" class="input">
-                                <option id="selected" value="<?php echo $row['SellerState'] ?>"><?php echo $row['SellerState'] ?></option>
+                                <option id="selected" value="<?php echo $row['state'] ?>"><?php echo $row['state'] ?></option>
                                 <option id="JHR" value="Johor">Johor</option>
                                 <option id="KDH" value="Kedah">Kedah</option>
                                 <option id="KTN" value="Kelantan">Kelantan</option>
@@ -103,20 +104,23 @@
                             </select>
                         </div>
                     </div>
+
+                    <div id="Buttons">
+                        <button type="submit" value="CONFIRM CHANGES" id="confirmButton" name="confirmButton">CONFIRM CHANGES</button>
+                        <button type="button" value="CANCEL" id="cancel" onclick="window.location='./sellerList.php'">CANCEL</button>
+                    </div>
+                    <input type="hidden" name="SellerID" value="<?php echo $row['id'] ?>">
                 </form>
             </div>
         </div>
-        <div id="Buttons">
-            <button type="submit" value="CONFIRM CHANGES" id="confirmButton" name="confirmButton">CONFIRM CHANGES</button>
-            <button type="button" value="CANCEL" id="cancel" onclick="window.location='./admin.php'">CANCEL</button>
-        </div>
     </div>
 <?php
-        }
     }
     else {
         echo 'No records found.';
     }
+
+    
 ?>
     <?php
         include "../includes/footer.html";
@@ -137,25 +141,3 @@
     </script>
 </body>
 </html>
-
-<?php
-    if (isset($_POST['confirmButton'])) {
-        $username = $_POST['txtUsername'];
-        $email = $_POST['txtEmail'];
-        $phone = $_POST['Phone'];
-        $address = $_POST['txtAddress'];
-        $state = $_POST['State'];
-
-        $updateQuery = "UPDATE `seller` SET `SellerUsername`='$username',`SellerEmail`='$email',`SellerPhone`='$phone',`SellerAddress`='$address',`SellerState`='$state' WHERE SellerID='$SellerID'";
-
-        if (mysqli_query($conn, $updateQuery)) {
-            echo "<script> alert('Seller's information has been updated successfully!');
-            window.location.href='./admin.php'; </script>";
-        }
-        else {
-            echo "Something went wrong";
-            header("Location: ./editSeller.php");
-        }
-    }
-    mysqli_close($conn);
-?>
