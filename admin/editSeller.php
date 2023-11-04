@@ -51,7 +51,7 @@
                     <div id="Group1">
                         <div id="SellerID">
                             <span style="font-size:28px; font-weight: bolder;">SellerID</span> <br>
-                            <input type="text" value="<?php echo $row['SellerID'] ?>" class="input" disabled >
+                            <input type="text" value="<?php echo $row['SellerID'] ?>" id="idBox" class="input" disabled >
                         </div>
 
                         <div id="Username">
@@ -117,10 +117,7 @@
     else {
         echo 'No records found.';
     }
-
 ?>
-
-
     <?php
         include "../includes/footer.html";
     ?>
@@ -141,3 +138,24 @@
 </body>
 </html>
 
+<?php
+    if (isset($_POST['confirmButton'])) {
+        $username = $_POST['txtUsername'];
+        $email = $_POST['txtEmail'];
+        $phone = $_POST['Phone'];
+        $address = $_POST['txtAddress'];
+        $state = $_POST['State'];
+
+        $updateQuery = "UPDATE `seller` SET `SellerUsername`='$username',`SellerEmail`='$email',`SellerPhone`='$phone',`SellerAddress`='$address',`SellerState`='$state' WHERE SellerID='$SellerID'";
+
+        if (mysqli_query($conn, $updateQuery)) {
+            echo "<script> alert('Seller's information has been updated successfully!');
+            window.location.href='./admin.php'; </script>";
+        }
+        else {
+            echo "Something went wrong";
+            header("Location: ./editSeller.php");
+        }
+    }
+    mysqli_close($conn);
+?>

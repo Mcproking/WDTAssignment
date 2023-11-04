@@ -23,7 +23,7 @@
         }
         else {
             if (mysqli_query($conn, $registerQuery)) {
-                echo "<script> alert('Seller registered successfully!');
+                echo "<script> alert('Seller has been registered successfully!');
                 window.location.href='../admin/admin.php'; </script>";
             }
             else {
