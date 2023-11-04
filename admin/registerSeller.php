@@ -72,6 +72,7 @@
                         <label for="password">Password<span style="color:red">*</span> </label><br>
                         <input type="password" name="txtPassword" id="password" class="input" pattern="(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*?[~!@#$%^&*()_+-={};:\|,.<>/?]).{8,}" title="Password must contain at least one uppercase letter, one lowercase letter, one digit, one special character, and at least 8 characters in length" required>
 
+                    <!-- Password Validation: Reference from https://www.w3schools.com/howto/howto_js_password_validation.asp -->
                         <div id="Requirements" class="visually-hidden">
                             <h4>Password must achieve the following requirements: </h4>
                             <p id="Uletter" class="invalid">At least 1&nbsp<b><i>uppercase</i></b>&nbspletter</p>
