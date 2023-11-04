@@ -59,17 +59,17 @@
                                 for($x = 0; $x < $smst->num_rows; $x++){
                                     $smst->bind_result($id,$username,$email,$phone,$address,$state);
                                     $smst->fetch();
-                                    $full_address = $address.$state;
+                                    $full_address = $address.', '.$state;
                                     $html = '
                                     <div id="record">
                                         <div class="record-detail" id="r-id">S'.$id.'</div>
                                         <div class="record-detail" id="r-user">'.$username.'</div>
                                         <div class="record-detail" id="r-email">'.$email.'</div>
                                         <div class="record-detail" id="r-phone">'.$phone.'</div>
-                                        <div class="record-detail" id="r-address">'.$address.'</div>
+                                        <div class="record-detail" id="r-address">'.$full_address.'</div>
                                         <div class="record-detail" id="r-action">
                                             <a href="./editSeller.php?SellerID='.$id.'" id="edit">EDIT</a>
-                                            <a onclick="confirmDelete()" id="delete">DELETE</a>
+                                            <a onclick="confirmDelete('.$id.')" id="delete">DELETE</a>
                                         </div>
                                     </div>';
                                     echo $html;  
@@ -84,16 +84,16 @@
                             for($x = 0; $x < $smst->num_rows; $x++){
                                 $smst->bind_result($id,$username,$email,$phone,$address,$state);
                                 $smst->fetch();
-                                $full_address = $address.$state;
+                                $full_address = $address.', '.$state;
                                 $html = '<div id="record">
                                 <div class="record-detail" id="r-id">S'.$id.'</div>
                                 <div class="record-detail" id="r-user">'.$username.'</div>
                                 <div class="record-detail" id="r-email">'.$email.'</div>
                                 <div class="record-detail" id="r-phone">'.$phone.'</div>
-                                <div class="record-detail" id="r-address">'.$address.'</div>
+                                <div class="record-detail" id="r-address">'.$full_address.'</div>
                                 <div class="record-detail" id="r-action">
                                     <a href="./editSeller.php?SellerID='.$id.'" id="edit">EDIT</a>
-                                    <a onclick="confirmDelete()" id="delete">DELETE</a>
+                                    <a onclick="confirmDelete('.$id.')" id="delete">DELETE</a>
                                 </div>
                             </div>';
                                 echo $html;
@@ -124,10 +124,10 @@
     </script>
 
     <script>
-        function confirmDelete() {
+        function confirmDelete(id) {
             let confirmation = "Are you sure you want to delete this seller?\nPress OK to confirm\nPress Cancel to cancel deletion";
             if (confirm(confirmation) == true) {
-                window.location.href="./deleteSeller.php?SellerID=<?php echo $id ?>";
+                window.location.href="./deleteSeller.php?SellerID="+ id;
             }
         }
     </script>

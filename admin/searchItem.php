@@ -1,6 +1,6 @@
 <?php
     include "../php/db_conn.php";
-    $categories = "SELECT DISTINCT ItemCategory FROM Item";
+    $categories = "SELECT DISTINCT category FROM item";
     $res = mysqli_query($conn, $categories);
 ?>
 
@@ -15,7 +15,6 @@
     <link rel="stylesheet" href="../static/includes.css">
     <link rel="stylesheet" href="../static/admin/admin.css">
     <link rel="stylesheet" href="../static/admin/sidenav.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 </head>
 <body>
     <?php
@@ -102,21 +101,6 @@
         }
     </script> -->
 
-    <script>
-        function selectCategory() {
-            var search = document.getElementById("ItemCategories").value;
-            $.ajax({
-                url: "showItems.php",
-                method: "POST",
-                data:{
-                    id: search
-                },
-                success : function(data) {
-                    $("#searchResult").html(data);
-                }
-            })
-        }
-    </script>
 </body>
 </html>
 
