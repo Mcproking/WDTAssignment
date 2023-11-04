@@ -35,7 +35,7 @@
 <?php
     include "../php/db_conn.php";
     $SellerID = $_GET['SellerID'];
-    $selectSeller = "SELECT * FROM seller WHERE SellerID = '$SellerID'";
+    $selectSeller = "SELECT * FROM seller WHERE id = '$SellerID'";
     $selectResult = mysqli_query($conn, $selectSeller);
 
     if (mysqli_num_rows($selectResult) > 0) {
