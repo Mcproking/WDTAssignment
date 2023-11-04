@@ -43,6 +43,7 @@
 <body>
     <?php
         include '../includes/header.php';
+        include '../php/db_conn.php';
     ?>
 
     <div id="wrapper">
