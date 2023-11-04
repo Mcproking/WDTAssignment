@@ -9,9 +9,9 @@
         $address = $_POST['txtAddress'];
         $state = $_POST['State'];
 
-        $registerQuery = "INSERT INTO `seller`(`SellerUsername`, `SellerEmail`, `SellerPhone`, `SellerPassword`, `SellerAddress`, `SellerState`) VALUES ('$username','$email','$phone','$password', '$address', '$state')";
+        $registerQuery = "INSERT INTO `seller`(`username`, `password`, `email`, `phone_no`, `address`, `state`) VALUES ('$username','$password','$email','$phone', '$address', '$state')";
 
-        $checkQuery = "SELECT * FROM seller WHERE SellerEmail = '$email'";
+        $checkQuery = "SELECT * FROM seller WHERE email = '$email'";
         $results = mysqli_query($conn, $checkQuery);
 
         if (mysqli_num_rows($results) > 0) {
@@ -19,7 +19,7 @@
             session_start();
             $_SESSION['ERR_FLASH'] = $err;
             header('Location: ../admin/admin.php');
-            mysqli_close($connection);
+            mysqli_close($conn);
         }
         else {
             if (mysqli_query($conn, $registerQuery)) {
