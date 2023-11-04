@@ -1,0 +1,120 @@
+.wrapper {
+    background-color: #F5F5DC;
+}
+
+#box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#title {
+    font-size: 24px;
+    font-weight: bolder;
+    margin-left: 100px;
+}
+
+#form_wrapper {
+    display: flex;
+    justify-content: center;
+    width: 1283px;
+    height: 700px;
+    border-radius: 25px;
+    background: #FCE09B;
+}
+
+#Form {
+    display: flex;
+    flex-direction: column;
+    width: 1100px;
+}
+
+.input {
+    border-radius: 5px;
+    border: 1px solid #000;
+    background: #FFF;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.textLabel {
+    font-size: 28px;
+    font-weight: bolder;
+}
+
+#Group1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 50px;
+}
+
+#Group2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 50px;
+}
+
+#Group3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 50px;
+}
+
+#address {
+    width: 400px;
+    height: 150px;
+}
+
+
+
+
+/*Confirm button & Cancel button*/
+
+button {
+    background-color: #57B461;
+    color: #FFFFFF;
+    border-style: none;
+    font-size: 28px;
+    font-weight: bold;
+    width: fit-content;
+    padding: 20px 6rem;
+    align-self: center;
+    margin-top: 1rem;
+}
+
+button:hover {
+    color: #0e1111;
+    background-color: #16D929;
+}
+
+#confirmButton {
+    margin-right: 40px;
+    border-radius: 10px;
+}
+
+#cancel {
+    background: #901111;
+    color: #FFFFFF;
+    margin-left: 40px;
+    border-radius: 10px;
+}
+
+#cancel:hover {
+    background: #FF1212;
+    color: #FDFFAD;
+}
+
+#Buttons{
+    display: flex;
+    justify-content: center;
+}
+
+#footer{
+    bottom: 0;
+}
