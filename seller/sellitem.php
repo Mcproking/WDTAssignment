@@ -43,7 +43,7 @@
 <body>
     <?php
         include '../includes/header.php';
-        include '../php/db_conn.php';
+        $_SESSION['id'] = '2';
     ?>
 
     <div id="wrapper">
@@ -53,7 +53,7 @@
                 <div id=textsellitem> <!--Title-->
                     <h1 id="sellitem_header">Sell Item</h1>
                 </div>
-                <form action="../php/sellitem.php" method="post" id="Form">
+                <form action="../php/sell_item.php" method="post" id="Form" enctype="multipart/form-data">
                     <div id="ItemName">
                         <label for="ItemName">Item Name<span style="color:red">*</span> </label><br>
                         <input type="text" name="txtItemName" id="ItemName" class="input" autofocus required>
@@ -79,13 +79,15 @@
 
                     <div id="ItemQuantity">
                         <label for="ItemQuantity">Item Quantity<span style="color:red">*</span> </label><br>
-                        <input type="number" name="txtItemQuantity" id="ItemQuantity" class="input" min="1" value="1" step="10" required>
+                        <input type="number" name="txtItemQuantity" id="ItemQuantity" class="input" min="1" value="1" step="1" required>
                     </div>   
 
                     <div id="ItemImage">
                         <label for="ItemImage">Item Image<span style="color:red">*</span> </label><br>
                         <input type="file" name="txtItemImage" id="ItemImage" class="input" accept="image/png, image/jpg, image/jpeg" required>
                     </div>   
+
+                    <input type="hidden" name="sellerID" value="<?php echo $_SESSION['id']?>">
 
                     <div id="Field">
                         <h4>* indicates a required field</h4>
@@ -99,8 +101,8 @@
                     ?>
                     
                     <div id="Buttons">
-                        <button type="submit" value="Confirm" id="confirmButton">Confirm</button>
-                        <button type="button" value="Cancel" id="cancel" onclick="window.location=''">Cancel</button>
+                        <button type="submit" value="Confirm" id="confirmButton" name="confirmButton">Confirm</button>
+                        <button type="button" value="Cancel" id="cancel" onclick="window.location='./index.php'">Cancel</button>
                     </div>
                 </form>
             </div>

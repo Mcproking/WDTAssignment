@@ -1,37 +1,38 @@
 <?php
     include 'db_conn.php';
+    if (isset($_POST['confirmButton'])) {
+        $id = $_POST['sellerID'];
+        $name = $_POST['txtItemName'];
+        $price = $_POST['txtItemPrice'];
+        $category = $_POST['ItemCategories'];
+        $quantity = $_POST['txtItemQuantity'];
+        $filename = $_FILES['txtItemImage']['name'];
+        move_uploaded_file($_FILES['txtItemImage']['tmp_name'],'../imgs/item_imgs/'.$filename); 
+        $filepath="../imgs/item_imgs/".$filename;
+        echo $filepath;
+        $sellQuery = "INSERT INTO `item`(`sellerID`,`name`, `price`, `category`, `quantity`, `img_path`) VALUES ('$id','$name','$price','$category','$quantity', '$filepath')";
 
-    if (isset($_POST['registerButton'])) {
-        $username = $_POST['txtUsername'];
-        $email = $_POST['txtEmail'];
-        $phone = $_POST['Phone'];
-        $password = $_POST['txtPassword'];
-        $address = $_POST['txtAddress'];
-        $state = $_POST['State'];
-
-        $registerQuery = "INSERT INTO `seller`(`SellerUsername`, `SellerEmail`, `SellerPhone`, `SellerPassword`, `SellerAddress`, `SellerState`) VALUES ('$username','$email','$phone','$password', '$address', '$state')";
-
-        $checkQuery = "SELECT * FROM seller WHERE SellerEmail = '$email'";
+        $checkQuery = "SELECT * FROM item WHERE name = '$name'";
         $results = mysqli_query($conn, $checkQuery);
 
         if (mysqli_num_rows($results) > 0) {
-            $err = "This email has been registered to an acount.";
-            session_start();
-            $_SESSION['ERR_FLASH'] = $err;
-            header('Location: ../admin/admin.php');
-            mysqli_close($connection);
-        }
-        else {
-            if (mysqli_query($conn, $registerQuery)) {
-                echo "<script> alert('Seller has been registered successfully!');
-                window.location.href='../admin/admin.php'; </script>";
-            }
-            else {
-                echo "Something went wrong";
-                header("Location: ../admin/registerSeller.php");
-            }
+             $err = "This item has already been added.";
+             session_start();
+             $_SESSION['ERR_FLASH'] = $err;
+             header('Location: ../seller/index.php');
+             mysqli_close($connection);
+         }
+         else {
+             if (mysqli_query($conn, $sellQuery)) {
+                 echo "<script> alert('Item has been added successfully!');
+                 window.location.href='../seller/index.php'; </script>";
+             }
+             else {
+                 echo "Something went wrong";
+                 header("Location: ../seller/sellitem.php");
+             }
 
-            mysqli_close($conn);
+             mysqli_close($conn);
         }
     }
 ?>
