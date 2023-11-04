@@ -5,7 +5,7 @@
         $username = $_POST['txtUsername'];
         $email = $_POST['txtEmail'];
         $phone = $_POST['Phone'];
-        $password = $_POST['txtPassword'];
+        $password = password_hash($_POST['txtPassword'], PASSWORD_DEFAULT);
         $address = $_POST['txtAddress'];
         $state = $_POST['State'];
 
