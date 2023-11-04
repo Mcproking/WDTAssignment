@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./static/body.css">
+    <link rel="stylesheet" href="./static/includes.css">
     <style>
         #description {
             height:110px;
@@ -55,11 +57,19 @@
             text-align: center;
             font-size: large;
         }
-
+        #footer {
+            float:left;
+            margin: 100px;
+            width: 100%;
+        }
+        
         
     </style>
 </head>
 <body>
+    <?php
+    include "./includes/header.php";
+    ?>
     <h1>About Us</h1>
     <div id="description">
         Hi! Welcome to EZGG, where you can find all your grocery needs in just one place. How convenient! As part of APU Web Solutions  Sdn. Bhd., we created this website with the intent of delivering basic food needs to your doorstep with just a click of a few buttons. We hope that we can provide assistance with food security issues and achieve sustainable agricultural development.
@@ -79,6 +89,11 @@
             <img src="imgs/customer.png" alt="Eugene" srcset="">
             <div id="management_content"><b><u>Assitant Manager</u></b><br><br>Eugene Tan Ting Siang</div>
         </div>
+    </div>
+    <div id="footer">
+        <?php
+        include "./includes/footer.html";
+        ?>
     </div>
 </body>
 </html>
