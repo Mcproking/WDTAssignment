@@ -9,9 +9,28 @@
 }
 
 #items_title{
-    font-size: 32px;
+    font-size: 24px;
     font-weight: bolder;
     margin-left: 50px;
+}
+
+#searchCategory {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 50px;
+}
+
+#search-header{
+    font-size: 24px;
+    font-weight: bolder;
+}
+
+#ItemCategories {
+    border-radius: 10px;
+    width: 300px;
+    padding:15px;
+    margin-left: 30px;
 }
 
 .items{

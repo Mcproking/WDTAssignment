@@ -36,7 +36,7 @@
             </div>
 
             <div id="searchCategory">
-                Search by Category:
+                <div id="search-header">Search by Category:</div>
                 <select name="ItemCategories" id="ItemCategories" onchange="selectCategory()">
                     <option value="" disabled selected hidden>--Select Category--</option>
                     <?php
@@ -176,21 +176,26 @@
 
     <!-- Search items -->
 
-    <!-- <script>
-        var fruits = "Fruits";
-        var vegetables = "Vegetables";
-        var meat = "Meat";
-        var dairy = "Dairy";
-        var tincanned = "Tin Canned";
-        var others = "Others";
-        var search = document.getElementById("ItemCategories");
+    <script>
+        function searchCategory() {
+
+            const categories = ["Fruits", "Vegetables", "Meat", "Dairy", "Tin Canned", "Others"]
+            var search = document.getElementById("ItemCategories");
+
+            for (let i=0; i < categories.length; i++) {
+                if (search.value == categories[i]) {
+                    window.location.href="./showItems.php?Category="+ search.value;
+                }
+            }
+        }
+
 
         if (search.value.match(fruits)) {
             <?php
 
             ?>
         }
-    </script> -->
+    </script>
 
 </body>
 </html>
