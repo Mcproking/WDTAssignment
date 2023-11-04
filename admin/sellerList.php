@@ -66,7 +66,7 @@
         $username = $_GET['searchSeller'];
     }
     $searchQuery = "SELECT * FROM seller WHERE SellerUsername = '$username'";
-    $searchResults =  mysqli_query($conn, $searchResults);
+    $searchResults =  mysqli_query($conn, $searchQuery);
 
     if (mysqli_num_rows($searchResults) > 0) {
 ?>
