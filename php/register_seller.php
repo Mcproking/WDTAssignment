@@ -1,7 +1,7 @@
 <?php
     include 'db_conn.php';
 
-    if isset($_POST['registerButton']) {
+    if (isset($_POST['registerButton'])) {
         $username = $_POST['txtUsername'];
         $email = $_POST['txtEmail'];
         $phone = $_POST['Phone'];
