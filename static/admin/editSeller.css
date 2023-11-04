@@ -8,18 +8,68 @@
     align-items: center;
 }
 
+#title {
+    font-size: 24px;
+    font-weight: bolder;
+    margin-left: 100px;
+}
+
 #form_wrapper {
     display: flex;
+    justify-content: center;
     width: 1283px;
-    height: 759px;
+    height: 700px;
     border-radius: 25px;
     background: #FCE09B;
 }
 
+#Form {
+    display: flex;
+    flex-direction: column;
+    width: 1100px;
+}
 
+.input {
+    border-radius: 5px;
+    border: 1px solid #000;
+    background: #FFF;
+    padding: 10px;
+    font-size: 20px;
+}
 
+.textLabel {
+    font-size: 28px;
+    font-weight: bolder;
+}
 
+#Group1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 50px;
+}
 
+#Group2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 50px;
+}
+
+#Group3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 50px;
+}
+
+#address {
+    width: 400px;
+    height: 150px;
+}
 
 
 
