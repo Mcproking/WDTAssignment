@@ -7,7 +7,7 @@
 
     if (mysqli_query($conn, $deleteQuery)) {
         echo "<script> alert('Seller was deleted successfully!');
-        window.location.href='./admin.php'; </script>";
+        window.location.href='./sellerList.php'; </script>";
     }
     else {
         echo "Something went wrong.";
