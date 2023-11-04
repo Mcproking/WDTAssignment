@@ -46,7 +46,7 @@
 </html>
 
 <?php
-    include "../php/db_conn.php";
+    include "../php/db_conn_daryl.php";
     $SellerID = $_GET['$SellerID'];
     $selectSeller = "SELECT * FROM seller WHERE SellerID = '$SellerID'";
     $selectResult = mysqli_query($conn, $selectSeller);

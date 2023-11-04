@@ -57,7 +57,7 @@
 </html>
 
 <?php
-    include "../php/db_conn.php";
+    include "../php/db_conn_daryl.php";
     
     $displayQuery = "SELECT * FROM seller ORDER BY SellerID ASC LIMIT 20";
     $displayResults = mysqli_query($conn, $displayQuery);

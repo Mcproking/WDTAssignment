@@ -1,5 +1,5 @@
 <?php
-    include 'db_conn.php';
+    include 'db_conn_daryl.php';
 
     if (isset($_POST['registerButton'])) {
         $username = $_POST['txtUsername'];
@@ -24,7 +24,7 @@
         else {
             if (mysqli_query($conn, $registerQuery)) {
                 echo "<script> alert('Seller registered successfully!');
-                window.location.href='../admin.admin.php'; </script>";
+                window.location.href='../admin/admin.php'; </script>";
             }
             else {
                 echo "Something went wrong";
