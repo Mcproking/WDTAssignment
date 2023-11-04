@@ -1,0 +1,144 @@
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    padding: 50px 30px;
+}
+
+.header{
+    position: relative;
+    z-index: 1;
+}
+
+.side-nav{
+    width: fit-content;
+    position: relative;
+    top:-2rem;
+    user-select: none;
+}
+
+/* Headers and form */
+#header-title{
+    font-size: 48px;
+    font-weight: bold;
+}
+
+#Search{
+    display: flex;
+    align-items: center;
+    padding:20px 0;
+    gap:20px;
+}
+
+#Search #form-search-header{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+#Search input[type=text]{
+    border-radius: 10px;
+    width: 300px;
+    padding:15px; 
+}
+
+#Search button{
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 450;
+    color:white;
+    padding: 15px 30px;
+    background-color: #006A24;
+    border-style: none;
+}
+
+/* List */
+#header{
+    display: flex;
+    width: auto;
+    background-color: #FCE09B;
+    border-style: solid;
+    border-bottom-style: none;
+    border-width: 1px;
+}
+#record{
+    display: flex;
+    width: auto;
+    background-color: #F5F5DC;
+    border-style: solid;
+    border-bottom-style: none;
+    border-width: 1px;
+}
+
+/* List width */
+#h-id, #h-user, #h-email, #h-phone, #h-address,
+#r-id, #r-user, #r-email, #r-phone, #r-address
+{
+    display: flex;
+    align-items: center;
+    width: 200px;
+}
+
+#h-action, #r-action{
+    flex-grow: 1;
+}
+
+.header-detail,.record-detail {
+    padding:15px;
+}
+
+/* Header text and border */
+.header-detail{
+    border-right-style: solid;
+    border-width: 1px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 550;
+}
+
+.header-detail:last-child{
+    border-right-style: none;
+}
+
+/* record text and border */
+.record-detail{
+    border-right-style: solid;
+    border-width: 1px;
+    font-size: 20px;
+    word-wrap: break-word; /* to warp the sectence*/
+    word-break: break-word; /* to warp the word that overflow*/
+    white-space: pre-line; /* \n will auto new line */
+    overflow-wrap: break-word;
+}
+
+.record-detail:last-child{
+    border-right-style: none;
+}
+
+#record:last-child{
+    border-bottom-style: solid;
+    border-width: 1px;
+}
+/* record action box */
+#r-action{
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#r-action a{
+    padding: 10px 30px;
+    background-color: #FFB000;
+    border-radius: 10px;
+    color:black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#r-action button{
+    padding: 10px 30px;
+    background-color: #901111;
+    border-style: none;
+    border-radius: 10px;
+    color:white;
+    font-weight: bold;
+    font-size: 16px;
+}

@@ -11,10 +11,10 @@
 }
 
 .side-nav{
+    width: fit-content;
     position: relative;
     top:-2rem;
-    -webkit-user-select: none;
-    -moz-user-select: none;
+    user-select: none;
 }
 
 /* menu section */
