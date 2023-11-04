@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="../static/includes.css">
     <link rel="stylesheet" href="../static/admin/admin.css">
     <link rel="stylesheet" href="../static/admin/sidenav.css">
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 </head>
 <body>
     <?php
@@ -37,7 +37,7 @@
 
     <div>
         Search by Category:
-        <select name="ItemCategories" id="ItemCategories">
+        <select name="ItemCategories" id="ItemCategories" onchange="selectCategory()">
             <option value="" disabled selected hidden>--Select Category--</option>
             <?php
                 while ($rows = mysqli_fetch_assoc($res)) {
@@ -53,6 +53,17 @@
                 <option value="TinCanned">Tin Canned</option>
                 <option value="Others">Others</option> -->
         </select>
+
+        <table>
+            <thead>
+                <th>Item Image</th>
+                <th>Name</th>
+                <th>Price</th>
+            </thead>
+            <tbody id="searchResult">
+
+            </tbody>
+        </table>
     </div>
 
     <?php
@@ -72,22 +83,40 @@
             elementItem.classList.remove("navopen");
         }
     </script>
+
+    <!-- Search items -->
+
+    <!-- <script>
+        var fruits = "Fruits";
+        var vegetables = "Vegetables";
+        var meat = "Meat";
+        var dairy = "Dairy";
+        var tincanned = "Tin Canned";
+        var others = "Others";
+        var search = document.getElementById("ItemCategories");
+
+        if (search.value.match(fruits)) {
+            <?php
+
+            ?>
+        }
+    </script> -->
+
+    <script>
+        function selectCategory() {
+            var search = document.getElementById("ItemCategories").value;
+            $.ajax({
+                url: "showItems.php",
+                method: "POST",
+                data:{
+                    id: search
+                },
+                success : function(data) {
+                    $("#searchResult").html(data);
+                }
+            })
+        }
+    </script>
 </body>
 </html>
 
-<!-- Search items -->
-
-<script>
-    var fruits = "Fruits";
-    var vegetables = "Vegetables";
-    var meat = "Meat";
-    var dairy = "Dairy";
-    var tincanned = "Tin Canned";
-    var others = "Others";
-    var search = document.getElementById("ItemCategories");
-
-    if (search.value.match(fruits)) {
-        <?php>
-        ?>
-    }
-</script>
