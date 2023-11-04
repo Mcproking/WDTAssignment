@@ -25,29 +25,9 @@
         </div>
     </div>
 
-    <?php
-        include "../includes/footer.html";
-    ?>
-
-    <script>
-        var openpx = 0;
-
-        var elementItem = document.getElementById("nav");
-        function opennav(){
-            elementItem.classList.toggle("navopen");
-            elementItem.classList.remove("navclose");
-        }
-        function closenav(){
-            elementItem.classList.toggle("navclose");
-            elementItem.classList.remove("navopen");
-        }
-    </script>
-</body>
-</html>
-
 <?php
     include "../php/db_conn_daryl.php";
-    $SellerID = $_GET['$SellerID'];
+    echo $SellerID = $_GET['SellerID'];
     $selectSeller = "SELECT * FROM seller WHERE SellerID = '$SellerID'";
     $selectResult = mysqli_query($conn, $selectSeller);
 
@@ -119,8 +99,26 @@
         echo 'No records found.';
     }
 
-
-
-
-
 ?>
+
+
+    <?php
+        include "../includes/footer.html";
+    ?>
+
+    <script>
+        var openpx = 0;
+
+        var elementItem = document.getElementById("nav");
+        function opennav(){
+            elementItem.classList.toggle("navopen");
+            elementItem.classList.remove("navclose");
+        }
+        function closenav(){
+            elementItem.classList.toggle("navclose");
+            elementItem.classList.remove("navopen");
+        }
+    </script>
+</body>
+</html>
+

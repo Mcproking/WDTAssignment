@@ -39,10 +39,13 @@
     <?php
     include "../php/db_conn_daryl.php";
     
-    $displayQuery = "SELECT * FROM seller ORDER BY SellerID ASC LIMIT 20";
-    $displayResults = mysqli_query($conn, $displayQuery);
-          
-    if (mysqli_num_rows($displayResults) > 0) {
+    if (isset($_GET['searchSeller'])) {
+        $username = $_GET['searchSeller'];
+    }
+    $searchQuery = "SELECT * FROM seller WHERE SellerUsername = '$username'";
+    $searchResults =  mysqli_query($conn, $searchQuery);
+
+    if (mysqli_num_rows($searchResults) > 0) {
 ?>
         <table border="1">
             <tr>
@@ -56,7 +59,7 @@
             </tr>
 
         <?php
-        while ($row = mysqli_fetch_assoc($displayResults)) {
+        while ($row = mysqli_fetch_assoc($searchResults)) {
             echo "<tr>";
             echo "<td>" . $row['SellerID'] . "</td>";
             echo "<td>" . $row['SellerUsername'] . "</td>";
@@ -77,7 +80,6 @@
     }
 ?>
         </table>
-
 
     <?php
         include "../includes/footer.html";
