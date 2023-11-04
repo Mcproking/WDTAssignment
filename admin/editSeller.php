@@ -70,23 +70,23 @@
                 <div id="States">
                     State
                     <select name="State" id="state">
-                        <option value="<?php echo $row['SellerState'] ?>"><?php echo $row['SellerState'] ?></option>
-                        <option name="JHR" value="Johor">Johor</option>
-                        <option name="KDH" value="Kedah">Kedah</option>
-                        <option name="KTN" value="Kelantan">Kelantan</option>
-                        <option name="MLK" value="Melaka">Melaka</option>
-                        <option name="NSN" value="Negeri Sembilan">Negeri Sembilan</option>
-                        <option name="PHG" value="Pahang">Pahang</option>
-                        <option name="PNG" value="Pulau Pinang">Pulau Pinang</option>
-                        <option name="PRK" value="Perak">Perak</option>
-                        <option name="PLS" value="Perlis">Perlis</option>
-                        <option name="SBH" value="Sabah">Sabah</option>
-                        <option name="SWK" value="Sarawak">Sarawak</option>
-                        <option name="SGR" value="Selangor">Selangor</option>
-                        <option name="TRG" value="Terengganu">Terengganu</option>
-                        <option name="WPKL" value="Wilayah Persekutuan Kuala Lumpur">Wilayah Persekutuan Kuala Lumpur</option>
-                        <option name="WPLBN" value="Wilayah Persekutuan Labuan">Wilayah Persekutuan Labuan</option>
-                        <option name="WPPJY" value="Wilayah Persekutuan Putrajaya">Wilayah Persekutuan Putrajaya</option>
+                        <option id="selected" value="<?php echo $row['SellerState'] ?>"><?php echo $row['SellerState'] ?></option>
+                        <option id="JHR" value="Johor">Johor</option>
+                        <option id="KDH" value="Kedah">Kedah</option>
+                        <option id="KTN" value="Kelantan">Kelantan</option>
+                        <option id="MLK" value="Melaka">Melaka</option>
+                        <option id="NSN" value="Negeri Sembilan">Negeri Sembilan</option>
+                        <option id="PHG" value="Pahang">Pahang</option>
+                        <option id="PNG" value="Pulau Pinang">Pulau Pinang</option>
+                        <option id="PRK" value="Perak">Perak</option>
+                        <option id="PLS" value="Perlis">Perlis</option>
+                        <option id="SBH" value="Sabah">Sabah</option>
+                        <option id="SWK" value="Sarawak">Sarawak</option>
+                        <option id="SGR" value="Selangor">Selangor</option>
+                        <option id="TRG" value="Terengganu">Terengganu</option>
+                        <option id="WPKL" value="Wilayah Persekutuan Kuala Lumpur">Wilayah Persekutuan Kuala Lumpur</option>
+                        <option id="WPLBN" value="Wilayah Persekutuan Labuan">Wilayah Persekutuan Labuan</option>
+                        <option id="WPPJY" value="Wilayah Persekutuan Putrajaya">Wilayah Persekutuan Putrajaya</option>
                     </select>
                 </div>
             </form>
