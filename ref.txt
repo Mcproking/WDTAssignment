@@ -21,11 +21,12 @@ https://www.codingdeeply.com/what-is-in-php/#:~:text=In%20PHP%20code%2C%20operat
 
 https://stackoverflow.com/questions/21727317/how-to-check-confirm-password-field-in-form-without-reloading-page
 
-Registration
+https://www.w3schools.com/howto/howto_js_password_validation.asp
 https://w3schools.invisionzone.com/topic/12939-cancel-button-for-forms/
 https://stackoverflow.com/questions/61227490/html-css-trying-to-move-input-text-box-to-a-set-positon
 https://www.w3schools.com/tags/att_pattern.asp
 https://stackoverflow.com/questions/5670879/css-html-create-a-glowing-border-around-an-input-field
+https://www.w3docs.com/snippets/html/how-to-create-an-html-button-that-acts-like-a-link.html
 
 register fadein and out requriements
 https://stackoverflow.com/questions/47476510/display-none-not-working-in-css-animation
