@@ -44,28 +44,6 @@
                 
             </div>
             <div class="lists" id="seller">
-                <!-- <div id="record">
-                    <div class="record-detail" id="r-id">S2</div>
-                    <div class="record-detail" id="r-user">S1</div>
-                    <div class="record-detail" id="r-email">S1@S.c</div>
-                    <div class="record-detail" id="r-phone">0123456789</div>
-                    <div class="record-detail" id="r-address">mamamiya so looooooooooqweeeqwweqwewqeqweqwooooooooooong, Johor</div>
-                    <div class="record-detail" id="r-action">
-                        <a href="">EDIT</a>
-                        <button>DELETE</button>
-                    </div>
-                </div>
-                <div id="record">
-                    <div class="record-detail" id="r-id">ID</div>
-                    <div class="record-detail" id="r-user">Username</div>
-                    <div class="record-detail" id="r-email">Email</div>
-                    <div class="record-detail" id="r-phone">Phone</div>
-                    <div class="record-detail" id="r-address">Address</div>
-                    <div class="record-detail" id="r-action">
-                        <a href="">EDIT</a>
-                        <button>DELETE</button>
-                    </div>
-                </div> -->
                 <?php
                     include "../php/db_conn.php";
                     $email_querry = "SELECT `id`,`username`,`email`,`phone_no`,`address`,`state` FROM `seller` WHERE `username` = ?";
@@ -78,22 +56,24 @@
                             $smst->store_result();
 
                             if($smst->num_rows > 0){
-                                $smst->bind_result($id,$username,$email,$phone,$address,$state);
-                                $smst->fetch();
-                                $full_address = $address.$state;
-                                $html = '
-                                <div id="record">
-                                    <div class="record-detail" id="r-id">S'.$id.'</div>
-                                    <div class="record-detail" id="r-user">'.$username.'</div>
-                                    <div class="record-detail" id="r-email">'.$email.'</div>
-                                    <div class="record-detail" id="r-phone">'.$phone.'</div>
-                                    <div class="record-detail" id="r-address">'.$address.'</div>
-                                    <div class="record-detail" id="r-action">
-                                        <a href="./editSeller.php?SellerID='.$id.'" id="edit">EDIT</a>
-                                        <a onclick="confirmDelete()" id="delete">DELETE</a>
-                                    </div>
-                                </div>';
-                                echo $html;  
+                                for($x = 0; $x < $smst->num_rows; $x++){
+                                    $smst->bind_result($id,$username,$email,$phone,$address,$state);
+                                    $smst->fetch();
+                                    $full_address = $address.$state;
+                                    $html = '
+                                    <div id="record">
+                                        <div class="record-detail" id="r-id">S'.$id.'</div>
+                                        <div class="record-detail" id="r-user">'.$username.'</div>
+                                        <div class="record-detail" id="r-email">'.$email.'</div>
+                                        <div class="record-detail" id="r-phone">'.$phone.'</div>
+                                        <div class="record-detail" id="r-address">'.$address.'</div>
+                                        <div class="record-detail" id="r-action">
+                                            <a href="./editSeller.php?SellerID='.$id.'" id="edit">EDIT</a>
+                                            <a onclick="confirmDelete()" id="delete">DELETE</a>
+                                        </div>
+                                    </div>';
+                                    echo $html;  
+                                }
                             }
                         }
                     }else if($smst = $conn->prepare($getAll_querry)){
@@ -101,21 +81,23 @@
                         $smst->store_result();
 
                         if($smst->num_rows > 0){
-                            $smst->bind_result($id,$username,$email,$phone,$address,$state);
-                            $smst->fetch();
-                            $full_address = $address.$state;
-                            $html = '                                <div id="record">
-                            <div class="record-detail" id="r-id">S'.$id.'</div>
-                            <div class="record-detail" id="r-user">'.$username.'</div>
-                            <div class="record-detail" id="r-email">'.$email.'</div>
-                            <div class="record-detail" id="r-phone">'.$phone.'</div>
-                            <div class="record-detail" id="r-address">'.$address.'</div>
-                            <div class="record-detail" id="r-action">
-                                <a href="./editSeller.php?SellerID='.$id.'" id="edit">EDIT</a>
-                                <a onclick="confirmDelete()" id="delete">DELETE</a>
-                            </div>
-                        </div>';
-                            echo $html;
+                            for($x = 0; $x < $smst->num_rows; $x++){
+                                $smst->bind_result($id,$username,$email,$phone,$address,$state);
+                                $smst->fetch();
+                                $full_address = $address.$state;
+                                $html = '<div id="record">
+                                <div class="record-detail" id="r-id">S'.$id.'</div>
+                                <div class="record-detail" id="r-user">'.$username.'</div>
+                                <div class="record-detail" id="r-email">'.$email.'</div>
+                                <div class="record-detail" id="r-phone">'.$phone.'</div>
+                                <div class="record-detail" id="r-address">'.$address.'</div>
+                                <div class="record-detail" id="r-action">
+                                    <a href="./editSeller.php?SellerID='.$id.'" id="edit">EDIT</a>
+                                    <a onclick="confirmDelete()" id="delete">DELETE</a>
+                                </div>
+                            </div>';
+                                echo $html;
+                            }
                         }
                     }
                 ?>
