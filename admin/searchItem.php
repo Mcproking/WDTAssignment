@@ -1,3 +1,9 @@
+<?php
+    include "../php/db_conn.php";
+    $categories = "SELECT DISTINCT ItemCategory FROM Item";
+    $res = mysqli_query($conn, $categories);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,18 +36,23 @@
     </div>
 
     <div>
-        <form action="" method="get" id="Search">
-            Search by Category:
-            <select name="ItemCategories" id="ItemCategories">
-                <option value="" disabled selected hidden>--Select Category--</option>
-                <option value="Fruits">Fruits</option>
+        Search by Category:
+        <select name="ItemCategories" id="ItemCategories">
+            <option value="" disabled selected hidden>--Select Category--</option>
+            <?php
+                while ($rows = mysqli_fetch_assoc($res)) {
+            ?>
+                    <option value="<?php echo $rows['ItemCategory'] ?>"> <?php echo $rows['ItemCategory'] ?> </option>
+            <?php
+                }
+            ?>
+                <!-- <option value="Fruits">Fruits</option>
                 <option value="Vegetables">Vegetables</option>
                 <option value="Meat">Meat</option>
                 <option value="Dairy">Dairy</option>
                 <option value="TinCanned">Tin Canned</option>
-                <option value="Others">Others</option>
-            </select>
-        </form>
+                <option value="Others">Others</option> -->
+        </select>
     </div>
 
     <?php
@@ -65,9 +76,6 @@
 </html>
 
 <!-- Search items -->
-<?php
-    include "../php/db_conn.php";
-?>
 
 <script>
     var fruits = "Fruits";
