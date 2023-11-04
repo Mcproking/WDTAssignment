@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="../static/includes.css">
     <link rel="stylesheet" href="../static/admin/admin.css">
     <link rel="stylesheet" href="../static/admin/sidenav.css">
+    <link rel="stylesheet" href="../static/admin/searchItem.css">
 </head>
 <body>
     <?php
@@ -28,41 +29,131 @@
             include "./sidenav.html";
             ?>
         </div>
-    </div>
+    
+        <div id="items-holder">
+            <div id="items_title">
+                <h1>Items</h1>
+            </div>
 
-    <div id="items_title">
-        <h1>Items</h1>
-    </div>
+            <div id="searchCategory">
+                Search by Category:
+                <select name="ItemCategories" id="ItemCategories" onchange="selectCategory()">
+                    <option value="" disabled selected hidden>--Select Category--</option>
+                    <?php
+                        while ($rows = mysqli_fetch_assoc($res)) {
+                    ?>
+                            <option value="<?php echo $rows['category'] ?>"> <?php echo $rows['category'] ?> </option>
+                    <?php
+                        }
+                    ?>
+                        <!-- <option value="Fruits">Fruits</option>
+                        <option value="Vegetables">Vegetables</option>
+                        <option value="Meat">Meat</option>
+                        <option value="Dairy">Dairy</option>
+                        <option value="TinCanned">Tin Canned</option>
+                        <option value="Others">Others</option> -->
+                </select>
+            </div>
 
-    <div>
-        Search by Category:
-        <select name="ItemCategories" id="ItemCategories" onchange="selectCategory()">
-            <option value="" disabled selected hidden>--Select Category--</option>
-            <?php
-                while ($rows = mysqli_fetch_assoc($res)) {
-            ?>
-                    <option value="<?php echo $rows['ItemCategory'] ?>"> <?php echo $rows['ItemCategory'] ?> </option>
-            <?php
-                }
-            ?>
-                <!-- <option value="Fruits">Fruits</option>
-                <option value="Vegetables">Vegetables</option>
-                <option value="Meat">Meat</option>
-                <option value="Dairy">Dairy</option>
-                <option value="TinCanned">Tin Canned</option>
-                <option value="Others">Others</option> -->
-        </select>
+            <div class="items">
 
-        <table>
-            <thead>
-                <th>Item Image</th>
-                <th>Name</th>
-                <th>Price</th>
-            </thead>
-            <tbody id="searchResult">
+                <div class="item">
+                    <img src="https://picsum.photos/seed/pe/500/500/" alt="" width="250px">
+                    <div class="item-text">
+                        <div class="text" id="Item">"Item Name"</div>
+                        <div class="text" id="Price">"Price"</div>
+                    </div>
+                </div>
 
-            </tbody>
-        </table>
+                <div class="item">
+                    <img src="https://picsum.photos/seed/pe/500/500/" alt="" width="250px">
+                    <div class="item-text">
+                        <div class="text" id="Item">"Item Name"</div>
+                        <div class="text" id="Price">"Price"</div>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="https://picsum.photos/seed/pe/500/500/" alt="" width="250px">
+                    <div class="item-text">
+                        <div class="text" id="Item">"Item Name"</div>
+                        <div class="text" id="Price">"Price"</div>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="https://picsum.photos/seed/pe/500/500/" alt="" width="250px">
+                    <div class="item-text">
+                        <div class="text" id="Item">"Item Name"</div>
+                        <div class="text" id="Price">"Price"</div>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="https://picsum.photos/seed/pe/500/500/" alt="" width="250px">
+                    <div class="item-text">
+                        <div class="text" id="Item">"Item Name"</div>
+                        <div class="text" id="Price">"Price"</div>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="https://picsum.photos/seed/pe/500/500/" alt="" width="250px">
+                    <div class="item-text">
+                        <div class="text" id="Item">"Item Name"</div>
+                        <div class="text" id="Price">"Price"</div>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="https://picsum.photos/seed/pe/500/500/" alt="" width="250px">
+                    <div class="item-text">
+                        <div class="text" id="Item">"Item Name"</div>
+                        <div class="text" id="Price">"Price"</div>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="https://picsum.photos/seed/pe/500/500/" alt="" width="250px">
+                    <div class="item-text">
+                        <div class="text" id="Item">"Item Name"</div>
+                        <div class="text" id="Price">"Price"</div>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="https://picsum.photos/seed/pe/500/500/" alt="" width="250px">
+                    <div class="item-text">
+                        <div class="text" id="Item">"Item Name"</div>
+                        <div class="text" id="Price">"Price"</div>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="https://picsum.photos/seed/pe/500/500/" alt="" width="250px">
+                    <div class="item-text">
+                        <div class="text" id="Item">"Item Name"</div>
+                        <div class="text" id="Price">"Price"</div>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="https://picsum.photos/seed/pe/500/500/" alt="" width="250px">
+                    <div class="item-text">
+                        <div class="text" id="Item">"Item Name"</div>
+                        <div class="text" id="Price">"Price"</div>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="https://picsum.photos/seed/pe/500/500/" alt="" width="250px">
+                    <div class="item-text">
+                        <div class="text" id="Item">"Item Name"</div>
+                        <div class="text" id="Price">"Price"</div>
+                    </div>
+                </div>
+            </div>
+        </div> 
     </div>
 
     <?php
