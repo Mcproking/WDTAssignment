@@ -188,13 +188,6 @@
                 }
             }
         }
-
-
-        if (search.value.match(fruits)) {
-            <?php
-
-            ?>
-        }
     </script>
 
 </body>
