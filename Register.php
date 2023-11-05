@@ -104,31 +104,31 @@
                     </div>
 
                     <div id="Address">
-                        <label for="address">Address (Optional)<br><textarea name="txtAddress" id="address"
+                        <label for="address">Address<span style="color:red">*</span><br><textarea name="txtAddress" id="address"
                         placeholder="Enter address without state&#10[Street Address], [Postal Code & City]"
                         class="input" cols="50" rows="5" autocomplete="off" required></textarea></label>
                     </div>     
 
                     <div id="States">
-                        State (Optional)
+                        State<span style="color:red">*</span>
                         <select name="State" id="state" required>
                             <option value="">--Select State--</option>
-                            <option value="JHR">Johor</option>
-                            <option value="KDH">Kedah</option>
-                            <option value="KTN">Kelantan</option>
-                            <option value="MLK">Melaka</option>
-                            <option value="NSN">Negeri Sembilan</option>
-                            <option value="PHG">Pahang</option>
-                            <option value="PNG">Pulau Pinang</option>
-                            <option value="PRK">Perak</option>
-                            <option value="PLS">Perlis</option>
-                            <option value="SBH">Sabah</option>
-                            <option value="SWK">Sarawak</option>
-                            <option value="SGR">Selangor</option>
-                            <option value="TRG">Terengganu</option>
-                            <option value="WPKL">Wilayah Persekutuan Kuala Lumpur</option>
-                            <option value="WPLBN">Wilayah Persekutuan Labuan</option>
-                            <option value="WPPJY">Wilayah Persekutuan Putrajaya</option>
+                            <option name="JHR" value="Johor">Johor</option>
+                            <option name="KDH" value="Kedah">Kedah</option>
+                            <option name="KTN" value="Kelantan">Kelantan</option>
+                            <option name="MLK" value="Melaka">Melaka</option>
+                            <option name="NSN" value="Negeri Sembilan">Negeri Sembilan</option>
+                            <option name="PHG" value="Pahang">Pahang</option>
+                            <option name="PNG" value="Pulau Pinang">Pulau Pinang</option>
+                            <option name="PRK" value="Perak">Perak</option>
+                            <option name="PLS" value="Perlis">Perlis</option>
+                            <option name="SBH" value="Sabah">Sabah</option>
+                            <option name="SWK" value="Sarawak">Sarawak</option>
+                            <option name="SGR" value="Selangor">Selangor</option>
+                            <option name="TRG" value="Terengganu">Terengganu</option>
+                            <option name="WPKL" value="Wilayah Persekutuan Kuala Lumpur">Wilayah Persekutuan Kuala Lumpur</option>
+                            <option name="WPLBN" value="Wilayah Persekutuan Labuan">Wilayah Persekutuan Labuan</option>
+                            <option name="WPPJY" value="Wilayah Persekutuan Putrajaya">Wilayah Persekutuan Putrajaya</option>
                         </select>
                     </div>
 
