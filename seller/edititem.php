@@ -33,9 +33,9 @@
                     <input type="text" name="item-price" id="edit-textbox">
                 </div>
                 <div class="edit-item-catagory-box" id="item-catagory">
-                    <div class="edit-item-catagory-box-header" id="edit-header"><label for="item-catagory">Item Catagory</label></div>
+                    <div class="edit-item-catagory-box-header" id="edit-header"><label for="item-catagory">Item Category</label></div>
                     <select name="item-catagory" id="edit-selectbox">
-                        <option value="none" disabled selected hidden> Item Catagory </option>
+                        <option value="none" disabled selected hidden> Item Category </option>
                         <option value="">I1</option>
                         <option value="">I2</option>
                         <option value="">I3</option>
