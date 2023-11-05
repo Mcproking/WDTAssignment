@@ -40,7 +40,7 @@
                     <div id="text">Edit or Delete Seller</div>
                 </div>
             </a>
-            <a class="menu-box" id="customer-list" href="">
+            <a class="menu-box" id="customer-list" href="./customerList.php">
                 <img src="../imgs/admin_imgs/customer-list-icon.png" alt="">
                 <div class="textbox">
                     <div id="text-header">Customer List</div>

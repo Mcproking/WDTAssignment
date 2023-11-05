@@ -119,6 +119,11 @@
     cursor:pointer;
 }
 
+.delete-button:hover {
+    background-color: #FF0000;
+    color: #F2F2F2;
+}
+
 .right-option{
     display: flex;
     gap:15px;
@@ -140,3 +145,9 @@
     color:black;
     text-decoration: none;
 }
+
+.checkout-button:hover {
+    color: #FFB000;
+    background-color: #0e1111;
+}
+

@@ -1,7 +1,13 @@
 admin:
-abc     
+root
+Qq1!1234
 
 seller:
 S1 Ss1!1234
+Anabel Anabel$100
+Amanda Amanda$100
+DonaldTrump Trump$100
 
 customer:
+Daniel@gmail.com Daniel+1
+Aiden@gmail.com Aiden$100
