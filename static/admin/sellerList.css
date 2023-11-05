@@ -50,6 +50,10 @@
     border-style: none;
 }
 
+#searchButton:hover {
+    background-color: #02D249;
+}
+
 /* List */
 #header{
     display: flex;
@@ -133,6 +137,11 @@
     font-weight: bold;
 }
 
+#edit:hover {
+    background-color: #B07901;
+    /* color: #EEEEEE; */
+}
+
 #delete {
     padding: 10px 30px;
     background-color: #901111;
@@ -143,12 +152,7 @@
     font-size: 16px;
 }
 
-/* #r-action button{
-    padding: 10px 30px;
-    background-color: #901111;
-    border-style: none;
-    border-radius: 10px;
-    color:white;
-    font-weight: bold;
-    font-size: 16px;
-} */
+#delete:hover {
+    background-color: #FF0000;
+    color: #F2F2F2;
+}
