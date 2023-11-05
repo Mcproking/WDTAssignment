@@ -37,7 +37,7 @@
 
             <div id="searchCategory">
                 <div id="search-header">Search by Category:</div>
-                <select name="ItemCategories" id="ItemCategories" onchange="selectCategory()">
+                <select name="ItemCategories" id="ItemCategories" onchange="searchCategory()">
                     <option value="" disabled selected hidden>--Select Category--</option>
                     <?php
                         while ($rows = mysqli_fetch_assoc($res)) {
