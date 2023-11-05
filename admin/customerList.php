@@ -41,7 +41,6 @@
                 <div class="header-detail" id="h-phone">Phone</div>
                 <div class="header-detail" id="h-address">Address</div>
                 <div class="header-detail" id="h-action">Action</div>
-                
             </div>
             <div class="lists" id="seller">
                 <?php
