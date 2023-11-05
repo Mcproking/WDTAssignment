@@ -1,7 +1,7 @@
 <?php
     include 'db_conn.php';
     if (isset($_POST['confirmButton'])) {
-        $id = $_POST['sellerID'];
+        $id = $_GET['id'];
         $name = $_POST['txtItemName'];
         $price = $_POST['txtItemPrice'];
         $category = $_POST['ItemCategories'];

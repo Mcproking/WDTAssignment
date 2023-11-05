@@ -109,7 +109,7 @@
             </div>
             <div class="bdy_flex_right right-option">
                 <div class="total-price">RM <?php echo number_format((float)$cartprice, 2, '.', '');?></div>
-                <a href="./checkout.php" class="checkout-button">Check out</a>
+                <button href="./checkout.php" class="checkout-button">Check out</button>
             </div>
         </div>
     </div>

@@ -17,7 +17,7 @@ $address = $_POST['txtAddress'];
 $state = $_POST['State'];
 
 $sql_ChkAccount = "SELECT `email` FROM `customer` WHERE `email` = ?";
-$sql_AddAccount = "INSERT INTO `customer`(`username`, `password`, `email`, `phone_no`, `gender`, `dob`) VALUES (?,?,?,?,?,? )";
+$sql_AddAccount = "INSERT INTO `customer`(`username`, `password`, `email`, `phone_no`, `gender`, `dob`, `address`,`state`) VALUES (?,?,?,?,?,?,?,?)";
 
 if($main = $conn ->prepare($sql_ChkAccount)){
     $main -> bind_param("s",$email);
@@ -35,7 +35,7 @@ if($main = $conn ->prepare($sql_ChkAccount)){
 
     if($main = $conn -> prepare($sql_AddAccount)){
         if($main = $conn -> prepare($sql_AddAccount)){
-            $main -> bind_param("ssssss",$username,$password,$email,$phone,$gender,$dob);
+            $main -> bind_param("ssssssss",$username,$password,$email,$phone,$gender,$dob,$address,$state);
             $main -> execute();
             $main -> close();
             $conn -> close();

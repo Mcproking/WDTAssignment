@@ -106,12 +106,12 @@
                     <div id="Address">
                         <label for="address">Address (Optional)<br><textarea name="txtAddress" id="address"
                         placeholder="Enter address without state&#10[Street Address], [Postal Code & City]"
-                        class="input" cols="50" rows="5" autocomplete="off"></textarea></label>
+                        class="input" cols="50" rows="5" autocomplete="off" required></textarea></label>
                     </div>     
 
                     <div id="States">
                         State (Optional)
-                        <select name="State" id="state">
+                        <select name="State" id="state" required>
                             <option value="">--Select State--</option>
                             <option value="JHR">Johor</option>
                             <option value="KDH">Kedah</option>
