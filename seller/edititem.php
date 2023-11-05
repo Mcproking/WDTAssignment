@@ -12,6 +12,7 @@
 </head>
 <body>
     <?php
+    session_start();
     include "../includes/header.php";
     ?>
     <div class="wrapper">
@@ -77,7 +78,7 @@
         });
     </script>
     <?php
-    include "../includes/footer.html";
+    include "../includes/footer.php";
     ?>
 </body>
 </html>
