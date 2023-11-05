@@ -67,72 +67,30 @@
             </div>
             <div class="latest-items">            
                 <div class="latest-itemsbox">
-                    <!-- This is to use with php and mysql.
-                    <div class="latest-item">
-                        <img src="https://picsum.photos/seed/pe/500/500/" alt="" width="250px">
+                <?php
+                    include './php/db_conn.php';
+                    $querry_list = 'SELECT `id`, `name`, `price`,`img_path` FROM `item` LIMIT 0,8 ';
+                    if($smst = $conn->prepare($querry_list)){
+                        $smst->execute();
+                        $smst->store_result();
+                        if ($smst->num_rows > 0){
+                            for ($x=0; $x < $smst->num_rows; $x++) {
+                                $smst->bind_result($id, $name, $price, $img_path);
+                                $smst->fetch();
+                                $img_path = substr($img_path,1);
+                                $link = "location.href='./item.php?item=".$id."'";
+                                $html = '<div class="latest-item">
+                        <img src="'.$img_path.'" alt="" width="250px">
                         <div class="latest-itemtext">
-                            <div class="item-text" id="Item">.$ItemName.</div>
-                            <div class="item-text" id="Price">.$ItemPrice.</div>
+                            <div class="item-text" id="Item">'.$name.'</div>
+                            <div class="item-text" id="Price">RM '.$price.'</div>
                         </div>
-                    </div>
-  
-                     -->
-                    <div class="latest-item">
-                        <img src="https://picsum.photos/seed/pe/500/500/" alt="" width="250px">
-                        <div class="latest-itemtext">
-                            <div class="item-text" id="Item">"Item Name"</div>
-                            <div class="item-text" id="Price">"Price"</div>
-                        </div>
-                    </div>
-                    <div class="latest-item">
-                        <img src="https://picsum.photos/seed/pe/500/500/" alt="" width="250px">
-                        <div class="latest-itemtext">
-                            <div class="item-text" id="Item">"Item Name"</div>
-                            <div class="item-text" id="Price">"Price"</div>
-                        </div>
-                    </div>
-                    <div class="latest-item">
-                        <img src="https://picsum.photos/seed/pe/500/500/" alt="" width="250px">
-                        <div class="latest-itemtext">
-                            <div class="item-text" id="Item">"Item Name"</div>
-                            <div class="item-text" id="Price">"Price"</div>
-                        </div>
-                    </div>
-                    <div class="latest-item">
-                        <img src="https://picsum.photos/seed/pe/500/500/" alt="" width="250px">
-                        <div class="latest-itemtext">
-                            <div class="item-text" id="Item">"Item Name"</div>
-                            <div class="item-text" id="Price">"Price"</div>
-                        </div>
-                    </div>
-                    <div class="latest-item">
-                        <img src="https://picsum.photos/seed/pe/500/500/" alt="" width="250px">
-                        <div class="latest-itemtext">
-                            <div class="item-text" id="Item">"Item Name"</div>
-                            <div class="item-text" id="Price">"Price"</div>
-                        </div>
-                    </div>
-                    <div class="latest-item">
-                        <img src="https://picsum.photos/seed/pe/500/500/" alt="" width="250px">
-                        <div class="latest-itemtext">
-                            <div class="item-text" id="Item">"Item Name"</div>
-                            <div class="item-text" id="Price">"Price"</div>
-                        </div>
-                    </div>
-                    <div class="latest-item">
-                        <img src="https://picsum.photos/seed/pe/500/500/" alt="" width="250px">
-                        <div class="latest-itemtext">
-                            <div class="item-text" id="Item">"Item Name"</div>
-                            <div class="item-text" id="Price">"Price"</div>
-                        </div>
-                    </div>
-                    <div class="latest-item">
-                        <img src="https://picsum.photos/seed/pe/500/500/" alt="" width="250px">
-                        <div class="latest-itemtext">
-                            <div class="item-text" id="Item">"Item Name"</div>
-                            <div class="item-text" id="Price">"Price"</div>
-                        </div>
-                    </div>
+                    </div>';
+                            echo $html;
+                            }
+                        }
+                    }                  
+                ?>
                 </div>
             </div>
         </div>
