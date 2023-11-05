@@ -35,7 +35,7 @@
             </a>
 
 
-            <a class="box" id="view-order">
+            <a class="box" id="view-order" href="./vieworder.php">
                 <img src="../imgs/seller_imgs/view-order-icon.png">
                 <div class="textbox">
                     <div class="box-header">View Order</div>
