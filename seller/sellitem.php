@@ -17,27 +17,6 @@
         .h_box {
             display: none;
         }
-        /*Requirement slide in*/
-        @keyframes slideIn {
-            0% {
-                opacity: 0;
-                transform: translateY(-40px);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        @keyframes slideOut {
-            0% {
-                opacity: 1;
-                transform: translateY(0);
-            }
-            100% {
-                opacity: 0;
-                transform: translateY(40px);
-            }
-        }
     </style>
 </head>
 <body>
