@@ -55,7 +55,7 @@
         </div>
             
         <div class="self-intro">
-            <img src="https://picsum.photos/id/307/500/300" width="500px">
+            <img src="./imgs/T-pose.jpg" width="500px">
             <div class="intro-text bdy">
             EZGG, your needs in one place. <br> Search no more!
             </div>

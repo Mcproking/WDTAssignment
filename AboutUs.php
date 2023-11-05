@@ -96,7 +96,7 @@
         <br>
         <br>
         <?php
-        include "./includes/footer.html";
+        include "./includes/footer.php";
         ?>
     </div>
 </body>
