@@ -96,14 +96,14 @@
                     <script src="../JavaScript/register.js"></script>
 
                     <div id="Address">
-                        <label for="address">Address (Optional)<br><textarea name="txtAddress" id="address"
+                        <label for="address">Address<span style="color:red">*</span><br><textarea name="txtAddress" id="address"
                         placeholder="Enter address without state&#10[Street Address], [Postal Code & City]"
-                        class="input" cols="50" rows="5" autocomplete="off"></textarea></label>
+                        class="input" cols="50" rows="5" autocomplete="off" required></textarea></label>
                     </div>     
 
                     <div id="States">
-                        State (Optional)
-                        <select name="State" id="state">
+                        State<span style="color:red">*</span>
+                        <select name="State" id="state" required>
                             <option value="">--Select State--</option>
                             <option name="JHR" value="Johor">Johor</option>
                             <option name="KDH" value="Kedah">Kedah</option>
