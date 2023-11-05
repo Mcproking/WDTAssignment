@@ -11,7 +11,7 @@
         session_start();
 
         // check if the session is login alrdy
-        if(!empty($_SESSION['loggedin'])){
+        if(!empty($_SESSION['loggedin']) and $_SESSION['auth'] == 'Admin'){
             header('Location: ../admin/admin.php');
         }
     ?>
@@ -38,7 +38,7 @@
             <?php
                 if(!empty($_SESSION['FLASH'])){
                     echo'<div id="error">'.$_SESSION['FLASH'].'</div>';
-                    $_SESSION = array();
+                    $_SESSION['FLASH'] = '';
                 }
             ?>
         </div>

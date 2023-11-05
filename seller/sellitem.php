@@ -42,8 +42,8 @@
 </head>
 <body>
     <?php
+        session_start();
         include '../includes/header.php';
-        $_SESSION['id'] = '2';
     ?>
 
     <div id="wrapper">
@@ -109,7 +109,7 @@
         </div>
     </div>
     <?php
-        include '../includes/footer.html';
+        include '../includes/footer.php';
     ?>
 </body>
 </html>

@@ -46,11 +46,11 @@
             <div class="lists" id="seller">
                 <?php
                     include "../php/db_conn.php";
-                    $email_querry = "SELECT `id`,`username`,`email`,`phone_no`,`address`,`state` FROM `seller` WHERE `username` = ?";
+                    $username_querry = "SELECT `id`,`username`,`email`,`phone_no`,`address`,`state` FROM `seller` WHERE `username` = ?";
                     $getAll_querry = "SELECT `id`,`username`,`email`,`phone_no`,`address`,`state` FROM `seller`";
 
                     if(!empty($_GET["searchSeller"])){
-                        if($smst = $conn->prepare($email_querry)){
+                        if($smst = $conn->prepare($username_querry)){
                             $smst->bind_param("s", $_GET["searchSeller"]);
                             $smst->execute();
                             $smst->store_result();
@@ -106,7 +106,7 @@
     </div>
 
     <?php
-        include "../includes/footer.html";
+        include "../includes/simple_footer.html";
     ?>
 
     <script>

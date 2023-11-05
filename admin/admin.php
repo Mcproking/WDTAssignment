@@ -13,6 +13,7 @@
 </head>
 <body>
     <?php
+    session_start();
     include "../includes/header.php";
     
     ?>
@@ -46,7 +47,7 @@
                     <div id="text">View and Delete Customer</div>
                 </div>
             </a>
-            <a class="menu-box" id="item-list" href="">
+            <a class="menu-box" id="item-list" href="./searchItem.php">
                 <img src="../imgs/admin_imgs/items-list-icon.png" alt="">
                 <div class="textbox">                
                     <div id="text-header">Items</div>
