@@ -69,7 +69,7 @@
                 <div class="latest-itemsbox">
                 <?php
                     include './php/db_conn.php';
-                    $querry_list = 'SELECT `id`, `name`, `price`,`img_path` FROM `item` LIMIT 0,8 ';
+                    $querry_list = 'SELECT `id`, `name`, `price`,`img_path` FROM `item`  ORDER BY `id` DESC LIMIT 0,8';
                     if($smst = $conn->prepare($querry_list)){
                         $smst->execute();
                         $smst->store_result();

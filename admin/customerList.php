@@ -12,6 +12,7 @@
 </head>
 <body>
     <?php
+    session_start();
     include "../includes/header.php";
     ?>
 
@@ -45,8 +46,8 @@
             <div class="lists" id="seller">
                 <?php
                     include "../php/db_conn.php";
-                    $email_querry = "SELECT customer.id,`username`,`email`,`phone_no`,`address`,`state` FROM `customer` LEFT JOIN cust_address ON customer.id = cust_address.cust_id WHERE `username` = ? ORDER BY customer.id ASC";
-                    $getAll_querry = "SELECT customer.id,`username`,`email`,`phone_no`,`address`,`state` FROM `customer` LEFT JOIN cust_address ON customer.id = cust_address.cust_id ORDER BY customer.id ASC";
+                    $email_querry = "SELECT customer.id,`username`,`email`,`phone_no`,`address`,`state` FROM `customer` WHERE `username` = ?";
+                    $getAll_querry = "SELECT customer.id,`username`,`email`,`phone_no`,`address`,`state` FROM `customer`";
 
                     if(!empty($_GET["searchCustomer"])){
                         if($smst = $conn->prepare($email_querry)){

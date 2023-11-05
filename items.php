@@ -38,8 +38,8 @@
                                 $html = '<div class="item" onclick="'.$link.'">
                                 <img src="'.$img_path.'" alt="" width="250px">
                                 <div class="item-text">
-                                    <div class="text" id="Item">"'.$name.'"</div>
-                                    <div class="text" id="Price">"'.$price.'"</div>
+                                    <div class="text" id="Item">'.$name.'</div>
+                                    <div class="text" id="Price">RM '.$price.'</div>
                                 </div>
                             </div>';
                             echo $html;

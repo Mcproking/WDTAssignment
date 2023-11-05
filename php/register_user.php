@@ -39,7 +39,7 @@ if($main = $conn ->prepare($sql_ChkAccount)){
             $main -> execute();
             $main -> close();
             $conn -> close();
-            header("Location:../index.php");
+            header("Location:../login.php");
         }
     }
     

@@ -66,7 +66,7 @@
         </div>
     </div>
     <?php
-    include './includes/footer.html';
+    include './includes/footer.php';
     ?>
     <script>
         var plus_btn = document.getElementById("plus-button");

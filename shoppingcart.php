@@ -109,7 +109,7 @@
             </div>
             <div class="bdy_flex_right right-option">
                 <div class="total-price">RM <?php echo number_format((float)$cartprice, 2, '.', '');?></div>
-                <button href="./checkout.php" class="checkout-button">Check out</button>
+                <button onclick="checkout()" class="checkout-button">Check out</button>
             </div>
         </div>
     </div>
@@ -117,7 +117,7 @@
     include "./includes/footer.php";
     ?>
     <script>
-        let chkboxs = document.querySelectorAll("[id='chkbox']");
+        let chkboxs = document.querySelectorAll("[type='checkbox']");
         var items = new Array();
         function delete_items(){
             items = [];
@@ -132,6 +132,11 @@
             // console.log(items);
         }
         
+        function checkout(){
+            <?php $_SESSION['cart'] = array();?>
+            alert("item send")
+            window.location.href="./index.php";
+        }
     </script>
 </body>
 </html>

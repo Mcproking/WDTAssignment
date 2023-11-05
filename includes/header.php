@@ -40,7 +40,6 @@
                         <div class="h_user h_box_text">Welcome, '.$_SESSION['username'].'</div>
                     </div>
                     <div class="h_box_dropdown">
-                            <a href="">Account</a>
                             <a href="'.$php_src.'logout.php">Logout</a>
                     </div>
                     </div>
