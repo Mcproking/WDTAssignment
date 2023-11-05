@@ -1,9 +1,3 @@
-<?php
-    include "../php/db_conn.php";
-    $categories = "SELECT DISTINCT category FROM item";
-    $res = mysqli_query($conn, $categories);
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,7 +33,12 @@
                 <div id="search-header">Search by Category:</div>
                 <select name="ItemCategories" id="ItemCategories" onchange="searchCategory()">
                     <option value="" disabled selected hidden>--Select Category--</option>
+                    <option value="">--Show all--</option>
                     <?php
+                        include "../php/db_conn.php";
+                        $categories = "SELECT DISTINCT category FROM item";
+                        $res = mysqli_query($conn, $categories);
+
                         while ($rows = mysqli_fetch_assoc($res)) {
                     ?>
                             <option value="<?php echo $rows['category'] ?>"> <?php echo $rows['category'] ?> </option>
@@ -56,102 +55,64 @@
             </div>
 
             <div class="items">
+                <!-- Search items -->
 
-                <div class="item">
-                    <img src="https://picsum.photos/seed/pe/500/500/" alt="" width="250px">
-                    <div class="item-text">
-                        <div class="text" id="Item">"Item Name"</div>
-                        <div class="text" id="Price">"Price"</div>
-                    </div>
-                </div>
+                <script>
+                    function searchCategory() {
+                        const categories = ["Fruits", "Vegetables", "Meat", "Dairy", "TinCanned", "Others", ""]
+                        var search = document.getElementById("ItemCategories");
 
-                <div class="item">
-                    <img src="https://picsum.photos/seed/pe/500/500/" alt="" width="250px">
-                    <div class="item-text">
-                        <div class="text" id="Item">"Item Name"</div>
-                        <div class="text" id="Price">"Price"</div>
-                    </div>
-                </div>
+                        for (let i=0; i < categories.length; i++) {
+                            if (search.value === categories[i]) {
+                                window.location.href="./searchItem.php?Category=" + search.value;
+                            } 
+                        }
+                    }
+                </script>
 
-                <div class="item">
-                    <img src="https://picsum.photos/seed/pe/500/500/" alt="" width="250px">
-                    <div class="item-text">
-                        <div class="text" id="Item">"Item Name"</div>
-                        <div class="text" id="Price">"Price"</div>
-                    </div>
-                </div>
+                <?php
+                    include "../php/db_conn.php";
 
-                <div class="item">
-                    <img src="https://picsum.photos/seed/pe/500/500/" alt="" width="250px">
-                    <div class="item-text">
-                        <div class="text" id="Item">"Item Name"</div>
-                        <div class="text" id="Price">"Price"</div>
-                    </div>
-                </div>
-
-                <div class="item">
-                    <img src="https://picsum.photos/seed/pe/500/500/" alt="" width="250px">
-                    <div class="item-text">
-                        <div class="text" id="Item">"Item Name"</div>
-                        <div class="text" id="Price">"Price"</div>
-                    </div>
-                </div>
-
-                <div class="item">
-                    <img src="https://picsum.photos/seed/pe/500/500/" alt="" width="250px">
-                    <div class="item-text">
-                        <div class="text" id="Item">"Item Name"</div>
-                        <div class="text" id="Price">"Price"</div>
-                    </div>
-                </div>
-
-                <div class="item">
-                    <img src="https://picsum.photos/seed/pe/500/500/" alt="" width="250px">
-                    <div class="item-text">
-                        <div class="text" id="Item">"Item Name"</div>
-                        <div class="text" id="Price">"Price"</div>
-                    </div>
-                </div>
-
-                <div class="item">
-                    <img src="https://picsum.photos/seed/pe/500/500/" alt="" width="250px">
-                    <div class="item-text">
-                        <div class="text" id="Item">"Item Name"</div>
-                        <div class="text" id="Price">"Price"</div>
-                    </div>
-                </div>
-
-                <div class="item">
-                    <img src="https://picsum.photos/seed/pe/500/500/" alt="" width="250px">
-                    <div class="item-text">
-                        <div class="text" id="Item">"Item Name"</div>
-                        <div class="text" id="Price">"Price"</div>
-                    </div>
-                </div>
-
-                <div class="item">
-                    <img src="https://picsum.photos/seed/pe/500/500/" alt="" width="250px">
-                    <div class="item-text">
-                        <div class="text" id="Item">"Item Name"</div>
-                        <div class="text" id="Price">"Price"</div>
-                    </div>
-                </div>
-
-                <div class="item">
-                    <img src="https://picsum.photos/seed/pe/500/500/" alt="" width="250px">
-                    <div class="item-text">
-                        <div class="text" id="Item">"Item Name"</div>
-                        <div class="text" id="Price">"Price"</div>
-                    </div>
-                </div>
-
-                <div class="item">
-                    <img src="https://picsum.photos/seed/pe/500/500/" alt="" width="250px">
-                    <div class="item-text">
-                        <div class="text" id="Item">"Item Name"</div>
-                        <div class="text" id="Price">"Price"</div>
-                    </div>
-                </div>
+                    if (empty($_GET['Category'])) {
+                        
+                        $getAllItems = "SELECT img_path, name, price FROM item ORDER BY id LIMIT 12";
+                        $getAllResults = mysqli_query($conn, $getAllItems);
+                        if (mysqli_num_rows($getAllResults) > 0) {
+                            while ($item = mysqli_fetch_assoc($getAllResults)) {
+                ?>
+                                <div class="item">
+                                    <img src="<?php echo $item['img_path'] ?>" alt="" width="250px">
+                                    <div class="item-text">
+                                        <div class="text" id="Item"><?php echo $item['name'] ?></div>
+                                        <div class="text" id="Price"><?php echo $item['price'] ?></div>
+                                    </div>
+                                </div> 
+                <?php
+                            }
+                        }
+                        else {
+                            $Category = $_GET['Category'];
+                            $searchQuery = "SELECT img_path, name, price FROM item WHERE category='$Category'";
+                            $searchResults = mysqli_query($conn, $searchQuery);
+                            if (mysqli_num_rows($searchResults) > 0) {
+                                while ($data = mysqli_fetch_assoc($searchResults)) {
+                ?>
+                                    <div class="item">
+                                        <img src="<?php echo $data['img_path'] ?>" alt="" width="250px">
+                                        <div class="item-text">
+                                            <div class="text" id="Item"><?php echo $data['name'] ?></div>
+                                            <div class="text" id="Price"><?php echo $data['price'] ?></div>
+                                        </div>
+                                    </div>
+                        <?php
+                                }
+                            }
+                            else {
+                                echo "No records found";
+                            }
+                        }
+                    }
+            ?>
             </div>
         </div> 
     </div>
@@ -174,21 +135,6 @@
         }
     </script>
 
-    <!-- Search items -->
-
-    <script>
-        function searchCategory() {
-
-            const categories = ["Fruits", "Vegetables", "Meat", "Dairy", "Tin Canned", "Others"]
-            var search = document.getElementById("ItemCategories");
-
-            for (let i=0; i < categories.length; i++) {
-                if (search.value === categories[i]) {
-                    window.location.href="./showItems.php?Category=" + search.value;
-                }
-            }
-        }
-    </script>
 
 </body>
 </html>
