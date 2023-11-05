@@ -21,103 +21,37 @@
                 <?php echo $_GET['items']; ?>
             </div>
             <div class="items">
-                <!-- For sql uses -->
-                <!-- <div class="item">
-                    <img src="https://picsum.photos/seed/pe/500/500/" alt="" width="250px">
-                    <div class="item-text">
-                        <div class="text" id="Item">"Item Name"</div>
-                        <div class="text" id="Price">"Price"</div>
-                    </div>
-                </div> -->
-                <div class="item">
-                    <img src="https://picsum.photos/seed/pe/500/500/" alt="" width="250px">
-                    <div class="item-text">
-                        <div class="text" id="Item">"Item Name"</div>
-                        <div class="text" id="Price">"Price"</div>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="https://picsum.photos/seed/pe/500/500/" alt="" width="250px">
-                    <div class="item-text">
-                        <div class="text" id="Item">"Item Name"</div>
-                        <div class="text" id="Price">"Price"</div>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="https://picsum.photos/seed/pe/500/500/" alt="" width="250px">
-                    <div class="item-text">
-                        <div class="text" id="Item">"Item Name"</div>
-                        <div class="text" id="Price">"Price"</div>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="https://picsum.photos/seed/pe/500/500/" alt="" width="250px">
-                    <div class="item-text">
-                        <div class="text" id="Item">"Item Name"</div>
-                        <div class="text" id="Price">"Price"</div>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="https://picsum.photos/seed/pe/500/500/" alt="" width="250px">
-                    <div class="item-text">
-                        <div class="text" id="Item">"Item Name"</div>
-                        <div class="text" id="Price">"Price"</div>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="https://picsum.photos/seed/pe/500/500/" alt="" width="250px">
-                    <div class="item-text">
-                        <div class="text" id="Item">"Item Name"</div>
-                        <div class="text" id="Price">"Price"</div>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="https://picsum.photos/seed/pe/500/500/" alt="" width="250px">
-                    <div class="item-text">
-                        <div class="text" id="Item">"Item Name"</div>
-                        <div class="text" id="Price">"Price"</div>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="https://picsum.photos/seed/pe/500/500/" alt="" width="250px">
-                    <div class="item-text">
-                        <div class="text" id="Item">"Item Name"</div>
-                        <div class="text" id="Price">"Price"</div>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="https://picsum.photos/seed/pe/500/500/" alt="" width="250px">
-                    <div class="item-text">
-                        <div class="text" id="Item">"Item Name"</div>
-                        <div class="text" id="Price">"Price"</div>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="https://picsum.photos/seed/pe/500/500/" alt="" width="250px">
-                    <div class="item-text">
-                        <div class="text" id="Item">"Item Name"</div>
-                        <div class="text" id="Price">"Price"</div>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="https://picsum.photos/seed/pe/500/500/" alt="" width="250px">
-                    <div class="item-text">
-                        <div class="text" id="Item">"Item Name"</div>
-                        <div class="text" id="Price">"Price"</div>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="https://picsum.photos/seed/pe/500/500/" alt="" width="250px">
-                    <div class="item-text">
-                        <div class="text" id="Item">"Item Name"</div>
-                        <div class="text" id="Price">"Price"</div>
-                    </div>
-                </div>
+                <?php
+                    if($_GET['items'] == "Tin Canned"){$category = "TinCanned";}else{$category = $_GET["items"];}
+                    include './php/db_conn.php';
+                    $querry_list = 'SELECT `id`, `name`, `price`,`img_path` FROM `item` WHERE `category` = ?';
+                    if($smst = $conn->prepare($querry_list)){
+                        $smst->bind_param('s',$category);
+                        $smst->execute();
+                        $smst->store_result();
+                        if ($smst->num_rows > 0){
+                            for ($x=0; $x < $smst->num_rows; $x++) {
+                                $smst->bind_result($id, $name, $price, $img_path);
+                                $smst->fetch();
+                                $img_path = substr($img_path,1);
+                                $link = "location.href='./item.php?item=".$id."'";
+                                $html = '<div class="item" onclick="'.$link.'">
+                                <img src="'.$img_path.'" alt="" width="250px">
+                                <div class="item-text">
+                                    <div class="text" id="Item">"'.$name.'"</div>
+                                    <div class="text" id="Price">"'.$price.'"</div>
+                                </div>
+                            </div>';
+                            echo $html;
+                            }
+                        }
+                    }                  
+                ?>
             </div>
         </div>
     </div>
     <?php
-    include "./includes/footer.html";
+    include "./includes/footer.php";
     ?>
 </body>
 </html>

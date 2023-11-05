@@ -1,6 +1,5 @@
 admin:
-abc
-Qq1!1234
+abc     
 
 seller:
 S1 Ss1!1234
