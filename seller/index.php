@@ -16,21 +16,6 @@
 </head>
 <body>
 
-<<<<<<< Updated upstream
-
-            <a class="box" id="view-order" href="./vieworder.php">
-                <img src="../imgs/seller_imgs/view-order-icon.png">
-                <div class="textbox">
-                    <div class="box-header">View Order</div>
-                    <div class="box-text">Check Customer Orders</div>
-                </div>
-            </a>
-        </div>
-    </div>
-    <?php
-    include "../includes/footer.html";
-    ?>
-=======
     <form action="../php/login_staff.php" method="POST">
         <label for="email" id="form-header">Email</label>
         <input type="email" name="email-login" id="email" placeholder="you@example.com">
@@ -38,6 +23,5 @@
         <input type="password" name="pass-login" id="password" placeholder="Enter Your Password">
         <input type="submit" value="Login" id="button-box">
     </form>
->>>>>>> Stashed changes
 </body>
 </html>
