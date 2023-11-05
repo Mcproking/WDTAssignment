@@ -6,7 +6,7 @@
     $sql = 'SELECT `username`, `email`, `password` FROM `admin` WHERE `username` = ?';
 
     // user authentication
-    if( $smst = $conn->prepare($sql)){
+    if($smst = $conn->prepare($sql)){
         // request data from sql querry and store it
         $smst -> bind_param('s',$_POST['txtName']);
         $smst -> execute();
@@ -20,9 +20,8 @@
                     session_regenerate_id();
                 }
                 $_SESSION['loggedin'] = True;
-                $_SESSION['name'] = $username;
+                $_SESSION['username'] = $username;
                 $_SESSION['email'] = $email;
-                $_SESSION['password'] = $pass;
                 $_SESSION['auth'] = "Admin";
                 header('Location: ../admin/admin.php');
             }else{

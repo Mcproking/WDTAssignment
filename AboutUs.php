@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us</title>
-    <link rel="stylesheet" href="../static/body.css">
-    <link rel="stylesheet" href="../static/includes.css">
+    <link rel="stylesheet" href="./static/body.css">
+    <link rel="stylesheet" href="./static/includes.css">
     <style>
         .wrapper{
             display: flex;
@@ -66,7 +66,8 @@
 </head>
 <body>
     <?php
-    include "../includes/header.php";
+    session_start();
+    include "./includes/header.php";
     ?>
     <div class="wrapper">
         <h1>About Us</h1>
@@ -77,15 +78,15 @@
             <h1>Management</h1>
             <div id="management">
                 <div id="management1">
-                    <img src="../imgs/customer.png" alt="Shane" srcset="">
+                    <img src="./imgs/shane.jpg" alt="Shane" srcset="">
                     <div id="management_content"><b><u>Director</u></b><br><br>Ho Shane Foong</div>
                 </div>
                 <div id="management2">
-                    <img src="../imgs/Daryl.jpg" alt="Daryl" srcset="">
+                    <img src="./imgs/Daryl.jpg" alt="Daryl" srcset="">
                     <div id="management_content"><b><u>Finance Manager</u></b><br><br>Daryl Sim Wei Shern</div>
                 </div>
                 <div id="management3">
-                    <img src="../imgs/Eugene.jpg" alt="Eugene" srcset="">
+                    <img src="./imgs/Eugene.jpg" alt="Eugene" srcset="">
                     <div id="management_content"><b><u>Marketing Manager</u></b><br><br>Eugene Tan Ting Siang</div>
                 </div>
             </div>
@@ -95,7 +96,7 @@
         <br>
         <br>
         <?php
-        include "../includes/footer.html";
+        include "./includes/footer.html";
         ?>
     </div>
 </body>

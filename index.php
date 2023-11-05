@@ -12,6 +12,7 @@
 </head>
 <body>        
     <?php 
+        session_start();
         include './includes/header.php'; 
         include './includes/navbar.html';
     ?>
@@ -138,7 +139,7 @@
     </div>
 
     <?php
-    include './includes/footer.html';
+    include './includes/footer.php';
     ?>
 </body>
 </html>

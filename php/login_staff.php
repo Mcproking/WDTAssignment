@@ -4,7 +4,7 @@
 session_start();
 include "db_conn.php";
 
-$sql = "SELECT `id`, `username`, `password`, `email` FROM `customer` WHERE `email`= ?";
+$sql = "SELECT `id`, `username`, `password`, `email` FROM `seller` WHERE `email`= ?";
 
 if ($smst = $conn -> prepare($sql)) {
     $smst -> bind_param("s", $_POST["email-login"]);
@@ -23,17 +23,17 @@ if ($smst = $conn -> prepare($sql)) {
             $_SESSION['id'] = $id;
             $_SESSION['username'] = $username;
             $_SESSION['email'] = $email;
-            $_SESSION['auth'] = 'User';
-            header('Location: ../');
+            $_SESSION['auth'] = 'Seller';
+            header('Location: ../seller/seller.php');
             }
             else {
-                header('Location: ../login.php');
+                header('Location: ../seller/');
                 $err = 'Email or password error';
                 $_SESSION['ERR_FLASH'] = $err;
             }
     }
     else {
-        header('Location: ../login/');
+        header('Location: ../seller/');
         $err = 'Login Error';
         $_SESSION['ERR_FLASH'] = $err;
     }

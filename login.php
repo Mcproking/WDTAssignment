@@ -23,13 +23,19 @@
             <div class="login">
                 <div id="login-header">Login</div>
                 <div id="login-form">
-                    <form name="login" action="" method="post">
+                    <form name="login" action="./php/login_user.php" method="post">
                         <label for="email" id="form-header">Email</label>
                         <input type="email" name="email-login" id="email" placeholder="you@example.com">
                         <label for="password" id="form-header">Password</label>
                         <input type="password" name="pass-login" id="password" placeholder="Enter Your Password">
                         <input type="submit" value="Login" id="button-box">
                     </form>
+                    <?php
+                        if(!empty($_SESSION['ERR_FLASH'])){
+                            echo '<div id="err" style="color:red; font-size:16px; font-weight:bold;">'.$_SESSION['ERR_FLASH'].'</div>';
+                            $_SESSION['ERR_FLASH'] = '';
+                        }
+                    ?>
                 </div>
                 <div id="login-no-account">
                     Don't have an account yet? <a href="./Register.php">Register Here.</a>
@@ -41,7 +47,7 @@
         </div>
     </div>
     <?php
-    include "./includes/footer.html";
+    include "./includes/footer.php";
     ?>
 </body>
 </html>
