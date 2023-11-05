@@ -183,7 +183,7 @@
             var search = document.getElementById("ItemCategories");
 
             for (let i=0; i < categories.length; i++) {
-                if (search.value == categories[i]) {
+                if (search.value === categories[i]) {
                     window.location.href="./showItems.php?Category=" + search.value;
                 }
             }
