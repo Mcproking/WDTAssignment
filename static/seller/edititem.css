@@ -137,6 +137,16 @@ input[type=button]:hover{
     background-color: #57B461;
 }
 
+#cfm-change-btn:hover{
+    color: #0e1111;
+    background-color: #16D929;
+}
+
 #cancel-btn{
     background-color: #901111;
+}
+
+#cancel-btn:hover {
+    background: #FF1212;
+    color: #FDFFAD;
 }
