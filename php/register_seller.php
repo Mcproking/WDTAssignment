@@ -15,7 +15,7 @@
         $results = mysqli_query($conn, $checkQuery);
 
         if (mysqli_num_rows($results) > 0) {
-            $err = "This email has been registered to an acount.";
+            $err = "This email has been registered to an account.";
             session_start();
             $_SESSION['ERR_FLASH'] = $err;
             header('Location: ../admin/admin.php');
