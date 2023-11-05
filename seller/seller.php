@@ -27,7 +27,7 @@
                 </div>
             </a>
             <!-- this prob uses daryl crated one-->
-            <a class="box" id="item-list" href="./edititem.php">
+            <!-- <a class="box" id="item-list" href="./edititem.php">
                 <img src="../imgs/seller_imgs/item-list-icon.png">
                 <div class="textbox">
                     <div class="box-header">Item List</div>
@@ -42,7 +42,7 @@
                     <div class="box-header">View Order</div>
                     <div class="box-text">Check Customer Orders</div>
                 </div>
-            </a>
+            </a> -->
         </div>
     </div>
     <?php

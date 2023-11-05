@@ -16,7 +16,7 @@
 </head>
 <body>
 
-    <form action="../php/login_staff.php" method="POST">
+    <form action="../php/login_seller.php" method="POST">
         <label for="email" id="form-header">Email</label>
         <input type="email" name="email-login" id="email" placeholder="you@example.com">
         <label for="password" id="form-header">Password</label>

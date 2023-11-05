@@ -32,7 +32,7 @@
                 <div id=textsellitem> <!--Title-->
                     <h1 id="sellitem_header">Sell Item</h1>
                 </div>
-                <form action="../php/sell_item.php" method="post" id="Form" enctype="multipart/form-data">
+                <form action="../php/sell_item.php?id=<?php echo $_SESSION['id']?>" method="post" id="Form" enctype="multipart/form-data">
                     <div id="ItemName">
                         <label for="ItemName">Item Name<span style="color:red">*</span> </label><br>
                         <input type="text" name="txtItemName" id="ItemName" class="input" autofocus required>
@@ -65,20 +65,11 @@
                         <label for="ItemImage">Item Image<span style="color:red">*</span> </label><br>
                         <input type="file" name="txtItemImage" id="ItemImage" class="input" accept="image/png, image/jpg, image/jpeg" required>
                     </div>   
-
-                    <input type="hidden" name="sellerID" value="<?php echo $_SESSION['id']?>">
-
+                    
                     <div id="Field">
                         <h4>* indicates a required field</h4>
                     </div>
-                   
-                    <?php
-                        if(!empty($_SESSION['ERR_FLASH'])){
-                            echo '<div id="err" style="color:red; font-size:16px; font-weight:bold;">'.$_SESSION['ERR_FLASH'].'</div>';
-                            $_SESSION = array();
-                        }
-                    ?>
-                    
+                                       
                     <div id="Buttons">
                         <button type="submit" value="Confirm" id="confirmButton" name="confirmButton">Confirm</button>
                         <button type="button" value="Cancel" id="cancel" onclick="window.location='./index.php'">Cancel</button>
