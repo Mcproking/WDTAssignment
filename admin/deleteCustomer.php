@@ -3,11 +3,9 @@
 
     $CustomerID = $_GET['customerid'];
 
-    $deleteQuery1 = "DELETE FROM `cust_address` WHERE cust_id='$CustomerID'";
-    $deleteQuery2 = "DELETE FROM `customer` WHERE id='$CustomerID'";
+    $deleteQuery = "DELETE FROM `customer` WHERE id='$CustomerID'";
 
-    if (mysqli_query($conn, $deleteQuery1)) {
-        mysqli_query($conn, $deleteQuery2);
+    if (mysqli_query($conn, $deleteQuery)) {
         echo "<script> alert('Customer was deleted successfully!');
         window.location.href='./customerList.php'; </script>";
     }
