@@ -42,9 +42,6 @@
                 }
             ?>
         </div>
-        <?php
-        include '../includes/footer.html'
-        ?>
     </div>
 
 </body>

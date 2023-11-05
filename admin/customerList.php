@@ -61,7 +61,7 @@
                                     $full_address = $address.$state;
                                     $html = '
                                     <div id="record">
-                                        <div class="record-detail" id="r-id">S'.$id.'</div>
+                                        <div class="record-detail" id="r-id">'.$id.'</div>
                                         <div class="record-detail" id="r-user">'.$username.'</div>
                                         <div class="record-detail" id="r-email">'.$email.'</div>
                                         <div class="record-detail" id="r-phone">'.$phone.'</div>
@@ -84,7 +84,7 @@
                                 $smst->fetch();
                                 $full_address = $address.' '.$state;
                                 $html = '<div id="record">
-                                <div class="record-detail" id="r-id">S'.$id.'</div>
+                                <div class="record-detail" id="r-id">'.$id.'</div>
                                 <div class="record-detail" id="r-user">'.$username.'</div>
                                 <div class="record-detail" id="r-email">'.$email.'</div>
                                 <div class="record-detail" id="r-phone">'.$phone.'</div>
@@ -102,9 +102,7 @@
         </div>
     </div>
 
-    <?php
-        include "../includes/footer.html";
-    ?>
+
 
     <script>
         var openpx = 0;

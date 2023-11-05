@@ -119,9 +119,6 @@
         echo 'No records found.';
     }
 ?>
-    <?php
-        include "../includes/footer.html";
-    ?>
 
     <script>
         var openpx = 0;

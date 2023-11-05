@@ -105,10 +105,6 @@
         </div>
     </div>
 
-    <?php
-        include "../includes/simple_footer.html";
-    ?>
-
     <script>
         var openpx = 0;
 
