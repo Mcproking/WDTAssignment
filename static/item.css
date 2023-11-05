@@ -24,6 +24,12 @@
     justify-content: center;
 }
 
+.item-imgs{
+    width: 50%;
+    height: 500px;
+}
+
+
 #quantity{
     text-align: center;
 }
@@ -62,6 +68,7 @@ input[type=button]:hover{
 }
 
 #add-cart-button{
+    text-decoration: none;
     color: #FFFFFF;
     font-size: 24px;
     border-radius: 15px;

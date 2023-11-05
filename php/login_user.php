@@ -33,8 +33,8 @@ if ($smst = $conn -> prepare($sql)) {
             }
     }
     else {
-        header('Location: ../login/');
-        $err = 'Login Error';
+        header('Location: ../login.php');
+        $err = 'Email or password error (1)';
         $_SESSION['ERR_FLASH'] = $err;
     }
     $main -> close();

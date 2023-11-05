@@ -11,8 +11,17 @@
 </head>
 <body>
     <?php 
+    session_start();
+    if (empty($_SESSION['loggedin'])){
+        if ($_SESSION['loggedin']){
+            return;
+        }else{
+            header('Location: ./login.php');
+        }
+    }
     include "./includes/header.php";
     include "./includes/navbar.html";
+    
     ?>
     <div class="wrapper">
         <div class="shoppingcart-header">
@@ -23,6 +32,58 @@
             <div class="header-text" id="header-total-price">Total Price</div>
         </div>
         <div class="shopping-cart">
+            <?php
+            include './php/db_conn.php';
+            $cartprice = 0;
+            $items = array();
+            $itemID = array();  
+            $itemquan = array();
+
+            for ($i = 0; $i < count($_SESSION['cart']);$i++){
+                $temp = $_SESSION['cart'][ $i ];
+                $item = explode(',', $temp);
+                array_push($items, $item);
+            }
+            
+            for ($i = 0; $i < count($items); $i++){
+               array_push($itemID, $items[$i][0]);
+            }
+            
+            for ($i = 0; $i < count($items); $i++){
+                array_push($itemquan,$items[$i][1]);
+            }
+            
+
+
+            $itemID = join(",", $itemID);
+
+            // echo $itemID;
+            $querry = "SELECT item.id, item.name, item.price, item.img_path, seller.username FROM `item` LEFT JOIN seller on item.sellerID = seller.id WHERE item.id in ($itemID)";
+            $getItems = mysqli_query($conn, $querry);
+            $x = 0;
+                while ($row_data = mysqli_fetch_array($getItems)){
+                    // print_r($row_data);
+                    $total_price = $row_data["price"] * $itemquan[$x];
+                    $img_path = substr($row_data["img_path"],1);
+                    $html = '<div class="shoppingcart-item">
+                    <div class="item-text" id="item-item">
+                        <input type="checkbox" name="id1" id="'.$row_data['id'].'" value="id1">
+                        <img src="'.$img_path.'">
+                        <label for="id1">'.$row_data['name'].'</label>
+                    </div>
+                    <div class="item-text" id="item-seller">'.$row_data['username'].'</div>
+                    <div class="item-text" id="item-price">'.$row_data['price'].'</div>
+                    <div class="item-text" id="item-quantity">'.$itemquan[$x].'</div>
+                    <div class="item-text" id="item-total-price">'.$total_price.'</div>
+                </div>';
+                    echo $html;
+                    $cartprice = $cartprice + $total_price;
+                    $x++;
+                }
+            
+            
+            
+            ?>
             <!-- for sql uses -->
             <!-- <div class="shoppingcart-item">
                 <div class="item-text" id="item-item">
@@ -35,66 +96,6 @@
                 <div class="item-text" id="item-quantity">Quantity</div>
                 <div class="item-text" id="item-total-price">Total Price</div>
             </div> -->
-
-            <div class="shoppingcart-item">
-                <div class="item-text" id="item-item">
-                    <input type="checkbox" name="id1" id="chkbox" value="id1">
-                    <img src="https://picsum.photos/seed/a/150">
-                    <label for="id1">Item Name</label>
-                </div>
-                <div class="item-text" id="item-seller">Seller</div>
-                <div class="item-text" id="item-price">Price</div>
-                <div class="item-text" id="item-quantity">Quantity</div>
-                <div class="item-text" id="item-total-price">Total Price</div>
-            </div>
-            
-            <div class="shoppingcart-item">
-                <div class="item-text" id="item-item">
-                    <input type="checkbox" name="id2" id="chkbox" value="id2">
-                    <img src="https://picsum.photos/seed/b/150">
-                    <label for="id2">Item Name</label>
-                </div>
-                <div class="item-text" id="item-seller">Seller</div>
-                <div class="item-text" id="item-price">Price</div>
-                <div class="item-text" id="item-quantity">Quantity</div>
-                <div class="item-text" id="item-total-price">Total Price</div>
-            </div>
-
-            <div class="shoppingcart-item">
-                <div class="item-text" id="item-item">
-                    <input type="checkbox" name="id3" id="chkbox" value="id3">
-                    <img src="https://picsum.photos/seed/c/150">
-                    <label for="id3">Item Name</label>
-                </div>
-                <div class="item-text" id="item-seller">Seller</div>
-                <div class="item-text" id="item-price">Price</div>
-                <div class="item-text" id="item-quantity">Quantity</div>
-                <div class="item-text" id="item-total-price">Total Price</div>
-            </div>
-
-            <div class="shoppingcart-item">
-                <div class="item-text" id="item-item">
-                    <input type="checkbox" name="id4" id="chkbox" value="id4">
-                    <img src="https://picsum.photos/seed/d/150">
-                    <label for="id4">Item Name</label>
-                </div>
-                <div class="item-text" id="item-seller">Seller</div>
-                <div class="item-text" id="item-price">Price</div>
-                <div class="item-text" id="item-quantity">Quantity</div>
-                <div class="item-text" id="item-total-price">Total Price</div>
-            </div>
-
-            <div class="shoppingcart-item">
-                <div class="item-text" id="item-item">
-                    <input type="checkbox" name="id5" id="chkbox" value="id5">
-                    <img src="https://picsum.photos/seed/e/150">
-                    <label for="id5">Item Name</label>
-                </div>
-                <div class="item-text" id="item-seller">Seller</div>
-                <div class="item-text" id="item-price">Price</div>
-                <div class="item-text" id="item-quantity">Quantity</div>
-                <div class="item-text" id="item-total-price">Total Price</div>
-            </div>
         </div>
         <hr style="background-color:black; height:1px; width:100%;">
         <div class="shoppingcart-options">
@@ -102,13 +103,13 @@
                 <button class="delete-button" onclick="delete_items();">DELETE SECTION</button>
             </div>
             <div class="bdy_flex_right right-option">
-                <div class="total-price">RM 00.00</div>
+                <div class="total-price">RM <?php echo number_format((float)$cartprice, 2, '.', '');?></div>
                 <a href="./checkout.php" class="checkout-button">Check out</a>
             </div>
         </div>
     </div>
     <?php
-    include "./includes/footer.html";
+    include "./includes/footer.php";
     ?>
     <script>
         let chkboxs = document.querySelectorAll("[id='chkbox']");

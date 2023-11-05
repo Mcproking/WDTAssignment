@@ -9,7 +9,7 @@
         $address = $_POST['txtAddress'];
         $state = $_POST['State'];
 
-        $registerQuery = "INSERT INTO `seller`(`username`, `password`, `email`, `phone_no`, `address`, `state`) VALUES ('$username','$password','$email','$phone', '$address', '$state')";
+        $registerQuery = "INSERT INTO `seller`(`username`, `email`, `phone`, `password`, `address`, `state`) VALUES ('$username','$email','$phone','$password', '$address', '$state')";
 
         $checkQuery = "SELECT * FROM seller WHERE email = '$email'";
         $results = mysqli_query($conn, $checkQuery);

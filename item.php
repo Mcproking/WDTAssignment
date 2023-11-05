@@ -12,27 +12,56 @@
 </head>
 <body>
     <?php
-    include './includes/header.php';
-    include './includes/navbar.html';
+    session_start();
+    if (empty($_SESSION['loggedin'])){
+        if ($_SESSION['loggedin']){
+            return;
+        }else{
+            header('Location: ./login.php');
+        }
+    }
+    include "./includes/header.php";
+    include "./includes/navbar.html";
+    
     ?>
     <div class="wrapper">
-        <div class="bdy_flex_left">
-            <img src="https://picsum.photos/300" alt="">
+        <?php
+        include './php/db_conn.php';
+        $id = $_GET['item'];
+        $querry = "SELECT `name`, `price`,`quantity`, `img_path` FROM `item` WHERE `id` = ?";
+        
+        if(!empty($_GET["item"])){
+            if($smst = $conn->prepare($querry)){
+                $smst->bind_param("s", $_GET["item"]);
+                $smst->execute();
+                $smst->store_result();
+
+                if($smst->num_rows > 0){
+                    $smst->bind_result($name, $price, $quantity, $img_path);
+                    $smst->fetch();
+                    $img_path = substr($img_path,1);
+
+                }
+            }
+        }
+        ?>
+        <div class="bdy_flex_left item-imgs">
+            <img src="<?php echo $img_path ?>">
         </div>
         <div class="bdy_flex_right item-details">
             <div class="item-name">
-                {{ item names}}
+                <?php echo $name ?>
             </div>
             <div class="item-price">
-                Price: {{ item price }}
+                Price: RM <?php echo $price ?>
             </div>
             <div class="quantity-selector">
                 <input type="button" value="+" id="plus-button" for="quantity">
-                <input type="number" name="quantity" id="quantity" value="1" min="1" disabled>
+                <input type="number" name="quantity" id="quantity" value="1" min="1" max="<?php echo $quantity?>" disabled>
                 <input type="button" value="-" id="minus-button" for="quantity">
             </div>
             <div class="button-add-to-cart">
-                <button id="add-cart-button" href=""></button>Add to cart</button>
+                <button id="add-cart-button" onclick="add_to_cart();">Add to cart</button>
             </div>
         </div>
     </div>
@@ -45,8 +74,12 @@
         var minus_btn =document.getElementById("minus-button");
 
         plus_btn.addEventListener("click", function(){
-
+            if(quan.value == <?php echo $quantity;?>){
+                quan.value = quan.value;
+                
+            }else{
             quan.value = Number(quan.value) + 1;
+            }
         });
 
         minus_btn.addEventListener("click", function(){
@@ -55,6 +88,10 @@
             }
             quan.value = quan.value - 1;
         });
+
+        function add_to_cart(){
+            window.location.href="./php/add_to_cart.php?id=<?php echo $id ?>&quantity=" + quan.value;
+        }
     </script>
 </body>
 </html>
